@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40511FF0D15D002AB6DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD40501FF0D15D002AB6DB /* ViewController.swift */; };
 		A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40521FF0D15D002AB6DB /* Main.storyboard */; };
@@ -15,6 +16,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.release.xcconfig"; sourceTree = "<group>"; };
+		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40501FF0D15D002AB6DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8DD40581FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8DD405A1FF0D15D002AB6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAndWash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		449D55C4F47680E173058D61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D783455B8D7FA9E833480B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */,
+				78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A8DD40421FF0D15C002AB6DB = {
 			isa = PBXGroup;
 			children = (
 				A8DD404D1FF0D15C002AB6DB /* KeepAndWash */,
 				A8DD404C1FF0D15C002AB6DB /* Products */,
+				5D783455B8D7FA9E833480B1 /* Pods */,
+				449D55C4F47680E173058D61 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A8DD405D1FF0D15D002AB6DB /* Build configuration list for PBXNativeTarget "KeepAndWash" */;
 			buildPhases = (
+				6743CDDAF64DBB4904852AE0 /* [CP] Check Pods Manifest.lock */,
 				A8DD40471FF0D15C002AB6DB /* Sources */,
 				A8DD40481FF0D15C002AB6DB /* Frameworks */,
 				A8DD40491FF0D15C002AB6DB /* Resources */,
+				9E3B452905F8F9D86BFC600D /* [CP] Embed Pods Frameworks */,
+				B7D367C99E90354047E2FDC1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6743CDDAF64DBB4904852AE0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KeepAndWash-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9E3B452905F8F9D86BFC600D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7D367C99E90354047E2FDC1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A8DD40471FF0D15C002AB6DB /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		A8DD405E1FF0D15D002AB6DB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +370,7 @@
 		};
 		A8DD405F1FF0D15D002AB6DB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
