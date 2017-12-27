@@ -3,7 +3,7 @@
 import Foundation
 import RealmSwift
 
-class ClothesRealm: Object {
+class RealmClothes: Object {
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var imageName = ""
@@ -11,8 +11,8 @@ class ClothesRealm: Object {
     @objc dynamic var photoPath: String?
     @objc dynamic var note = ""
     @objc dynamic var isDirty = false
-    @objc dynamic var type: ClothesTypeRealm?
-    var laundryIcons = List<LaundryIconRealm>()
+    @objc dynamic var type: RealmClothesType?
+    var laundryIcons = List<RealmLaundryIcon>()
     
     override static func primaryKey() -> String? {
         return "id"
@@ -27,9 +27,9 @@ class ClothesRealm: Object {
         photoPath = clothes.photoPath
         note = clothes.note
         isDirty = clothes.isDirty
-        type = ClothesTypeRealm(clothesType: clothes.type)
+        type = RealmClothesType(clothesType: clothes.type)
         //laundryIcons = List<LaundryIconRealm>(clothes.laundryIcons.map({ LaundryIconRealm(laundryIcon: $0)}))
-        laundryIcons.append(objectsIn: clothes.laundryIcons.map({ LaundryIconRealm(laundryIcon: $0)}))
+        laundryIcons.append(objectsIn: clothes.laundryIcons.map({ RealmLaundryIcon(laundryIcon: $0)}))
         
     }
     

@@ -2,12 +2,12 @@
 import Foundation
 import RealmSwift
 
-class LaundryIconRealm: Object {
+class RealmLaundryIcon: Object {
     @objc dynamic var id = ""
     @objc dynamic var imageName = ""
     @objc dynamic var desc = ""
     @objc dynamic var priority = 0
-    @objc dynamic var category: LaundryIconCategoryRealm?
+    @objc dynamic var category: RealmLaundryIconCategory?
     
     override static func primaryKey() -> String? {
         return "id"
@@ -19,7 +19,7 @@ class LaundryIconRealm: Object {
         imageName = laundryIcon.imageName
         desc = laundryIcon.desc
         priority = laundryIcon.priority
-        category = LaundryIconCategoryRealm(laundryIconCategory: laundryIcon.category)
+        category = RealmLaundryIconCategory(laundryIconCategory: laundryIcon.category)
     }
     
     var plainObject: LaundryIcon {

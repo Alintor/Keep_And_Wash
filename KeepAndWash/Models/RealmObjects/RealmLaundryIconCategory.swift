@@ -2,7 +2,7 @@
 import Foundation
 import RealmSwift
 
-class LaundryIconCategoryRealm: Object {
+class RealmLaundryIconCategory: Object {
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var imageName = ""
