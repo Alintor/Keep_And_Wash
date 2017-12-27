@@ -1,10 +1,10 @@
 
 protocol DataSource {
-    func getAll() -> [Clothes]
-    func getAll() -> [LaundryIcon]
-    func getBy(id:String) -> Clothes?
-    func getDirtyClothes() -> [Clothes]
-    func insert(item:Clothes)
-    func update(item:Clothes)
+    associatedtype T
+    func getAll() -> [T]
+    func getBy(id:String) -> T?
+    func getWith(parametrs: (key:String, value:Any)) -> [T]
+    func insert(item:T)
+    func update(item:T)
     func deleteBy(id:String)
 }
