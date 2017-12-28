@@ -1,5 +1,5 @@
 
-struct LaundryIcon {
+struct LaundryIcon: PlainObject {
     let id: String
     let imageName: String
     let desc: String

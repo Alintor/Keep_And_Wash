@@ -2,7 +2,7 @@
 import Foundation
 import RealmSwift
 
-class RealmLaundryIcon: Object {
+class RealmLaundryIcon: Object, RealmObject {
     @objc dynamic var id = ""
     @objc dynamic var imageName = ""
     @objc dynamic var desc = ""
@@ -15,6 +15,10 @@ class RealmLaundryIcon: Object {
     
     convenience init(laundryIcon: LaundryIcon) {
         self.init()
+        fillWith(plainObject: laundryIcon)
+    }
+    
+    func fillWith(plainObject laundryIcon: LaundryIcon) {
         id = laundryIcon.id
         imageName = laundryIcon.imageName
         desc = laundryIcon.desc

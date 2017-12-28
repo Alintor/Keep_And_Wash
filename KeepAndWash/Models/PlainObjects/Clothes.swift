@@ -1,5 +1,5 @@
 
-struct Clothes {
+struct Clothes: PlainObject {
     let id: String
     var title: String
     var imageName: String

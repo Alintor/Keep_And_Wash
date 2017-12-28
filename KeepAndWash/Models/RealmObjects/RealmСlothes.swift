@@ -3,7 +3,8 @@
 import Foundation
 import RealmSwift
 
-class RealmClothes: Object {
+class RealmClothes: Object, RealmObject {
+    
     @objc dynamic var id = ""
     @objc dynamic var title = ""
     @objc dynamic var imageName = ""
@@ -20,6 +21,10 @@ class RealmClothes: Object {
     
     convenience init(clothes: Clothes) {
         self.init()
+        fillWith(plainObject: clothes)
+    }
+    
+    func fillWith(plainObject clothes: Clothes) {
         id = clothes.id
         title = clothes.title
         imageName = clothes.imageName
