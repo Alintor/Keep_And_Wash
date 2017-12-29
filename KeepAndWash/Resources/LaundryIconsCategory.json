@@ -1,0 +1,17 @@
+[
+	{
+		"id":"lic1",
+		"title":"Стирка",
+		"imageName":"icnLic_1"
+	},
+	{
+		"id":"lic2",
+		"title":"Сушка",
+		"imageName":"icnLic_2"
+	},
+	{
+		"id":"lic3",
+		"title":"Глажка",
+		"imageName":"icnLic_3"
+	}
+]

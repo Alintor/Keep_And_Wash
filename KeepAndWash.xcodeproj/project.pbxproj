@@ -14,6 +14,11 @@
 		A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AA1FF6273200093266 /* ClothesPresenter.swift */; };
 		A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */; };
 		A89A02AF1FF67AC000093266 /* LaundryIconsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */; };
+		A89A02B31FF6A53800093266 /* LaundryIcons.json in Resources */ = {isa = PBXBuildFile; fileRef = A89A02B21FF6A53800093266 /* LaundryIcons.json */; };
+		A89A02B51FF6A54600093266 /* LaundryIconsCategory.json in Resources */ = {isa = PBXBuildFile; fileRef = A89A02B41FF6A54600093266 /* LaundryIconsCategory.json */; };
+		A89A02B71FF6A54D00093266 /* ClothesType.json in Resources */ = {isa = PBXBuildFile; fileRef = A89A02B61FF6A54D00093266 /* ClothesType.json */; };
+		A89A02BA1FF6A5BB00093266 /* RealmStorageUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02B91FF6A5BB00093266 /* RealmStorageUpdater.swift */; };
+		A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02BB1FF6A6AB00093266 /* Constants.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40521FF0D15D002AB6DB /* Main.storyboard */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
@@ -42,6 +47,11 @@
 		A89A02AA1FF6273200093266 /* ClothesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesPresenter.swift; sourceTree = "<group>"; };
 		A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsVC.swift; sourceTree = "<group>"; };
 		A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsPresenter.swift; sourceTree = "<group>"; };
+		A89A02B21FF6A53800093266 /* LaundryIcons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaundryIcons.json; sourceTree = "<group>"; };
+		A89A02B41FF6A54600093266 /* LaundryIconsCategory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = LaundryIconsCategory.json; sourceTree = "<group>"; };
+		A89A02B61FF6A54D00093266 /* ClothesType.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ClothesType.json; sourceTree = "<group>"; };
+		A89A02B91FF6A5BB00093266 /* RealmStorageUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageUpdater.swift; sourceTree = "<group>"; };
+		A89A02BB1FF6A6AB00093266 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40531FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -131,6 +141,16 @@
 			path = LaundryIconsScreen;
 			sourceTree = "<group>";
 		};
+		A89A02B81FF6A56300093266 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02B61FF6A54D00093266 /* ClothesType.json */,
+				A89A02B21FF6A53800093266 /* LaundryIcons.json */,
+				A89A02B41FF6A54600093266 /* LaundryIconsCategory.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		A8DD40421FF0D15C002AB6DB = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +172,9 @@
 		A8DD404D1FF0D15C002AB6DB /* KeepAndWash */ = {
 			isa = PBXGroup;
 			children = (
+				A89A02B81FF6A56300093266 /* Resources */,
 				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
+				A89A02BB1FF6A6AB00093266 /* Constants.swift */,
 				A89A02A91FF6270800093266 /* UserStories */,
 				A89A02A61FF4FB6C00093266 /* Services */,
 				A8DD40601FF377DC002AB6DB /* Models */,
@@ -170,6 +192,7 @@
 				A8DD40711FF391D1002AB6DB /* RealmObjects */,
 				A8DD40721FF391E0002AB6DB /* PlainObjects */,
 				A8DD40751FF3B7DA002AB6DB /* RealmStorage.swift */,
+				A89A02B91FF6A5BB00093266 /* RealmStorageUpdater.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,8 +283,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A89A02B71FF6A54D00093266 /* ClothesType.json in Resources */,
+				A89A02B31FF6A53800093266 /* LaundryIcons.json in Resources */,
 				A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */,
 				A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */,
+				A89A02B51FF6A54600093266 /* LaundryIconsCategory.json in Resources */,
 				A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
+				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
 				A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */,
@@ -349,6 +376,7 @@
 				A8DD40661FF38AD7002AB6DB /* RealmLaundryIconCategory.swift in Sources */,
 				A89A02AF1FF67AC000093266 /* LaundryIconsPresenter.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
+				A89A02BA1FF6A5BB00093266 /* RealmStorageUpdater.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

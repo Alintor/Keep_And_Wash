@@ -1,0 +1,17 @@
+[
+	{
+		"id":"ct1",
+		"title":"Рубашка",
+		"imageName":"icnCt_1"
+	},
+	{
+		"id":"ct2",
+		"title":"Футболка",
+		"imageName":"icnCt_2"
+	},
+	{
+		"id":"ct3",
+		"title":"Брюки",
+		"imageName":"icnCt_3"
+	}
+]
