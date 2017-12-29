@@ -10,8 +10,11 @@
 		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
 		A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A21FF4D18500093266 /* RealmObject.swift */; };
 		A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A41FF4D19900093266 /* PlainObject.swift */; };
+		A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A71FF626FB00093266 /* ClothesVC.swift */; };
+		A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AA1FF6273200093266 /* ClothesPresenter.swift */; };
+		A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */; };
+		A89A02AF1FF67AC000093266 /* LaundryIconsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
-		A8DD40511FF0D15D002AB6DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD40501FF0D15D002AB6DB /* ViewController.swift */; };
 		A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40521FF0D15D002AB6DB /* Main.storyboard */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
 		A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */; };
@@ -35,9 +38,12 @@
 		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
 		A89A02A21FF4D18500093266 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A89A02A41FF4D19900093266 /* PlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainObject.swift; sourceTree = "<group>"; };
+		A89A02A71FF626FB00093266 /* ClothesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesVC.swift; sourceTree = "<group>"; };
+		A89A02AA1FF6273200093266 /* ClothesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesPresenter.swift; sourceTree = "<group>"; };
+		A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsVC.swift; sourceTree = "<group>"; };
+		A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsPresenter.swift; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8DD40501FF0D15D002AB6DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A8DD40531FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8DD40581FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,6 +104,33 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		A89A02A91FF6270800093266 /* UserStories */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02B01FF67B6400093266 /* ClothesScreen */,
+				A89A02B11FF67BAC00093266 /* LaundryIconsScreen */,
+			);
+			path = UserStories;
+			sourceTree = "<group>";
+		};
+		A89A02B01FF67B6400093266 /* ClothesScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02A71FF626FB00093266 /* ClothesVC.swift */,
+				A89A02AA1FF6273200093266 /* ClothesPresenter.swift */,
+			);
+			path = ClothesScreen;
+			sourceTree = "<group>";
+		};
+		A89A02B11FF67BAC00093266 /* LaundryIconsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */,
+				A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */,
+			);
+			path = LaundryIconsScreen;
+			sourceTree = "<group>";
+		};
 		A8DD40421FF0D15C002AB6DB = {
 			isa = PBXGroup;
 			children = (
@@ -120,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
-				A8DD40501FF0D15D002AB6DB /* ViewController.swift */,
+				A89A02A91FF6270800093266 /* UserStories */,
 				A89A02A61FF4FB6C00093266 /* Services */,
 				A8DD40601FF377DC002AB6DB /* Models */,
 				A8DD40521FF0D15D002AB6DB /* Main.storyboard */,
@@ -299,12 +332,14 @@
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
+				A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */,
 				A8DD406A1FF3908D002AB6DB /* Clothes.swift in Sources */,
 				A8DD40801FF3D157002AB6DB /* ClothesServiceImpl.swift in Sources */,
 				A8DD40621FF37F41002AB6DB /* RealmСlothes.swift in Sources */,
-				A8DD40511FF0D15D002AB6DB /* ViewController.swift in Sources */,
+				A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */,
 				A8DD406C1FF3909F002AB6DB /* LaundryIcon.swift in Sources */,
 				A8DD40641FF38A4D002AB6DB /* RealmLaundryIcon.swift in Sources */,
+				A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */,
 				A8DD406E1FF390CD002AB6DB /* ClothesType.swift in Sources */,
 				A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */,
 				A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */,
@@ -312,6 +347,7 @@
 				A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */,
 				A8DD407C1FF3CFA2002AB6DB /* ClothesService.swift in Sources */,
 				A8DD40661FF38AD7002AB6DB /* RealmLaundryIconCategory.swift in Sources */,
+				A89A02AF1FF67AC000093266 /* LaundryIconsPresenter.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
