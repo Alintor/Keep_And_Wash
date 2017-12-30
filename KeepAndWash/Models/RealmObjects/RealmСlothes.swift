@@ -7,7 +7,6 @@ class RealmClothes: Object, RealmObject {
     
     @objc dynamic var id = ""
     @objc dynamic var title = ""
-    @objc dynamic var imageName = ""
     @objc dynamic var color = ""
     @objc dynamic var photoPath: String?
     @objc dynamic var note = ""
@@ -27,7 +26,6 @@ class RealmClothes: Object, RealmObject {
     func fillWith(plainObject clothes: Clothes) {
         id = clothes.id
         title = clothes.title
-        imageName = clothes.imageName
         color = clothes.color
         photoPath = clothes.photoPath
         note = clothes.note
@@ -41,7 +39,6 @@ class RealmClothes: Object, RealmObject {
     var plainObject: Clothes {
         return Clothes(id: id,
                        title: title,
-                       imageName: imageName,
                        color: color,
                        photoPath: photoPath,
                        note: note,

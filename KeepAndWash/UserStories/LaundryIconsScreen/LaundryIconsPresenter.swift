@@ -1,8 +1,13 @@
 
 import Foundation
 
+struct IconGroup {
+    let category:LaundryIconCategory
+    let icons:[LaundryIcon]
+}
+
 protocol IconsView: NSObjectProtocol {
-    func setIcons(_ icons:[LaundryIcon])
+    func setIcons(_ icons:[IconGroup])
 }
 
 class LaundryIconsPresenter {
@@ -17,8 +22,14 @@ class LaundryIconsPresenter {
     }
     
     private func updateIcons() {
-        let icons = iconsService.getAllIcons()
-        view?.setIcons(icons)
-        
+        var groupedIcons = [IconGroup]()
+        let categories = iconsService.getIconsCategories()
+        for category in categories {
+            groupedIcons.append(IconGroup(category: category,
+                                  icons: iconsService.getIconsFor(category: category)))
+        }
+        view?.setIcons(groupedIcons)
     }
 }
+
+
