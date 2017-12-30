@@ -22,4 +22,14 @@ struct Constants {
         static let addPhoto = "Добавить фото (необ.)"
         static let addNote = "Добавить примечание (необ.)"
     }
+    
+    struct Labels {
+        static let colorTitle = "Цвет"
+        static let iconsTitle = "Иконки"
+    }
+    
+    struct ImageNames {
+        static let colorIcon = "icn_color"
+        static let emptyColorIcon = "icn_empty_color"
+    }
 }
