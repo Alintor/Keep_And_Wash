@@ -3,18 +3,21 @@
 import UIKit
 
 class ClothesVC: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
 
+    var presenter: ClothesPresenter?
+    var clothes = [Clothes]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        presenter = ClothesPresenter(view: self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation
@@ -26,4 +29,27 @@ class ClothesVC: UIViewController {
     }
     */
 
+}
+
+extension ClothesVC: ClothesView {
+    func setClothes(_ clothes: [Clothes]) {
+        tableView.isHidden = false
+        self.clothes = clothes
+    }
+    
+    func setEmptyClothes() {
+        tableView.isHidden = true
+    }
+}
+
+extension ClothesVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return clothes.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let item = clothes[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = item.title
+        return cell
+    }
 }
