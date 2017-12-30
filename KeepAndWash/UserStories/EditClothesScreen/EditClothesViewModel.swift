@@ -9,15 +9,24 @@ enum EditClothesViiewModelType {
     case button
 }
 
+enum EditClothesVMActionsType {
+    case editPhoto
+    case editTitle
+    case editType
+    case editColor
+    case editIcons
+    case editNote
+}
+
 class EditClothesViewModel {
     var type: EditClothesViiewModelType
     var data:Any?
-    var callback:()->()
+    var actionType: EditClothesVMActionsType
     
-    init(type:EditClothesViiewModelType, data:Any?, callback:@escaping ()->()) {
+    init(type:EditClothesViiewModelType, actionType: EditClothesVMActionsType, data:Any?) {
         self.type = type
         self.data = data
-        self.callback = callback
+        self.actionType = actionType
     }
     
 }

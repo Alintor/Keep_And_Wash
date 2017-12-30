@@ -45,64 +45,52 @@ class EditClothesPresenter {
         
         var viewModels = [EditClothesViewModel]()
         
-        viewModels.append(EditClothesViewModel(type: .title, data: clothesTitle, callback: { [unowned self] in
-            self.view?.openTextWriterWith(placeholder: Constants.Placeholders.enterTitle, callback: { (title) in
-                self.clothesTitle = title
-                self.updateViewModels()
-            })
-        }))
+        viewModels.append(EditClothesViewModel(type: .title, actionType: .editTitle, data: clothesTitle))
         
-        
-        let typeCallback:()->() = { [unowned self] in
-            self.view?.openTypesPicker()
-        }
         if let type = clothesType {
-            viewModels.append(EditClothesViewModel(type: .type, data: type, callback: typeCallback))
+            viewModels.append(EditClothesViewModel(type: .type, actionType: .editType, data: type))
         } else {
-            viewModels.append(EditClothesViewModel(type: .button, data: Constants.ButtonTitles.chooseType, callback: typeCallback))
+            viewModels.append(EditClothesViewModel(type: .button, actionType: .editType, data: Constants.ButtonTitles.chooseType))
         }
         
-        
-        viewModels.append(EditClothesViewModel(type: .color, data: clothesColor, callback: { [unowned self] in
-            self.view?.openColorPicker()
-        }))
-        
-        let iconsCallback:()->() = { [unowned self] in
-            self.view?.openIconsPicker()
-        }
+        viewModels.append(EditClothesViewModel(type: .color, actionType: .editColor, data: clothesColor))
         
         if clothesIcons.count != 0 {
-            viewModels.append(EditClothesViewModel(type: .icons, data: clothesIcons, callback: iconsCallback))
+            viewModels.append(EditClothesViewModel(type: .icons, actionType: .editIcons, data: clothesIcons))
         } else {
-            viewModels.append(EditClothesViewModel(type: .button, data: Constants.ButtonTitles.chooseIcons, callback: iconsCallback))
-        }
-        
-        
-        let photoCallback:()->() = { [unowned self] in
-            self.view?.openPhotoPicker()
+            viewModels.append(EditClothesViewModel(type: .button, actionType: .editIcons, data: Constants.ButtonTitles.chooseIcons))
         }
         
         if let path = clothesPhotoPath {
-            viewModels.append(EditClothesViewModel(type: .icons, data: path, callback: photoCallback))
+            viewModels.append(EditClothesViewModel(type: .photo, actionType: .editPhoto, data: path))
         } else {
-            viewModels.append(EditClothesViewModel(type: .button, data: Constants.ButtonTitles.chooseIcons, callback: photoCallback))
-        }
-        
-        
-        let noteCallback:()->() = { [unowned self] in
-            self.view?.openTextWriterWith(placeholder: Constants.Placeholders.enterNote, callback: { (note) in
-                self.clothesNote = note
-                self.updateViewModels()
-            })
+            viewModels.append(EditClothesViewModel(type: .button, actionType: .editPhoto, data: Constants.ButtonTitles.addPhoto))
         }
         
         if let note = clothesNote {
-            viewModels.append(EditClothesViewModel(type: .note, data: note, callback: noteCallback))
+            viewModels.append(EditClothesViewModel(type: .note, actionType: .editNote, data: note))
         } else {
-            viewModels.append(EditClothesViewModel(type: .button, data: Constants.ButtonTitles.chooseIcons, callback: noteCallback))
+            viewModels.append(EditClothesViewModel(type: .button, actionType: .editNote, data: Constants.ButtonTitles.addNote))
         }
         
         self.view?.setViewModels(viewModels)
+    }
+    
+    func viewModelAction(actionType:EditClothesVMActionsType) {
+        switch actionType {
+        case .editTitle:
+            break
+        case .editNote:
+            break
+        case .editColor:
+            view?.openColorPicker()
+        case .editIcons:
+            view?.openIconsPicker()
+        case .editPhoto:
+            view?.openPhotoPicker()
+        case .editType:
+            view?.openTypesPicker()
+        }
     }
     
     func saveChanges() {
