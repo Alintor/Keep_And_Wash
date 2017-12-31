@@ -8,7 +8,7 @@ protocol EditClothesView: NSObjectProtocol {
     func openIconsPicker()
     func openTypesPicker()
     func openPhotoPicker()
-    func openTextWriterWith(placeholder:String, callback:@escaping (_ text:String)->())
+    //func openTextWriterWith(placeholder:String, callback:@escaping (_ text:String)->())
     
 }
 

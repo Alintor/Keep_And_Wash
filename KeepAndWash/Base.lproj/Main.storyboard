@@ -61,6 +61,11 @@
                                 <segue destination="zrt-ap-lhb" kind="show" id="JhD-FJ-ODL"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="wQ1-UR-Z5G">
+                            <connections>
+                                <segue destination="99S-YU-iZC" kind="show" id="omJ-nv-oMb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GoL-ql-uME" id="bXp-kN-WIG"/>
@@ -69,6 +74,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="125.4872563718141"/>
+        </scene>
+        <!--Edit ClothesVC-->
+        <scene sceneID="2LS-RY-ADu">
+            <objects>
+                <viewController id="99S-YU-iZC" customClass="EditClothesVC" customModule="KeepAndWash" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QN1-fp-yrQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="TbB-gm-MLN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="99S-YU-iZC" id="fBi-e0-ZZM"/>
+                                    <outlet property="delegate" destination="99S-YU-iZC" id="cnc-sO-JWZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TbB-gm-MLN" firstAttribute="top" secondItem="QN1-fp-yrQ" secondAttribute="top" id="Og6-S8-xtA"/>
+                            <constraint firstItem="TbB-gm-MLN" firstAttribute="bottom" secondItem="OMQ-mE-ywD" secondAttribute="bottom" id="X3b-FB-0jt"/>
+                            <constraint firstItem="TbB-gm-MLN" firstAttribute="trailing" secondItem="OMQ-mE-ywD" secondAttribute="trailing" id="bBr-Lg-ecH"/>
+                            <constraint firstItem="TbB-gm-MLN" firstAttribute="leading" secondItem="OMQ-mE-ywD" secondAttribute="leading" id="ymK-CA-O36"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OMQ-mE-ywD"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="TbB-gm-MLN" id="1h2-or-ePX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z7S-8g-wau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1325.5999999999999" y="142.57871064467767"/>
         </scene>
         <!--Laundry IconsVC-->
         <scene sceneID="E1D-kT-srG">
