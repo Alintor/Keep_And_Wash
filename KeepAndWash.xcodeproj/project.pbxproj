@@ -36,6 +36,8 @@
 		A89A02E41FF8106700093266 /* EditPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89A02E21FF8106700093266 /* EditPhotoCell.xib */; };
 		A89A02E81FF8114600093266 /* EditButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02E61FF8114600093266 /* EditButtonCell.swift */; };
 		A89A02E91FF8114600093266 /* EditButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89A02E71FF8114600093266 /* EditButtonCell.xib */; };
+		A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */; };
+		A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40521FF0D15D002AB6DB /* Main.storyboard */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
@@ -86,6 +88,8 @@
 		A89A02E21FF8106700093266 /* EditPhotoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPhotoCell.xib; sourceTree = "<group>"; };
 		A89A02E61FF8114600093266 /* EditButtonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditButtonCell.swift; sourceTree = "<group>"; };
 		A89A02E71FF8114600093266 /* EditButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditButtonCell.xib; sourceTree = "<group>"; };
+		A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+reusable.swift"; sourceTree = "<group>"; };
+		A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+reusable.swift"; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40531FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -281,6 +285,15 @@
 			path = EditButtonCell;
 			sourceTree = "<group>";
 		};
+		A89A02EF1FF8FC7400093266 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */,
+				A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A8DD40421FF0D15C002AB6DB = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +318,7 @@
 				A89A02B81FF6A56300093266 /* Resources */,
 				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
 				A89A02BB1FF6A6AB00093266 /* Constants.swift */,
+				A89A02EF1FF8FC7400093266 /* Extensions */,
 				A89A02C81FF7ED0400093266 /* CustomViews */,
 				A89A02A91FF6270800093266 /* UserStories */,
 				A89A02A61FF4FB6C00093266 /* Services */,
@@ -494,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
+				A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
@@ -514,6 +529,7 @@
 				A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */,
 				A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */,
 				A8DD40701FF390E8002AB6DB /* LaundryIconCategory.swift in Sources */,
+				A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */,
 				A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */,
 				A89A02C61FF7ECFB00093266 /* EditTitleCell.swift in Sources */,
 				A8DD407C1FF3CFA2002AB6DB /* ClothesService.swift in Sources */,
