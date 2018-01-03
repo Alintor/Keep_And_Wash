@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
+		A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */; };
 		A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A21FF4D18500093266 /* RealmObject.swift */; };
 		A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A41FF4D19900093266 /* PlainObject.swift */; };
 		A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A71FF626FB00093266 /* ClothesVC.swift */; };
@@ -60,6 +61,7 @@
 /* Begin PBXFileReference section */
 		78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.release.xcconfig"; sourceTree = "<group>"; };
 		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
+		A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		A89A02A21FF4D18500093266 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A89A02A41FF4D19900093266 /* PlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainObject.swift; sourceTree = "<group>"; };
 		A89A02A71FF626FB00093266 /* ClothesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesVC.swift; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */,
 				A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */,
+				A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				A89A02CF1FF8024100093266 /* EditTypeCell.swift in Sources */,
 				A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */,
 				A89A02D41FF804A900093266 /* EditColorCell.swift in Sources */,
+				A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */,
 				A8DD406C1FF3909F002AB6DB /* LaundryIcon.swift in Sources */,
 				A8DD40641FF38A4D002AB6DB /* RealmLaundryIcon.swift in Sources */,
 				A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */,
