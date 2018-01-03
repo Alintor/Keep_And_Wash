@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
 		A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */; };
+		A8882CA41FFCF81300F540C0 /* LaundryIconsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */; };
+		A8882CA61FFD00CD00F540C0 /* EditClothesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */; };
+		A8882CA81FFD010400F540C0 /* ClothesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */; };
 		A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A21FF4D18500093266 /* RealmObject.swift */; };
 		A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A41FF4D19900093266 /* PlainObject.swift */; };
 		A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A71FF626FB00093266 /* ClothesVC.swift */; };
@@ -40,7 +43,6 @@
 		A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */; };
 		A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
-		A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40521FF0D15D002AB6DB /* Main.storyboard */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
 		A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */; };
 		A8DD40621FF37F41002AB6DB /* RealmСlothes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD40611FF37F41002AB6DB /* RealmСlothes.swift */; };
@@ -62,6 +64,9 @@
 		78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.release.xcconfig"; sourceTree = "<group>"; };
 		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
 		A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaundryIconsVC.storyboard; sourceTree = "<group>"; };
+		A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditClothesVC.storyboard; sourceTree = "<group>"; };
+		A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClothesVC.storyboard; sourceTree = "<group>"; };
 		A89A02A21FF4D18500093266 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A89A02A41FF4D19900093266 /* PlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainObject.swift; sourceTree = "<group>"; };
 		A89A02A71FF626FB00093266 /* ClothesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesVC.swift; sourceTree = "<group>"; };
@@ -94,7 +99,6 @@
 		A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+reusable.swift"; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A8DD40531FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8DD40581FF0D15D002AB6DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A8DD405A1FF0D15D002AB6DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 			children = (
 				A89A02A71FF626FB00093266 /* ClothesVC.swift */,
 				A89A02AA1FF6273200093266 /* ClothesPresenter.swift */,
+				A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */,
 			);
 			path = ClothesScreen;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 			children = (
 				A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */,
 				A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */,
+				A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */,
 			);
 			path = LaundryIconsScreen;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 				A89A02BD1FF7B01B00093266 /* EditClothesVC.swift */,
 				A89A02BF1FF7B09800093266 /* EditClothesPresenter.swift */,
 				A89A02C21FF7D14200093266 /* EditClothesViewModel.swift */,
+				A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */,
 			);
 			path = EditClothesScreen;
 			sourceTree = "<group>";
@@ -326,7 +333,6 @@
 				A89A02A91FF6270800093266 /* UserStories */,
 				A89A02A61FF4FB6C00093266 /* Services */,
 				A8DD40601FF377DC002AB6DB /* Models */,
-				A8DD40521FF0D15D002AB6DB /* Main.storyboard */,
 				A8DD40551FF0D15D002AB6DB /* Assets.xcassets */,
 				A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */,
 				A8DD405A1FF0D15D002AB6DB /* Info.plist */,
@@ -435,15 +441,17 @@
 				A89A02D01FF8024100093266 /* EditTypeCell.xib in Resources */,
 				A89A02C71FF7ECFB00093266 /* EditTitleCell.xib in Resources */,
 				A89A02B31FF6A53800093266 /* LaundryIcons.json in Resources */,
+				A8882CA41FFCF81300F540C0 /* LaundryIconsVC.storyboard in Resources */,
 				A89A02E91FF8114600093266 /* EditButtonCell.xib in Resources */,
+				A8882CA81FFD010400F540C0 /* ClothesVC.storyboard in Resources */,
 				A89A02D51FF804A900093266 /* EditColorCell.xib in Resources */,
 				A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */,
+				A8882CA61FFD00CD00F540C0 /* EditClothesVC.storyboard in Resources */,
 				A89A02DA1FF80B4300093266 /* EditIconsCell.xib in Resources */,
 				A89A02DF1FF80DD100093266 /* EditNoteCell.xib in Resources */,
 				A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */,
 				A89A02B51FF6A54600093266 /* LaundryIconsCategory.json in Resources */,
 				A89A02E41FF8106700093266 /* EditPhotoCell.xib in Resources */,
-				A8DD40541FF0D15D002AB6DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -551,14 +559,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A8DD40521FF0D15D002AB6DB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A8DD40531FF0D15D002AB6DB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
