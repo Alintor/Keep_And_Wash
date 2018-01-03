@@ -1,6 +1,7 @@
 
 protocol PickerView {
     func setViewModels(_ viewModels:[PickerViewModel])
+    func setTitle(_ title:String)
     func hideButton()
 }
 
