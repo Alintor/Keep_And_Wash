@@ -21,6 +21,7 @@
 		A8882CBC1FFD1DEA00F540C0 /* UICollectionViewCell+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CBB1FFD1DEA00F540C0 /* UICollectionViewCell+reusable.swift */; };
 		A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CBD1FFD1E1D00F540C0 /* UICollectionView+reusable.swift */; };
 		A8882CC01FFD222400F540C0 /* UIViewController+StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */; };
+		A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */; };
 		A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A21FF4D18500093266 /* RealmObject.swift */; };
 		A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A41FF4D19900093266 /* PlainObject.swift */; };
 		A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A71FF626FB00093266 /* ClothesVC.swift */; };
@@ -85,6 +86,7 @@
 		A8882CBB1FFD1DEA00F540C0 /* UICollectionViewCell+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+reusable.swift"; sourceTree = "<group>"; };
 		A8882CBD1FFD1E1D00F540C0 /* UICollectionView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+reusable.swift"; sourceTree = "<group>"; };
 		A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstance.swift"; sourceTree = "<group>"; };
+		A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerPresenter.swift; sourceTree = "<group>"; };
 		A89A02A21FF4D18500093266 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A89A02A41FF4D19900093266 /* PlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainObject.swift; sourceTree = "<group>"; };
 		A89A02A71FF626FB00093266 /* ClothesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesVC.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				A8882CA91FFD06D400F540C0 /* PickerVC.swift */,
 				A8882CAC1FFD0E5C00F540C0 /* PickerPresenter.swift */,
 				A8882CB01FFD0EB500F540C0 /* PickerViewModel.swift */,
+				A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */,
 			);
 			path = PickerScreen;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
+				A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */,
 				A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,

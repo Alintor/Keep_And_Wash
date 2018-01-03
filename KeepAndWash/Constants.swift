@@ -26,6 +26,7 @@ struct Constants {
     struct Labels {
         static let colorTitle = "Цвет"
         static let iconsTitle = "Иконки"
+        static let colorPickerTitle = "Выберите цвет"
     }
     
     struct ImageNames {
