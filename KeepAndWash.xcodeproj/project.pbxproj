@@ -22,6 +22,7 @@
 		A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CBD1FFD1E1D00F540C0 /* UICollectionView+reusable.swift */; };
 		A8882CC01FFD222400F540C0 /* UIViewController+StoryboardInstance.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */; };
 		A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */; };
+		A8882CC41FFE184F00F540C0 /* EditClothesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CC31FFE184F00F540C0 /* EditClothesRouter.swift */; };
 		A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A21FF4D18500093266 /* RealmObject.swift */; };
 		A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A41FF4D19900093266 /* PlainObject.swift */; };
 		A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02A71FF626FB00093266 /* ClothesVC.swift */; };
@@ -87,6 +88,7 @@
 		A8882CBD1FFD1E1D00F540C0 /* UICollectionView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+reusable.swift"; sourceTree = "<group>"; };
 		A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardInstance.swift"; sourceTree = "<group>"; };
 		A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerPresenter.swift; sourceTree = "<group>"; };
+		A8882CC31FFE184F00F540C0 /* EditClothesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClothesRouter.swift; sourceTree = "<group>"; };
 		A89A02A21FF4D18500093266 /* RealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmObject.swift; sourceTree = "<group>"; };
 		A89A02A41FF4D19900093266 /* PlainObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainObject.swift; sourceTree = "<group>"; };
 		A89A02A71FF626FB00093266 /* ClothesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesVC.swift; sourceTree = "<group>"; };
@@ -247,6 +249,7 @@
 				A89A02BD1FF7B01B00093266 /* EditClothesVC.swift */,
 				A89A02BF1FF7B09800093266 /* EditClothesPresenter.swift */,
 				A89A02C21FF7D14200093266 /* EditClothesViewModel.swift */,
+				A8882CC31FFE184F00F540C0 /* EditClothesRouter.swift */,
 			);
 			path = EditClothesScreen;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 				A8DD406C1FF3909F002AB6DB /* LaundryIcon.swift in Sources */,
 				A8DD40641FF38A4D002AB6DB /* RealmLaundryIcon.swift in Sources */,
 				A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */,
+				A8882CC41FFE184F00F540C0 /* EditClothesRouter.swift in Sources */,
 				A8DD406E1FF390CD002AB6DB /* ClothesType.swift in Sources */,
 				A89A02E81FF8114600093266 /* EditButtonCell.swift in Sources */,
 				A8882CB11FFD0EB500F540C0 /* PickerViewModel.swift in Sources */,

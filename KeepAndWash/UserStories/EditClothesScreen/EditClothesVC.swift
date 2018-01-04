@@ -14,6 +14,7 @@ class EditClothesVC: UIViewController {
         super.viewDidLoad()
         
         presenter = EditClothesPresenter(data: data, view: self)
+        presenter?.setRouter(EditClothesRouter(rootViewController: self))
         
         tableView.registerReusableCell(EditTitleCell.self)
         tableView.registerReusableCell(EditNoteCell.self)
@@ -41,26 +42,6 @@ extension EditClothesVC: EditClothesView {
     }
     
     func showAlertWith(text: String) {
-        
-    }
-    
-    func openColorPicker() {
-        if let colorPicker = PickerVC.storyboardInstance() {
-            colorPicker.presenter = ColorPickerPresenter(delegate: presenter, initialColor: nil)
-            self.present(colorPicker, animated: true, completion: nil)
-        }
-        
-    }
-    
-    func openIconsPicker() {
-        
-    }
-    
-    func openTypesPicker() {
-        
-    }
-    
-    func openPhotoPicker() {
         
     }
 }

@@ -4,26 +4,23 @@ import Foundation
 protocol EditClothesView: NSObjectProtocol {
     func setViewModels(_ viewModels:[EditClothesViewModel])
     func showAlertWith(text:String)
-    func openColorPicker()
-    func openIconsPicker()
-    func openTypesPicker()
-    func openPhotoPicker()
     //func openTextWriterWith(placeholder:String, callback:@escaping (_ text:String)->())
     
 }
 
 class EditClothesPresenter {
     
-    var clothesId:String?
-    var clothesTitle:String?
-    var clothesColor:String?
-    var clothesPhotoPath:String?
-    var clothesNote:String?
-    var clothesType:ClothesType?
-    var clothesIcons = [LaundryIcon]()
+    private var clothesId:String?
+    private var clothesTitle:String?
+    private var clothesColor:String?
+    private var clothesPhotoPath:String?
+    private var clothesNote:String?
+    private var clothesType:ClothesType?
+    private var clothesIcons = [LaundryIcon]()
     
     let clothesService: ClothesService
     private weak var view: EditClothesView?
+    private var router: EditClothesRouter?
     
     init(service:ClothesService = ClothesServiceImpl(), data:Clothes?, view:EditClothesView) {
         clothesService = service
@@ -53,7 +50,12 @@ class EditClothesPresenter {
             viewModels.append(EditClothesViewModel(type: .button, actionType: .editType, data: Constants.ButtonTitles.chooseType))
         }
         
-        viewModels.append(EditClothesViewModel(type: .color, actionType: .editColor, data: clothesColor))
+        if let color = clothesColor {
+            viewModels.append(EditClothesViewModel(type: .color, actionType: .editColor, data: color))
+        } else {
+             viewModels.append(EditClothesViewModel(type: .button, actionType: .editColor, data: Constants.ButtonTitles.chooseColor))
+        }
+        
         
         if clothesIcons.count != 0 {
             viewModels.append(EditClothesViewModel(type: .icons, actionType: .editIcons, data: clothesIcons))
@@ -76,6 +78,10 @@ class EditClothesPresenter {
         self.view?.setViewModels(viewModels)
     }
     
+    func setRouter(_ router:EditClothesRouter) {
+        self.router = router
+    }
+    
     func viewModelAction(actionType:EditClothesVMActionsType) {
         switch actionType {
         case .editTitle:
@@ -83,13 +89,13 @@ class EditClothesPresenter {
         case .editNote:
             break
         case .editColor:
-            view?.openColorPicker()
+            router?.openColorPicker(delegate: self)
         case .editIcons:
-            view?.openIconsPicker()
+            break
         case .editPhoto:
-            view?.openPhotoPicker()
+            break
         case .editType:
-            view?.openTypesPicker()
+            break
         }
     }
     

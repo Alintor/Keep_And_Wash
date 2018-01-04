@@ -19,6 +19,7 @@ struct Constants {
     struct ButtonTitles {
         static let chooseType = "Выбрать тип"
         static let chooseIcons = "Выбрать иконки"
+        static let chooseColor = "Выбрать цвет"
         static let addPhoto = "Добавить фото (необ.)"
         static let addNote = "Добавить примечание (необ.)"
     }
