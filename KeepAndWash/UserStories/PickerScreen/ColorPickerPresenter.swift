@@ -1,6 +1,6 @@
 import UIKit
 protocol ColorPickerDelegate {
-    func setColor(_ HexColor:String)
+    func setColor(_ hexColor:String)
 }
 
 
@@ -17,7 +17,7 @@ class ColorPickerPresenter: PickerPresenter {
     
     func getColors() -> [String] {
         return [UIColor.black.hex,
-                UIColor.white.hex,
+                UIColor.brown.hex,
                 UIColor.red.hex,
                 UIColor.blue.hex,
                 UIColor.green.hex,

@@ -99,3 +99,12 @@ class EditClothesPresenter {
     
     
 }
+
+extension EditClothesPresenter: ColorPickerDelegate {
+    func setColor(_ hexColor: String) {
+        clothesColor = hexColor
+        updateViewModels()
+    }
+    
+    
+}

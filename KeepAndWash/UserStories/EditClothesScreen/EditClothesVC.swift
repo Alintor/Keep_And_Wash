@@ -45,6 +45,10 @@ extension EditClothesVC: EditClothesView {
     }
     
     func openColorPicker() {
+        if let colorPicker = PickerVC.storyboardInstance() {
+            colorPicker.presenter = ColorPickerPresenter(delegate: presenter, initialColor: nil)
+            self.present(colorPicker, animated: true, completion: nil)
+        }
         
     }
     
@@ -108,5 +112,11 @@ extension EditClothesVC: UITableViewDataSource {
             
         }
         
+    }
+}
+
+extension EditClothesVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.viewModelAction(actionType: viewModels[indexPath.row].actionType)
     }
 }

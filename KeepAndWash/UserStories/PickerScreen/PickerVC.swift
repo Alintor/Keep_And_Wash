@@ -4,6 +4,7 @@ import UIKit
 class PickerVC: UIViewController {
     
     
+    @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLbl: UILabel!
     
@@ -19,6 +20,11 @@ class PickerVC: UIViewController {
         super.viewDidLoad()
         collectionView.registerReusableCell(PickerCell.self)
         presenter?.attach(view: self)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        backgroundView.isHidden = false
     }
 
 }
