@@ -11,9 +11,7 @@ class EditColorCell: UITableViewCell {
         didSet {
             if let colorName = viewModel?.data as? String {
                 colorIcon.image = UIImage(named: Constants.ImageNames.colorIcon)
-                //colorIcon.tintColor =
-            } else {
-                colorIcon.image = UIImage(named: Constants.ImageNames.emptyColorIcon)
+                colorIcon.tintColor = UIColor(hex: colorName)
             }
         }
     }

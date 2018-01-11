@@ -1,16 +1,18 @@
 
 import UIKit
 class EditClothesRouter {
-    private weak var rootViewController:UIViewController?
+    private weak var viewController:UIViewController?
     
-    init(rootViewController:UIViewController) {
-        self.rootViewController = rootViewController
+    init(viewController:UIViewController) {
+        self.viewController = viewController
     }
     
-    func openColorPicker(delegate:ColorPickerDelegate) {
-        if let colorPicker = PickerVC.storyboardInstance() {
-            colorPicker.presenter = ColorPickerPresenter(delegate: delegate, initialColor: nil)
-            rootViewController?.present(colorPicker, animated: true, completion: nil)
-        }
+    func openColorPickerWith(intialColor:String?, output:ColorPickerOutput) {
+        let colorPicker = PickerVC.storyboardInstance()
+        let router = PickerRouter(viewController: colorPicker)
+        let presenter = ColorPickerPresenter(initialColor: intialColor, output: output)
+        presenter.router = router
+        colorPicker.presenter = presenter
+        viewController?.present(colorPicker, animated: true, completion: nil)
     }
 }

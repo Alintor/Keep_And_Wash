@@ -7,14 +7,18 @@ class EditClothesVC: UIViewController {
     
     var data:Clothes?
     var presenter:EditClothesPresenter?
-    var viewModels = [EditClothesViewModel]()
+    var viewModels = [EditClothesViewModel]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = EditClothesPresenter(data: data, view: self)
-        presenter?.setRouter(EditClothesRouter(rootViewController: self))
+        presenter?.setRouter(EditClothesRouter(viewController: self))
         
         tableView.registerReusableCell(EditTitleCell.self)
         tableView.registerReusableCell(EditNoteCell.self)

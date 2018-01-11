@@ -35,7 +35,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-qz-1cK">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_check" translatesAutoresizingMaskIntoConstraints="NO" id="ux2-qz-1cK">
                         <rect key="frame" x="20" y="0.0" width="25" height="25"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="25" id="QuU-mR-38i"/>
@@ -65,4 +65,7 @@
             <point key="canvasLocation" x="71" y="83.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="icn_check" width="21" height="21"/>
+    </resources>
 </document>

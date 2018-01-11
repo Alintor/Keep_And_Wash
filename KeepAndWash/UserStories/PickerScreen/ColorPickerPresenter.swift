@@ -1,5 +1,5 @@
 import UIKit
-protocol ColorPickerDelegate {
+protocol ColorPickerOutput {
     func setColor(_ hexColor:String)
 }
 
@@ -7,12 +7,13 @@ protocol ColorPickerDelegate {
 class ColorPickerPresenter: PickerPresenter {
     
     private weak var view:PickerView?
-    private var selectedColor:String?
-    private var delegate:ColorPickerDelegate?
+    private var output:ColorPickerOutput?
+    private var viewModels = [PickerViewModel]()
+    var router:PickerRouter?
     
-    init(delegate:ColorPickerDelegate?, initialColor:String?) {
-        self.delegate = delegate
-        selectedColor = initialColor
+    init(initialColor:String?, output:ColorPickerOutput?) {
+        self.output = output
+        viewModels = getViewModelsWith(intialColor: initialColor)
     }
     
     func getColors() -> [String] {
@@ -30,20 +31,21 @@ class ColorPickerPresenter: PickerPresenter {
     func attach(view: PickerView) {
         self.view = view
         view.setTitle(Constants.Labels.colorPickerTitle)
-        updateViewModels()
+        view.hideButton()
+        view.setViewModels(viewModels)
     }
     
-    func updateViewModels() {
+    func getViewModelsWith(intialColor:String?) -> [PickerViewModel] {
         var viewModels = [PickerViewModel]()
         let colors = getColors()
         for color in colors {
-            let isSelected = color == selectedColor
+            let isSelected = color == intialColor
             viewModels.append(PickerViewModel(title: nil,
                                               imageName: Constants.ImageNames.colorIcon,
                                               hexColor: color,
                                               isChoosen: isSelected))
         }
-        view?.setViewModels(viewModels)
+        return viewModels
         
     }
     
@@ -52,7 +54,8 @@ class ColorPickerPresenter: PickerPresenter {
     }
     
     func itemTapped(index: Int) {
-        delegate?.setColor(getColors()[index])
+        output?.setColor(viewModels[index].hexColor)
+        router?.closeModule()
     }
     
     

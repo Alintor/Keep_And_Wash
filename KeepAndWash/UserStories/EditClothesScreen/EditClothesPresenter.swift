@@ -89,7 +89,7 @@ class EditClothesPresenter {
         case .editNote:
             break
         case .editColor:
-            router?.openColorPicker(delegate: self)
+            router?.openColorPickerWith(intialColor: clothesColor, output: self)
         case .editIcons:
             break
         case .editPhoto:
@@ -106,7 +106,7 @@ class EditClothesPresenter {
     
 }
 
-extension EditClothesPresenter: ColorPickerDelegate {
+extension EditClothesPresenter: ColorPickerOutput {
     func setColor(_ hexColor: String) {
         clothesColor = hexColor
         updateViewModels()
