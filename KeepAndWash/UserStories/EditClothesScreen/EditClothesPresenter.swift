@@ -42,7 +42,11 @@ class EditClothesPresenter {
         
         var viewModels = [EditClothesViewModel]()
         
-        viewModels.append(EditClothesViewModel(type: .title, actionType: .editTitle, data: clothesTitle))
+        if let title = clothesTitle {
+            viewModels.append(EditClothesViewModel(type: .title, actionType: .editTitle, data: title))
+        } else {
+            viewModels.append(EditClothesViewModel(type: .button, actionType: .editTitle, data: Constants.ButtonTitles.addTitle))
+        }
         
         if let type = clothesType {
             viewModels.append(EditClothesViewModel(type: .type, actionType: .editType, data: type))
@@ -93,7 +97,7 @@ class EditClothesPresenter {
         case .editIcons:
             router?.openIconsPickerWith(initialIcons: clothesIcons, output: self)
         case .editPhoto:
-            break
+            router?.openPhotoPickerWith(initialPhotoPath: clothesPhotoPath, output: self)
         case .editType:
             router?.openClothesTypePickerWith(initialType: clothesType, output: self)
         }
@@ -125,6 +129,11 @@ extension EditClothesPresenter: ClothesTypePickerOutput {
         clothesType = type
         updateViewModels()
     }
-    
-    
+}
+
+extension EditClothesPresenter: PhotoPickerOutput {
+    func setPhotoPath(_ path: String?) {
+        clothesPhotoPath = path
+        updateViewModels()
+    }
 }

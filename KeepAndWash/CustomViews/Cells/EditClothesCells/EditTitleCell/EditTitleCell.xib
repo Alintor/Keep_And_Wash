@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,23 +20,23 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Ma-zM-Myr">
-                        <rect key="frame" x="16" y="6" width="288" height="31.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdv-fe-0DS">
+                        <rect key="frame" x="16" y="11" width="288" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="2Ma-zM-Myr" secondAttribute="trailing" constant="16" id="5Cp-Pd-uOo"/>
-                    <constraint firstAttribute="bottom" secondItem="2Ma-zM-Myr" secondAttribute="bottom" constant="6" id="mjB-gj-8hc"/>
-                    <constraint firstItem="2Ma-zM-Myr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="niO-S8-Zuq"/>
-                    <constraint firstItem="2Ma-zM-Myr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="yGb-j0-Z05"/>
+                    <constraint firstItem="Mdv-fe-0DS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="I02-af-k8l"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Mdv-fe-0DS" secondAttribute="bottom" id="XnI-K5-kRv"/>
+                    <constraint firstItem="Mdv-fe-0DS" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="a9Q-7g-jNk"/>
+                    <constraint firstItem="Mdv-fe-0DS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="cNY-3D-JUm"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="textField" destination="2Ma-zM-Myr" id="MWW-pT-ril"/>
+                <outlet property="titleLbl" destination="Mdv-fe-0DS" id="Wty-Mz-fS0"/>
             </connections>
         </tableViewCell>
     </objects>

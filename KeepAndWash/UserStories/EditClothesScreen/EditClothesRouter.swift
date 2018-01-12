@@ -37,4 +37,13 @@ class EditClothesRouter {
         pickerVC.output = presenter
         viewController?.present(pickerVC, animated: true, completion: nil)
     }
+    
+    func openPhotoPickerWith(initialPhotoPath:String?, output:PhotoPickerOutput) {
+        let pickerVC = PickerVC.storyboardInstance()
+        let router = PhotoPickerRouter(viewController: pickerVC)
+        let presenter = PhotoPickerPresenter(initialPhotoPath: initialPhotoPath, output: output)
+        presenter.router = router
+        pickerVC.output = presenter
+        viewController?.present(pickerVC, animated: true, completion: nil)
+    }
 }

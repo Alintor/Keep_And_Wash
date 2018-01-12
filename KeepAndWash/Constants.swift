@@ -18,6 +18,7 @@ struct Constants {
     }
     
     struct ButtonTitles {
+        static let addTitle = "Добавить название"
         static let chooseType = "Выбрать тип"
         static let chooseIcons = "Выбрать иконки"
         static let chooseColor = "Выбрать цвет"
@@ -32,11 +33,17 @@ struct Constants {
         static let iconsPickerTitle = "Выберите иконки"
         static let typePickerTitle = "Выберите тип вещи"
         static let photoPickerTitle = "Добавить фотографию"
+        static let cameraPickerCellTitle = "Сделать фото"
+        static let photoLibraryPickerCellTitle = "Галерея"
+        static let deletePickerCellTitle = "Удалить фото"
     }
     
     struct ImageNames {
         static let colorIcon = "icn_color"
         static let emptyColorIcon = "icn_empty_color"
+        static let cameraIcon = "icn_camera"
+        static let photoLibraryIcon = "icm_photo_library"
+        static let deleteIcon = "icn_delete"
     }
     
     struct Colors {

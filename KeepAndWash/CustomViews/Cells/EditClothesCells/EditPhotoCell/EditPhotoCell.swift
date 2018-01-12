@@ -8,7 +8,7 @@ class EditPhotoCell: UITableViewCell {
     var viewModel:EditClothesViewModel? {
         didSet {
             if let path = viewModel?.data as? String {
-                
+                photoImage.image = UIImage(contentsOfFile: path)
             }
         }
     }

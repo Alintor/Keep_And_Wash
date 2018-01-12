@@ -56,6 +56,9 @@
 		A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */; };
 		A89D6F912008A62F00844713 /* IconsPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */; };
 		A89D6F932008D34500844713 /* ClothesTypePickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F922008D34500844713 /* ClothesTypePickerPresenter.swift */; };
+		A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */; };
+		A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F962008EBD900844713 /* PhotoPickerPresenter.swift */; };
+		A89D6F992008EE6C00844713 /* PhotoPickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F982008EE6C00844713 /* PhotoPickerHelper.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
 		A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */; };
@@ -125,6 +128,9 @@
 		A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+reusable.swift"; sourceTree = "<group>"; };
 		A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsPickerPresenter.swift; sourceTree = "<group>"; };
 		A89D6F922008D34500844713 /* ClothesTypePickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesTypePickerPresenter.swift; sourceTree = "<group>"; };
+		A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerRouter.swift; sourceTree = "<group>"; };
+		A89D6F962008EBD900844713 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
+		A89D6F982008EE6C00844713 /* PhotoPickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHelper.swift; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -183,9 +189,8 @@
 				A8882CAC1FFD0E5C00F540C0 /* PickerViewProtocols.swift */,
 				A8882CB01FFD0EB500F540C0 /* PickerViewModel.swift */,
 				A8411E7E20076816000D3C5D /* PickerRouter.swift */,
-				A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */,
-				A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */,
-				A89D6F922008D34500844713 /* ClothesTypePickerPresenter.swift */,
+				A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */,
+				A89D6F9A20090A5D00844713 /* Presenters */,
 			);
 			path = PickerScreen;
 			sourceTree = "<group>";
@@ -274,13 +279,7 @@
 		A89A02C91FF7ED1600093266 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				A89A02CA1FF801B900093266 /* EditTitleCell */,
-				A89A02D11FF8024800093266 /* EditTypeCell */,
-				A89A02D61FF8068500093266 /* EditColorCell */,
-				A89A02DB1FF80B4900093266 /* EditIconsCell */,
-				A89A02E01FF80DDA00093266 /* EditNoteCell */,
-				A89A02E51FF8106F00093266 /* EditPhotoCell */,
-				A89A02EA1FF8114E00093266 /* EditButtonCell */,
+				A89D6F9B20090D2B00844713 /* EditClothesCells */,
 				A8882CB61FFD11FE00F540C0 /* PickerCell */,
 			);
 			path = Cells;
@@ -360,6 +359,32 @@
 				A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A89D6F9A20090A5D00844713 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */,
+				A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */,
+				A89D6F922008D34500844713 /* ClothesTypePickerPresenter.swift */,
+				A89D6F962008EBD900844713 /* PhotoPickerPresenter.swift */,
+				A89D6F982008EE6C00844713 /* PhotoPickerHelper.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		A89D6F9B20090D2B00844713 /* EditClothesCells */ = {
+			isa = PBXGroup;
+			children = (
+				A89A02CA1FF801B900093266 /* EditTitleCell */,
+				A89A02D11FF8024800093266 /* EditTypeCell */,
+				A89A02D61FF8068500093266 /* EditColorCell */,
+				A89A02DB1FF80B4900093266 /* EditIconsCell */,
+				A89A02E01FF80DDA00093266 /* EditNoteCell */,
+				A89A02E51FF8106F00093266 /* EditPhotoCell */,
+				A89A02EA1FF8114E00093266 /* EditButtonCell */,
+			);
+			path = EditClothesCells;
 			sourceTree = "<group>";
 		};
 		A8DD40421FF0D15C002AB6DB = {
@@ -594,6 +619,7 @@
 				A8DD40801FF3D157002AB6DB /* ClothesServiceImpl.swift in Sources */,
 				A8DD40621FF37F41002AB6DB /* RealmСlothes.swift in Sources */,
 				A89A02CF1FF8024100093266 /* EditTypeCell.swift in Sources */,
+				A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */,
 				A8882CAA1FFD06D400F540C0 /* PickerVC.swift in Sources */,
 				A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */,
 				A89A02D41FF804A900093266 /* EditColorCell.swift in Sources */,
@@ -601,6 +627,7 @@
 				A8882CB91FFD124C00F540C0 /* PickerCell.swift in Sources */,
 				A8DD406C1FF3909F002AB6DB /* LaundryIcon.swift in Sources */,
 				A8DD40641FF38A4D002AB6DB /* RealmLaundryIcon.swift in Sources */,
+				A89D6F992008EE6C00844713 /* PhotoPickerHelper.swift in Sources */,
 				A89A02AB1FF6273200093266 /* ClothesPresenter.swift in Sources */,
 				A8882CC41FFE184F00F540C0 /* EditClothesRouter.swift in Sources */,
 				A8DD406E1FF390CD002AB6DB /* ClothesType.swift in Sources */,
@@ -621,6 +648,7 @@
 				A89A02C31FF7D14200093266 /* EditClothesViewModel.swift in Sources */,
 				A89A02C01FF7B09800093266 /* EditClothesPresenter.swift in Sources */,
 				A89D6F912008A62F00844713 /* IconsPickerPresenter.swift in Sources */,
+				A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */,
 				A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */,
 				A89A02DE1FF80DD100093266 /* EditNoteCell.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,

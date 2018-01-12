@@ -31,7 +31,7 @@ class IconsPickerPresenter: PickerViewOutput {
             state.append(IconsPickerState(icon: icon,
                                           viewModel: PickerViewModel(title: nil,
                                                                      imageName: icon.imageName,
-                                                                     hexColor: "",
+                                                                     hexColor: Constants.Colors.mainColor.hex,
                                                                      isChoosen: isChoosen)))
         }
         return state
