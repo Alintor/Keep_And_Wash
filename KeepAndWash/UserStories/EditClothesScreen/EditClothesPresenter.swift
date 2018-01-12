@@ -111,6 +111,13 @@ extension EditClothesPresenter: ColorPickerOutput {
         clothesColor = hexColor
         updateViewModels()
     }
+}
+
+extension EditClothesPresenter: IconsPickerOutput {
+    func setIcons(_ icons: [LaundryIcon]) {
+        clothesIcons = icons
+        updateViewModels()
+    }
     
     
 }

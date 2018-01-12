@@ -8,11 +8,22 @@ class EditClothesRouter {
     }
     
     func openColorPickerWith(intialColor:String?, output:ColorPickerOutput) {
-        let colorPicker = PickerVC.storyboardInstance()
-        let router = PickerRouter(viewController: colorPicker)
+        let pickerVC = PickerVC.storyboardInstance()
+        let router = PickerRouter(viewController: pickerVC)
         let presenter = ColorPickerPresenter(initialColor: intialColor, output: output)
         presenter.router = router
-        colorPicker.presenter = presenter
-        viewController?.present(colorPicker, animated: true, completion: nil)
+        pickerVC.presenter = presenter
+        viewController?.present(pickerVC, animated: true, completion: nil)
+    }
+    
+    func openIconsPickerWith(initialIcons:[LaundryIcon]?, output:IconsPickerOutput) {
+        let pickerVC = PickerVC.storyboardInstance()
+        let router = PickerRouter(viewController: pickerVC)
+        let presenter = IconsPickerPresenter(service: LaundryIconServiceImpl(),
+                                             intitialIcons: initialIcons,
+                                             output: output)
+        presenter.router = router
+        pickerVC.presenter = presenter
+        viewController?.present(pickerVC, animated: true, completion: nil)
     }
 }

@@ -28,6 +28,9 @@ struct Constants {
         static let colorTitle = "Цвет"
         static let iconsTitle = "Иконки"
         static let colorPickerTitle = "Выберите цвет"
+        static let iconsPickerTitle = "Выберите иконки"
+        static let categoryPickerTitle = "Выберите тип вещи"
+        static let photoPickerTitle = "Добавить фотографию"
     }
     
     struct ImageNames {

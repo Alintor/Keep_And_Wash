@@ -54,6 +54,7 @@
 		A89A02E91FF8114600093266 /* EditButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A89A02E71FF8114600093266 /* EditButtonCell.xib */; };
 		A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */; };
 		A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */; };
+		A89D6F912008A62F00844713 /* IconsPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
 		A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */; };
@@ -121,6 +122,7 @@
 		A89A02E71FF8114600093266 /* EditButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditButtonCell.xib; sourceTree = "<group>"; };
 		A89A02EB1FF8FC4900093266 /* UITableViewCell+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+reusable.swift"; sourceTree = "<group>"; };
 		A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+reusable.swift"; sourceTree = "<group>"; };
+		A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsPickerPresenter.swift; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				A8882CB01FFD0EB500F540C0 /* PickerViewModel.swift */,
 				A8411E7E20076816000D3C5D /* PickerRouter.swift */,
 				A8882CC11FFD228A00F540C0 /* ColorPickerPresenter.swift */,
+				A89D6F902008A62F00844713 /* IconsPickerPresenter.swift */,
 			);
 			path = PickerScreen;
 			sourceTree = "<group>";
@@ -613,6 +616,7 @@
 				A89A02D91FF80B4300093266 /* EditIconsCell.swift in Sources */,
 				A89A02C31FF7D14200093266 /* EditClothesViewModel.swift in Sources */,
 				A89A02C01FF7B09800093266 /* EditClothesPresenter.swift in Sources */,
+				A89D6F912008A62F00844713 /* IconsPickerPresenter.swift in Sources */,
 				A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */,
 				A89A02DE1FF80DD100093266 /* EditNoteCell.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
