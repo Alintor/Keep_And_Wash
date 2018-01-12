@@ -10,76 +10,23 @@ protocol EditClothesView: NSObjectProtocol {
 
 class EditClothesPresenter {
     
-    private var clothesId:String?
-    private var clothesTitle:String?
-    private var clothesColor:String?
-    private var clothesPhotoPath:String?
-    private var clothesNote:String?
-    private var clothesType:ClothesType?
-    private var clothesIcons = [LaundryIcon]()
-    
+    private let state: EditClothesState
     let clothesService: ClothesService
+    let builder:EditClothesVMBuilder
     private weak var view: EditClothesView?
     private var router: EditClothesRouter?
     
     init(service:ClothesService = ClothesServiceImpl(), data:Clothes?, view:EditClothesView) {
         clothesService = service
         self.view = view
-        
-        if let data = data {
-            clothesId = data.id
-            clothesTitle = data.title
-            clothesColor = data.color
-            clothesPhotoPath = data.photoPath
-            clothesNote = data.note
-            clothesType = data.type
-            clothesIcons = data.laundryIcons
-        }
+        state = EditClothesState(clothes: data)
+        builder = EditClothesVMBuilder(state: state)
         updateViewModels()
     }
     
     private func updateViewModels() {
         
-        var viewModels = [EditClothesViewModel]()
-        
-        if let title = clothesTitle {
-            viewModels.append(EditClothesViewModel(type: .title, actionType: .editTitle, data: title))
-        } else {
-            viewModels.append(EditClothesViewModel(type: .button, actionType: .editTitle, data: Constants.ButtonTitles.addTitle))
-        }
-        
-        if let type = clothesType {
-            viewModels.append(EditClothesViewModel(type: .type, actionType: .editType, data: type))
-        } else {
-            viewModels.append(EditClothesViewModel(type: .button, actionType: .editType, data: Constants.ButtonTitles.chooseType))
-        }
-        
-        if let color = clothesColor {
-            viewModels.append(EditClothesViewModel(type: .color, actionType: .editColor, data: color))
-        } else {
-             viewModels.append(EditClothesViewModel(type: .button, actionType: .editColor, data: Constants.ButtonTitles.chooseColor))
-        }
-        
-        
-        if clothesIcons.count != 0 {
-            viewModels.append(EditClothesViewModel(type: .icons, actionType: .editIcons, data: clothesIcons))
-        } else {
-            viewModels.append(EditClothesViewModel(type: .button, actionType: .editIcons, data: Constants.ButtonTitles.chooseIcons))
-        }
-        
-        if let path = clothesPhotoPath {
-            viewModels.append(EditClothesViewModel(type: .photo, actionType: .editPhoto, data: path))
-        } else {
-            viewModels.append(EditClothesViewModel(type: .button, actionType: .editPhoto, data: Constants.ButtonTitles.addPhoto))
-        }
-        
-        if let note = clothesNote {
-            viewModels.append(EditClothesViewModel(type: .note, actionType: .editNote, data: note))
-        } else {
-            viewModels.append(EditClothesViewModel(type: .button, actionType: .editNote, data: Constants.ButtonTitles.addNote))
-        }
-        
-        self.view?.setViewModels(viewModels)
+        self.view?.setViewModels(builder.buildViewModels())
     }
     
     func setRouter(_ router:EditClothesRouter) {
@@ -93,13 +40,13 @@ class EditClothesPresenter {
         case .editNote:
             break
         case .editColor:
-            router?.openColorPickerWith(intialColor: clothesColor, output: self)
+            router?.openColorPickerWith(intialColor: state.color, output: self)
         case .editIcons:
-            router?.openIconsPickerWith(initialIcons: clothesIcons, output: self)
+            router?.openIconsPickerWith(initialIcons: state.icons, output: self)
         case .editPhoto:
-            router?.openPhotoPickerWith(initialPhotoPath: clothesPhotoPath, output: self)
+            router?.openPhotoPickerWith(initialPhotoPath: state.photoPath, output: self)
         case .editType:
-            router?.openClothesTypePickerWith(initialType: clothesType, output: self)
+            router?.openClothesTypePickerWith(initialType: state.type, output: self)
         }
     }
     
@@ -107,33 +54,32 @@ class EditClothesPresenter {
         
     }
     
-    
 }
 
 extension EditClothesPresenter: ColorPickerOutput {
     func setColor(_ hexColor: String) {
-        clothesColor = hexColor
+        state.color = hexColor
         updateViewModels()
     }
 }
 
 extension EditClothesPresenter: IconsPickerOutput {
     func setIcons(_ icons: [LaundryIcon]) {
-        clothesIcons = icons
+        state.icons = icons
         updateViewModels()
     }
 }
 
 extension EditClothesPresenter: ClothesTypePickerOutput {
     func setType(_ type: ClothesType) {
-        clothesType = type
+        state.type = type
         updateViewModels()
     }
 }
 
 extension EditClothesPresenter: PhotoPickerOutput {
     func setPhotoPath(_ path: String?) {
-        clothesPhotoPath = path
+        state.photoPath = path
         updateViewModels()
     }
 }

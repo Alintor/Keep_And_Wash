@@ -59,6 +59,8 @@
 		A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */; };
 		A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F962008EBD900844713 /* PhotoPickerPresenter.swift */; };
 		A89D6F992008EE6C00844713 /* PhotoPickerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A89D6F982008EE6C00844713 /* PhotoPickerHelper.swift */; };
+		A8D9E5CB20091130001F1BE6 /* EditCLothesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9E5CA20091130001F1BE6 /* EditCLothesState.swift */; };
+		A8D9E5CD200911A2001F1BE6 /* EditClothesVMBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D9E5CC200911A2001F1BE6 /* EditClothesVMBuilder.swift */; };
 		A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */; };
 		A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40551FF0D15D002AB6DB /* Assets.xcassets */; };
 		A8DD40591FF0D15D002AB6DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */; };
@@ -131,6 +133,8 @@
 		A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerRouter.swift; sourceTree = "<group>"; };
 		A89D6F962008EBD900844713 /* PhotoPickerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerPresenter.swift; sourceTree = "<group>"; };
 		A89D6F982008EE6C00844713 /* PhotoPickerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerHelper.swift; sourceTree = "<group>"; };
+		A8D9E5CA20091130001F1BE6 /* EditCLothesState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditCLothesState.swift; sourceTree = "<group>"; };
+		A8D9E5CC200911A2001F1BE6 /* EditClothesVMBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditClothesVMBuilder.swift; sourceTree = "<group>"; };
 		A8DD404B1FF0D15C002AB6DB /* KeepAndWash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeepAndWash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8DD40551FF0D15D002AB6DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */,
 				A89A02BD1FF7B01B00093266 /* EditClothesVC.swift */,
 				A89A02BF1FF7B09800093266 /* EditClothesPresenter.swift */,
+				A8D9E5CA20091130001F1BE6 /* EditCLothesState.swift */,
+				A8D9E5CC200911A2001F1BE6 /* EditClothesVMBuilder.swift */,
 				A89A02C21FF7D14200093266 /* EditClothesViewModel.swift */,
 				A8882CC31FFE184F00F540C0 /* EditClothesRouter.swift */,
 			);
@@ -607,6 +613,7 @@
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
 				A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */,
 				A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */,
+				A8D9E5CB20091130001F1BE6 /* EditCLothesState.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
@@ -617,6 +624,7 @@
 				A8882CBC1FFD1DEA00F540C0 /* UICollectionViewCell+reusable.swift in Sources */,
 				A8882CAD1FFD0E5C00F540C0 /* PickerViewProtocols.swift in Sources */,
 				A8DD40801FF3D157002AB6DB /* ClothesServiceImpl.swift in Sources */,
+				A8D9E5CD200911A2001F1BE6 /* EditClothesVMBuilder.swift in Sources */,
 				A8DD40621FF37F41002AB6DB /* RealmСlothes.swift in Sources */,
 				A89A02CF1FF8024100093266 /* EditTypeCell.swift in Sources */,
 				A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */,
