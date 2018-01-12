@@ -1,4 +1,5 @@
 
+import UIKit
 struct Constants {
     struct Storage {
         static let storageVersion = "0.1"
@@ -29,12 +30,16 @@ struct Constants {
         static let iconsTitle = "Иконки"
         static let colorPickerTitle = "Выберите цвет"
         static let iconsPickerTitle = "Выберите иконки"
-        static let categoryPickerTitle = "Выберите тип вещи"
+        static let typePickerTitle = "Выберите тип вещи"
         static let photoPickerTitle = "Добавить фотографию"
     }
     
     struct ImageNames {
         static let colorIcon = "icn_color"
         static let emptyColorIcon = "icn_empty_color"
+    }
+    
+    struct Colors {
+        static let mainColor = UIColor.black
     }
 }

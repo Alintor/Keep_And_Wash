@@ -91,11 +91,11 @@ class EditClothesPresenter {
         case .editColor:
             router?.openColorPickerWith(intialColor: clothesColor, output: self)
         case .editIcons:
-            break
+            router?.openIconsPickerWith(initialIcons: clothesIcons, output: self)
         case .editPhoto:
             break
         case .editType:
-            break
+            router?.openClothesTypePickerWith(initialType: clothesType, output: self)
         }
     }
     
@@ -116,6 +116,13 @@ extension EditClothesPresenter: ColorPickerOutput {
 extension EditClothesPresenter: IconsPickerOutput {
     func setIcons(_ icons: [LaundryIcon]) {
         clothesIcons = icons
+        updateViewModels()
+    }
+}
+
+extension EditClothesPresenter: ClothesTypePickerOutput {
+    func setType(_ type: ClothesType) {
+        clothesType = type
         updateViewModels()
     }
     

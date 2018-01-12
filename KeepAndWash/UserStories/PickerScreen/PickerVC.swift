@@ -8,7 +8,7 @@ class PickerVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLbl: UILabel!
     
-    var presenter:PickerPresenter?
+    var output:PickerViewOutput?
     var viewModels = [PickerViewModel]() {
         didSet {
             collectionView.reloadData()
@@ -19,7 +19,7 @@ class PickerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.registerReusableCell(PickerCell.self)
-        presenter?.attach(view: self)
+        output?.attach(view: self)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -29,7 +29,7 @@ class PickerVC: UIViewController {
 
 }
 
-extension PickerVC: PickerView {
+extension PickerVC: PickerViewInput {
     func setViewModels(_ viewModels: [PickerViewModel]) {
         self.viewModels = viewModels
     }
@@ -60,6 +60,6 @@ extension PickerVC: UICollectionViewDataSource {
 
 extension PickerVC: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        presenter?.itemTapped(index: indexPath.row)
+        output?.itemTapped(index: indexPath.row)
     }
 }

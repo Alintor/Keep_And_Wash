@@ -12,7 +12,7 @@ class EditClothesRouter {
         let router = PickerRouter(viewController: pickerVC)
         let presenter = ColorPickerPresenter(initialColor: intialColor, output: output)
         presenter.router = router
-        pickerVC.presenter = presenter
+        pickerVC.output = presenter
         viewController?.present(pickerVC, animated: true, completion: nil)
     }
     
@@ -23,7 +23,18 @@ class EditClothesRouter {
                                              intitialIcons: initialIcons,
                                              output: output)
         presenter.router = router
-        pickerVC.presenter = presenter
+        pickerVC.output = presenter
+        viewController?.present(pickerVC, animated: true, completion: nil)
+    }
+    
+    func openClothesTypePickerWith(initialType:ClothesType?, output:ClothesTypePickerOutput) {
+        let pickerVC = PickerVC.storyboardInstance()
+        let router = PickerRouter(viewController: pickerVC)
+        let presenter = ClothesTypePickerPresenter(service: ClothesServiceImpl(),
+                                                   initialType: initialType,
+                                                   output: output)
+        presenter.router = router
+        pickerVC.output = presenter
         viewController?.present(pickerVC, animated: true, completion: nil)
     }
 }

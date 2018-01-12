@@ -1,29 +1,34 @@
 
 class ClothesServiceImpl: ClothesService {
-    let storage = RealmStorage<RealmClothes>()
+    let clothesStorage = RealmStorage<RealmClothes>()
+    let clothesTypeStorage = RealmStorage<RealmClothesType>()
+    
+    func getClothesTypes() -> [ClothesType] {
+        return clothesTypeStorage.getAll()
+    }
     
     func getAllClothes() -> [Clothes] {
-        return storage.getAll()
+        return clothesStorage.getAll()
     }
     
     func getDirtyClothes() -> [Clothes] {
-        return storage.getWith(key: "isDirty", value: true)
+        return clothesStorage.getWith(key: "isDirty", value: true)
     }
     
     func getClothesBy(id: String) -> Clothes? {
-        return storage.getBy(id: id)
+        return clothesStorage.getBy(id: id)
     }
     
     func add(clothes: Clothes) {
-        storage.insert(item: clothes)
+        clothesStorage.insert(item: clothes)
     }
     
     func edit(clothes: Clothes) {
-        storage.update(item: clothes)
+        clothesStorage.update(item: clothes)
     }
     
     func deleteClothesBy(id: String) {
-        storage.deleteBy(id: id)
+        clothesStorage.deleteBy(id: id)
     }
     
 }

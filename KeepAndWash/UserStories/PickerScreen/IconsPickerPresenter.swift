@@ -1,9 +1,9 @@
 
-protocol IconsPickerOutput {
+protocol IconsPickerOutput: class {
     func setIcons(_ icons:[LaundryIcon])
 }
 
-class IconsPickerPresenter: PickerPresenter {
+class IconsPickerPresenter: PickerViewOutput {
     
     struct IconsPickerState {
         let icon: LaundryIcon
@@ -11,18 +11,18 @@ class IconsPickerPresenter: PickerPresenter {
     }
     
     let service:LaundryIconService
-    weak var view:PickerView?
+    private weak var view:PickerViewInput?
+    private weak var output:IconsPickerOutput?
+    private var state = [IconsPickerState]()
     var router:PickerRouter?
-    var output:IconsPickerOutput?
-    var state = [IconsPickerState]()
     
     init(service:LaundryIconService, intitialIcons:[LaundryIcon]?, output:IconsPickerOutput?) {
         self.service = service
         self.output = output
-        state = getState(intitialIcons: intitialIcons)
+        state = getStateWith(intitialIcons: intitialIcons)
     }
     
-    func getState(intitialIcons:[LaundryIcon]?) -> [IconsPickerState] {
+    private func getStateWith(intitialIcons:[LaundryIcon]?) -> [IconsPickerState] {
         var state = [IconsPickerState]()
         let icons = service.getAllIcons()
         
@@ -34,12 +34,10 @@ class IconsPickerPresenter: PickerPresenter {
                                                                      hexColor: "",
                                                                      isChoosen: isChoosen)))
         }
-        
         return state
-        
     }
     
-    func attach(view: PickerView) {
+    func attach(view: PickerViewInput) {
         self.view = view
         view.setTitle(Constants.Labels.iconsPickerTitle)
         view.setViewModels(state.map({ $0.viewModel }))

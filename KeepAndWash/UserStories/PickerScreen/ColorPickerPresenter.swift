@@ -1,19 +1,19 @@
 import UIKit
-protocol ColorPickerOutput {
+protocol ColorPickerOutput: class {
     func setColor(_ hexColor:String)
 }
 
 
-class ColorPickerPresenter: PickerPresenter {
+class ColorPickerPresenter: PickerViewOutput {
     
-    private weak var view:PickerView?
-    private var output:ColorPickerOutput?
+    private weak var view:PickerViewInput?
+    private weak var output:ColorPickerOutput?
     private var viewModels = [PickerViewModel]()
     var router:PickerRouter?
     
     init(initialColor:String?, output:ColorPickerOutput?) {
         self.output = output
-        viewModels = getViewModelsWith(intialColor: initialColor)
+        viewModels = getViewModelsWith(initialColor: initialColor)
     }
     
     func getColors() -> [String] {
@@ -28,28 +28,24 @@ class ColorPickerPresenter: PickerPresenter {
                 UIColor.purple.hex]
     }
     
-    func attach(view: PickerView) {
+    func attach(view: PickerViewInput) {
         self.view = view
         view.setTitle(Constants.Labels.colorPickerTitle)
         view.hideButton()
         view.setViewModels(viewModels)
     }
     
-    func getViewModelsWith(intialColor:String?) -> [PickerViewModel] {
+    func getViewModelsWith(initialColor:String?) -> [PickerViewModel] {
         var viewModels = [PickerViewModel]()
         let colors = getColors()
         for color in colors {
-            let isSelected = color == intialColor
+            let isSelected = color == initialColor
             viewModels.append(PickerViewModel(title: nil,
                                               imageName: Constants.ImageNames.colorIcon,
                                               hexColor: color,
                                               isChoosen: isSelected))
         }
         return viewModels
-        
-    }
-    
-    func buttonTapped() {
         
     }
     

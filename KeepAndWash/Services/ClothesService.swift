@@ -1,5 +1,6 @@
 
 protocol ClothesService {
+    func getClothesTypes() -> [ClothesType]
     func getAllClothes() -> [Clothes]
     func getDirtyClothes() -> [Clothes]
     func getClothesBy(id:String) -> Clothes?
