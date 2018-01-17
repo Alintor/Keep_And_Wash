@@ -185,7 +185,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A8882CAB1FFD06DE00F540C0 /* PickerScreen */ = {
+		A8882CAB1FFD06DE00F540C0 /* PickerModule */ = {
 			isa = PBXGroup;
 			children = (
 				A8882CAE1FFD0E9900F540C0 /* PickerVC.storyboard */,
@@ -196,7 +196,7 @@
 				A89D6F942008E8F000844713 /* PhotoPickerRouter.swift */,
 				A89D6F9A20090A5D00844713 /* Presenters */,
 			);
-			path = PickerScreen;
+			path = PickerModule;
 			sourceTree = "<group>";
 		};
 		A8882CB61FFD11FE00F540C0 /* PickerCell */ = {
@@ -219,35 +219,35 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		A89A02A91FF6270800093266 /* UserStories */ = {
+		A89A02A91FF6270800093266 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				A89A02B01FF67B6400093266 /* ClothesScreen */,
-				A89A02B11FF67BAC00093266 /* LaundryIconsScreen */,
-				A89A02C11FF7B0B900093266 /* EditClothesScreen */,
-				A8882CAB1FFD06DE00F540C0 /* PickerScreen */,
+				A89A02B01FF67B6400093266 /* ClothesModule */,
+				A89A02B11FF67BAC00093266 /* LaundryIconsModule */,
+				A89A02C11FF7B0B900093266 /* EditClothesModule */,
+				A8882CAB1FFD06DE00F540C0 /* PickerModule */,
 			);
-			path = UserStories;
+			path = Presentation;
 			sourceTree = "<group>";
 		};
-		A89A02B01FF67B6400093266 /* ClothesScreen */ = {
+		A89A02B01FF67B6400093266 /* ClothesModule */ = {
 			isa = PBXGroup;
 			children = (
 				A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */,
 				A89A02A71FF626FB00093266 /* ClothesVC.swift */,
 				A89A02AA1FF6273200093266 /* ClothesPresenter.swift */,
 			);
-			path = ClothesScreen;
+			path = ClothesModule;
 			sourceTree = "<group>";
 		};
-		A89A02B11FF67BAC00093266 /* LaundryIconsScreen */ = {
+		A89A02B11FF67BAC00093266 /* LaundryIconsModule */ = {
 			isa = PBXGroup;
 			children = (
 				A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */,
 				A89A02AC1FF67A9E00093266 /* LaundryIconsVC.swift */,
 				A89A02AE1FF67AC000093266 /* LaundryIconsPresenter.swift */,
 			);
-			path = LaundryIconsScreen;
+			path = LaundryIconsModule;
 			sourceTree = "<group>";
 		};
 		A89A02B81FF6A56300093266 /* Resources */ = {
@@ -260,7 +260,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		A89A02C11FF7B0B900093266 /* EditClothesScreen */ = {
+		A89A02C11FF7B0B900093266 /* EditClothesModule */ = {
 			isa = PBXGroup;
 			children = (
 				A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */,
@@ -271,7 +271,7 @@
 				A89A02C21FF7D14200093266 /* EditClothesViewModel.swift */,
 				A8882CC31FFE184F00F540C0 /* EditClothesRouter.swift */,
 			);
-			path = EditClothesScreen;
+			path = EditClothesModule;
 			sourceTree = "<group>";
 		};
 		A89A02C81FF7ED0400093266 /* CustomViews */ = {
@@ -419,7 +419,7 @@
 				A89A02BB1FF6A6AB00093266 /* Constants.swift */,
 				A89A02EF1FF8FC7400093266 /* Extensions */,
 				A89A02C81FF7ED0400093266 /* CustomViews */,
-				A89A02A91FF6270800093266 /* UserStories */,
+				A89A02A91FF6270800093266 /* Presentation */,
 				A89A02A61FF4FB6C00093266 /* Services */,
 				A8DD40601FF377DC002AB6DB /* Models */,
 				A8DD40551FF0D15D002AB6DB /* Assets.xcassets */,
