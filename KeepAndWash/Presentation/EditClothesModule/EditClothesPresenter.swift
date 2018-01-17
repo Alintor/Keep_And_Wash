@@ -36,9 +36,15 @@ class EditClothesPresenter {
     func viewModelAction(actionType:EditClothesVMActionsType) {
         switch actionType {
         case .editTitle:
-            break
+            router?.openTextInputWith(placeholder: Constants.Placeholders.enterTitle, initialText: state.title, callback: { [unowned self](text) in
+                self.state.title = text
+                self.updateViewModels()
+            })
         case .editNote:
-            break
+            router?.openTextInputWith(placeholder: Constants.Placeholders.enterNote, initialText: state.note, callback: { [unowned self](text) in
+                self.state.note = text
+                self.updateViewModels()
+            })
         case .editColor:
             router?.openColorPickerWith(intialColor: state.color, output: self)
         case .editIcons:

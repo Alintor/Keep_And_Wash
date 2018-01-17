@@ -46,4 +46,13 @@ class EditClothesRouter {
         pickerVC.output = presenter
         viewController?.present(pickerVC, animated: true, completion: nil)
     }
+    
+    func openTextInputWith(placeholder:String, initialText:String?, callback:@escaping (_ text:String)->()) {
+        let textInputVC = TextInputVC.storyboardInstance()
+        let router = TextInputRouter(viewController: textInputVC)
+        let presenter = TextInputPresenter(placeholder: placeholder, initialText: initialText, callback: callback)
+        presenter.router = router
+        textInputVC.output = presenter
+        viewController?.present(textInputVC, animated: true, completion: nil)
+    }
 }
