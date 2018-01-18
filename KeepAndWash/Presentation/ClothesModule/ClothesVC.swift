@@ -6,7 +6,7 @@ class ClothesVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var presenter: ClothesPresenter?
+    var output: ClothesViewOutput?
     var clothes = [Clothes]() {
         didSet {
             tableView.reloadData()
@@ -15,23 +15,23 @@ class ClothesVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        presenter = ClothesPresenter(view: self)
+        
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Icons", style: .plain, target: self, action: #selector(showIconsTapped))
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClothesTapped))
+        
+        output?.attachView(self)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @objc func showIconsTapped(_ sender: Any) {
+        output?.showIcons()
     }
-    */
-
+    
+    @objc func addClothesTapped(_ sender: Any) {
+        output?.addNewClothes()
+    }
 }
 
-extension ClothesVC: ClothesView {
+extension ClothesVC: ClothesViewInput {
     func setClothes(_ clothes: [Clothes]) {
         tableView.isHidden = false
         self.clothes = clothes
@@ -51,5 +51,12 @@ extension ClothesVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = item.title
         return cell
+    }
+}
+
+extension ClothesVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = clothes[indexPath.row]
+        output?.editClothes(item)
     }
 }

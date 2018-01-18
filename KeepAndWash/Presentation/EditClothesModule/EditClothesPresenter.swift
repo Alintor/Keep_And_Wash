@@ -1,27 +1,27 @@
 
-import Foundation
-
-protocol EditClothesView: NSObjectProtocol {
+protocol EditClothesViewInput: class {
     func setViewModels(_ viewModels:[EditClothesViewModel])
     func showAlertWith(text:String)
-    //func openTextWriterWith(placeholder:String, callback:@escaping (_ text:String)->())
-    
 }
 
-class EditClothesPresenter {
+protocol EditClothesViewOutput {
+    func attachView(_ view:EditClothesViewInput )
+    func viewModelAction(actionType:EditClothesVMActionsType)
+    func saveChanges()
+}
+
+class EditClothesPresenter: EditClothesViewOutput {
     
     private let state: EditClothesState
     let clothesService: ClothesService
     let builder:EditClothesVMBuilder
-    private weak var view: EditClothesView?
-    private var router: EditClothesRouter?
+    private weak var view: EditClothesViewInput?
+    var router: EditClothesRouter?
     
-    init(service:ClothesService = ClothesServiceImpl(), data:Clothes?, view:EditClothesView) {
+    init(service:ClothesService, clothes:Clothes?) {
         clothesService = service
-        self.view = view
-        state = EditClothesState(clothes: data)
+        state = EditClothesState(clothes: clothes)
         builder = EditClothesVMBuilder(state: state)
-        updateViewModels()
     }
     
     private func updateViewModels() {
@@ -29,8 +29,9 @@ class EditClothesPresenter {
         self.view?.setViewModels(builder.buildViewModels())
     }
     
-    func setRouter(_ router:EditClothesRouter) {
-        self.router = router
+    func attachView(_ view:EditClothesViewInput ) {
+        self.view = view
+        updateViewModels()
     }
     
     func viewModelAction(actionType:EditClothesVMActionsType) {

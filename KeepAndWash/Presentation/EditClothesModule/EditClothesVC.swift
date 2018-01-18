@@ -6,7 +6,7 @@ class EditClothesVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var data:Clothes?
-    var presenter:EditClothesPresenter?
+    var output:EditClothesViewOutput?
     var viewModels = [EditClothesViewModel]() {
         didSet {
             tableView.reloadData()
@@ -17,8 +17,7 @@ class EditClothesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        presenter = EditClothesPresenter(data: data, view: self)
-        presenter?.setRouter(EditClothesRouter(viewController: self))
+        output?.attachView(self)
         
         tableView.registerReusableCell(EditTitleCell.self)
         tableView.registerReusableCell(EditNoteCell.self)
@@ -28,19 +27,9 @@ class EditClothesVC: UIViewController {
         tableView.registerReusableCell(EditPhotoCell.self)
         tableView.registerReusableCell(EditButtonCell.self)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
-extension EditClothesVC: EditClothesView {
+extension EditClothesVC: EditClothesViewInput {
     func setViewModels(_ viewModels: [EditClothesViewModel]) {
         self.viewModels = viewModels
     }
@@ -102,6 +91,6 @@ extension EditClothesVC: UITableViewDataSource {
 
 extension EditClothesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter?.viewModelAction(actionType: viewModels[indexPath.row].actionType)
+        output?.viewModelAction(actionType: viewModels[indexPath.row].actionType)
     }
 }
