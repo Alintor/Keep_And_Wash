@@ -13,6 +13,8 @@
 		A841D654200F58E900CD79D5 /* TextInputVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A841D653200F58E900CD79D5 /* TextInputVC.storyboard */; };
 		A841D656200F678500CD79D5 /* TextInputPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D655200F678500CD79D5 /* TextInputPresenter.swift */; };
 		A841D658200F679300CD79D5 /* TextInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D657200F679300CD79D5 /* TextInputRouter.swift */; };
+		A841D65A2010B41A00CD79D5 /* HexColorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6592010B41A00CD79D5 /* HexColorService.swift */; };
+		A841D65C2010B4BC00CD79D5 /* HexColorServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D65B2010B4BC00CD79D5 /* HexColorServiceImpl.swift */; };
 		A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */; };
 		A8882CA41FFCF81300F540C0 /* LaundryIconsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */; };
 		A8882CA61FFD00CD00F540C0 /* EditClothesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */; };
@@ -91,6 +93,8 @@
 		A841D653200F58E900CD79D5 /* TextInputVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInputVC.storyboard; sourceTree = "<group>"; };
 		A841D655200F678500CD79D5 /* TextInputPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputPresenter.swift; sourceTree = "<group>"; };
 		A841D657200F679300CD79D5 /* TextInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputRouter.swift; sourceTree = "<group>"; };
+		A841D6592010B41A00CD79D5 /* HexColorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorService.swift; sourceTree = "<group>"; };
+		A841D65B2010B4BC00CD79D5 /* HexColorServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexColorServiceImpl.swift; sourceTree = "<group>"; };
 		A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
 		A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaundryIconsVC.storyboard; sourceTree = "<group>"; };
 		A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditClothesVC.storyboard; sourceTree = "<group>"; };
@@ -232,8 +236,10 @@
 			children = (
 				A8DD40791FF3CF8F002AB6DB /* LaundryIconService.swift */,
 				A8DD407B1FF3CFA2002AB6DB /* ClothesService.swift */,
+				A841D6592010B41A00CD79D5 /* HexColorService.swift */,
 				A8DD407D1FF3D147002AB6DB /* LaundryIconServiceImpl.swift */,
 				A8DD407F1FF3D157002AB6DB /* ClothesServiceImpl.swift */,
+				A841D65B2010B4BC00CD79D5 /* HexColorServiceImpl.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -635,6 +641,7 @@
 				A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */,
 				A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */,
 				A8D9E5CB20091130001F1BE6 /* EditCLothesState.swift in Sources */,
+				A841D65C2010B4BC00CD79D5 /* HexColorServiceImpl.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
@@ -683,6 +690,7 @@
 				A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */,
 				A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */,
 				A89A02DE1FF80DD100093266 /* EditNoteCell.swift in Sources */,
+				A841D65A2010B41A00CD79D5 /* HexColorService.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
 				A89A02BA1FF6A5BB00093266 /* RealmStorageUpdater.swift in Sources */,
 			);

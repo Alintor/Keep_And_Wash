@@ -10,7 +10,7 @@ class EditClothesRouter {
     func openColorPickerWith(intialColor:String?, output:ColorPickerOutput) {
         let pickerVC = PickerVC.storyboardInstance()
         let router = PickerRouter(viewController: pickerVC)
-        let presenter = ColorPickerPresenter(initialColor: intialColor, output: output)
+        let presenter = ColorPickerPresenter(initialColor: intialColor, service: HexColorServiceImpl(), output: output)
         presenter.router = router
         pickerVC.output = presenter
         viewController?.present(pickerVC, animated: true, completion: nil)

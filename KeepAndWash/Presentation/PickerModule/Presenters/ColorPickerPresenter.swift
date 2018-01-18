@@ -8,24 +8,14 @@ class ColorPickerPresenter: PickerViewOutput {
     
     private weak var view:PickerViewInput?
     private weak var output:ColorPickerOutput?
+    private var service:HexColorService
     private var viewModels = [PickerViewModel]()
     var router:PickerRouter?
     
-    init(initialColor:String?, output:ColorPickerOutput?) {
+    init(initialColor:String?, service:HexColorService, output:ColorPickerOutput?) {
         self.output = output
+        self.service = service
         viewModels = getViewModelsWith(initialColor: initialColor)
-    }
-    
-    func getColors() -> [String] {
-        return [UIColor.black.hex,
-                UIColor.brown.hex,
-                UIColor.red.hex,
-                UIColor.blue.hex,
-                UIColor.green.hex,
-                UIColor.orange.hex,
-                UIColor.yellow.hex,
-                UIColor.darkGray.hex,
-                UIColor.purple.hex]
     }
     
     func attach(view: PickerViewInput) {
@@ -37,7 +27,7 @@ class ColorPickerPresenter: PickerViewOutput {
     
     func getViewModelsWith(initialColor:String?) -> [PickerViewModel] {
         var viewModels = [PickerViewModel]()
-        let colors = getColors()
+        let colors = service.getMainHexColors()
         for color in colors {
             let isSelected = color == initialColor
             viewModels.append(PickerViewModel(title: nil,
