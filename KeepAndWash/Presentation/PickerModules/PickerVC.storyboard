@@ -47,6 +47,26 @@
                                             <outlet property="delegate" destination="ILo-WK-Lyg" id="JWu-Np-J7L"/>
                                         </connections>
                                     </collectionView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L50-Ai-s0o">
+                                        <rect key="frame" x="0.0" y="289" width="375" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ads-HW-e6T">
+                                                <rect key="frame" x="8" y="7" width="359" height="30"/>
+                                                <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="doneBtnTapped:" destination="ILo-WK-Lyg" eventType="touchUpInside" id="dd0-Uh-3an"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="ads-HW-e6T" firstAttribute="top" secondItem="L50-Ai-s0o" secondAttribute="top" constant="7" id="0yp-8x-g1Q"/>
+                                            <constraint firstAttribute="height" constant="45" id="Ixx-7I-AW6"/>
+                                            <constraint firstAttribute="bottom" secondItem="ads-HW-e6T" secondAttribute="bottom" constant="8" id="Q1P-Yc-udH"/>
+                                            <constraint firstItem="ads-HW-e6T" firstAttribute="leading" secondItem="L50-Ai-s0o" secondAttribute="leading" constant="8" id="TQr-o5-AX6"/>
+                                            <constraint firstAttribute="trailing" secondItem="ads-HW-e6T" secondAttribute="trailing" constant="8" id="zxs-4c-916"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -54,9 +74,12 @@
                                     <constraint firstAttribute="trailing" secondItem="Ywe-X1-I7V" secondAttribute="trailing" constant="8" id="2qt-YJ-1CX"/>
                                     <constraint firstItem="Ywe-X1-I7V" firstAttribute="leading" secondItem="5Ka-w5-Kgm" secondAttribute="leading" constant="8" id="K5d-Q2-mqx"/>
                                     <constraint firstItem="9BU-Ga-vaw" firstAttribute="top" secondItem="Ywe-X1-I7V" secondAttribute="bottom" constant="24" id="KVI-0G-EG9"/>
+                                    <constraint firstAttribute="bottom" secondItem="L50-Ai-s0o" secondAttribute="bottom" id="QIO-Hj-w2g"/>
                                     <constraint firstAttribute="trailing" secondItem="9BU-Ga-vaw" secondAttribute="trailing" constant="32" id="lPb-CF-c6b"/>
+                                    <constraint firstItem="L50-Ai-s0o" firstAttribute="leading" secondItem="5Ka-w5-Kgm" secondAttribute="leading" id="nGJ-ge-47l"/>
                                     <constraint firstItem="Ywe-X1-I7V" firstAttribute="top" secondItem="5Ka-w5-Kgm" secondAttribute="top" constant="12" id="ove-Bj-uc8"/>
                                     <constraint firstAttribute="bottom" secondItem="9BU-Ga-vaw" secondAttribute="bottom" constant="32" id="s2v-7f-TAd"/>
+                                    <constraint firstAttribute="trailing" secondItem="L50-Ai-s0o" secondAttribute="trailing" id="wLm-JA-zQ1"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -75,6 +98,7 @@
                     </view>
                     <connections>
                         <outlet property="backgroundView" destination="eMG-CE-XFg" id="Ov4-ec-lKv"/>
+                        <outlet property="buttonView" destination="L50-Ai-s0o" id="mna-X1-sai"/>
                         <outlet property="collectionView" destination="9BU-Ga-vaw" id="D2b-3M-lNb"/>
                         <outlet property="titleLbl" destination="Ywe-X1-I7V" id="Zz1-X4-cPn"/>
                     </connections>

@@ -9,7 +9,7 @@ class RealmClothes: Object, RealmObject {
     @objc dynamic var title = ""
     @objc dynamic var color = ""
     @objc dynamic var photoPath: String?
-    @objc dynamic var note = ""
+    @objc dynamic var note: String?
     @objc dynamic var isDirty = false
     @objc dynamic var type: RealmClothesType?
     var laundryIcons = List<RealmLaundryIcon>()

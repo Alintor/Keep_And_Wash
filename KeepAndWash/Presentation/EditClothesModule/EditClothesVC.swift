@@ -17,6 +17,7 @@ class EditClothesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveClothesTapped))
         output?.attachView(self)
         
         tableView.registerReusableCell(EditTitleCell.self)
@@ -27,15 +28,15 @@ class EditClothesVC: UIViewController {
         tableView.registerReusableCell(EditPhotoCell.self)
         tableView.registerReusableCell(EditButtonCell.self)
     }
+    
+    @objc func saveClothesTapped(_ sender: Any) {
+        output?.saveChanges()
+    }
 }
 
 extension EditClothesVC: EditClothesViewInput {
     func setViewModels(_ viewModels: [EditClothesViewModel]) {
         self.viewModels = viewModels
-    }
-    
-    func showAlertWith(text: String) {
-        
     }
 }
 

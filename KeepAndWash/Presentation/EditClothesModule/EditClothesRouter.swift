@@ -7,6 +7,10 @@ class EditClothesRouter {
         self.viewController = viewController
     }
     
+    func closeModule() {
+        viewController?.navigationController?.popViewController(animated: true)
+    }
+    
     func openColorPickerWith(intialColor:String?, output:ColorPickerOutput) {
         let pickerVC = ColorPickerModuleAssembly.getModuleWith(intialColor: intialColor, output: output)
         viewController?.present(pickerVC, animated: true, completion: nil)
@@ -30,5 +34,18 @@ class EditClothesRouter {
     func openTextInputWith(placeholder:String, initialText:String?, callback:@escaping (_ text:String)->()) {
         let textInputVC = TextInputModuleAssembly.getTextInputModuleWith(placeholder: placeholder, initialText: initialText, callback: callback)
         viewController?.present(textInputVC, animated: true, completion: nil)
+    }
+    
+    func showAlert(title:String? = nil, message:String, isToast: Bool = false) {
+        let alertController: UIAlertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        if isToast {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                alertController.dismiss(animated: true, completion: nil)
+            }
+        } else {
+            alertController.addAction(UIAlertAction(title: Constants.ButtonTitles.okBtn, style: .cancel, handler: nil))
+        }
+        viewController?.present(alertController, animated: true, completion: nil)
+        
     }
 }

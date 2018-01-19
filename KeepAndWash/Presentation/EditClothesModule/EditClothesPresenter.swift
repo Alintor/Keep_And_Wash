@@ -1,7 +1,8 @@
 
+import Foundation
+
 protocol EditClothesViewInput: class {
     func setViewModels(_ viewModels:[EditClothesViewModel])
-    func showAlertWith(text:String)
 }
 
 protocol EditClothesViewOutput {
@@ -59,6 +60,36 @@ class EditClothesPresenter: EditClothesViewOutput {
     
     func saveChanges() {
         
+        if state.id == nil {
+            state.id = UUID().uuidString
+        }
+        if state.title == nil {
+            router?.showAlert(message: Constants.ErrorMessages.addTitleError)
+            return
+        }
+        if state.type == nil {
+            router?.showAlert(message: Constants.ErrorMessages.chooseTypeError)
+            return
+        }
+        if state.color == nil {
+            router?.showAlert(message: Constants.ErrorMessages.chooseColorError)
+            return
+        }
+        if state.icons.count == 0 {
+            router?.showAlert(message: Constants.ErrorMessages.chooseIconsError)
+            return
+        }
+        
+        clothesService.edit(clothes: Clothes(id: state.id!,
+                                             title: state.title!,
+                                             color: state.color!,
+                                             photoPath: state.photoPath,
+                                             note: state.note,
+                                             isDirty: false,
+                                             type: state.type!,
+                                             laundryIcons: state.icons))
+        
+        router?.closeModule()
     }
     
 }

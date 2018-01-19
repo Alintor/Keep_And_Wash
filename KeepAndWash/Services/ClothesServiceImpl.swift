@@ -1,4 +1,6 @@
 
+import Foundation
+
 class ClothesServiceImpl: ClothesService {
     let clothesStorage = RealmStorage<RealmClothes>()
     let clothesTypeStorage = RealmStorage<RealmClothesType>()
@@ -19,16 +21,14 @@ class ClothesServiceImpl: ClothesService {
         return clothesStorage.getBy(id: id)
     }
     
-    func add(clothes: Clothes) {
-        clothesStorage.insert(item: clothes)
-    }
-    
     func edit(clothes: Clothes) {
-        clothesStorage.update(item: clothes)
+        clothesStorage.insert(item: clothes)
+        NotificationCenter.default.post(name: Constants.Notifications.clothesChanged, object: nil)
     }
     
     func deleteClothesBy(id: String) {
         clothesStorage.deleteBy(id: id)
+        NotificationCenter.default.post(name: Constants.Notifications.clothesChanged, object: nil)
     }
     
 }

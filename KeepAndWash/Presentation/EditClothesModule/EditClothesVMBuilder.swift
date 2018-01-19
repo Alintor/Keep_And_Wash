@@ -27,7 +27,6 @@ class EditClothesVMBuilder {
             viewModels.append(EditClothesViewModel(type: .button, actionType: .editColor, data: Constants.ButtonTitles.chooseColor))
         }
         
-        
         if state.icons.count != 0 {
             viewModels.append(EditClothesViewModel(type: .icons, actionType: .editIcons, data: state.icons))
         } else {

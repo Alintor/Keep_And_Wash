@@ -4,7 +4,7 @@ struct Clothes: PlainObject {
     var title: String
     var color: String
     var photoPath: String?
-    var note: String
+    var note: String?
     var isDirty: Bool
     var type: ClothesType
     var laundryIcons: [LaundryIcon]

@@ -1,4 +1,6 @@
 
+import Foundation
+
 protocol ClothesViewInput: class {
     func setClothes(_ clothes:[Clothes])
     func setEmptyClothes()
@@ -21,6 +23,7 @@ class ClothesPresenter: ClothesViewOutput {
     
     init(service:ClothesService) {
         clothesService = service
+        NotificationCenter.default.addObserver(self, selector: #selector(updateClothes), name: Constants.Notifications.clothesChanged, object: nil)
     }
     
     func attachView(_ view:ClothesViewInput) {
@@ -48,7 +51,7 @@ class ClothesPresenter: ClothesViewOutput {
         
     }
     
-    private func updateClothes() {
+    @objc private func updateClothes() {
         let clothes = clothesService.getAllClothes()
         if clothes.count == 0 {
             view?.setEmptyClothes()

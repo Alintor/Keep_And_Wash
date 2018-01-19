@@ -7,6 +7,8 @@ class PickerVC: UIViewController {
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var buttonView: UIView!
+    
     
     var output:PickerViewOutput?
     var viewModels = [PickerViewModel]() {
@@ -26,7 +28,11 @@ class PickerVC: UIViewController {
         super.viewDidAppear(animated)
         backgroundView.isHidden = false
     }
-
+    
+    @IBAction func doneBtnTapped(_ sender: Any) {
+        output?.buttonTapped()
+    }
+    
 }
 
 extension PickerVC: PickerViewInput {
@@ -39,7 +45,7 @@ extension PickerVC: PickerViewInput {
     }
     
     func hideButton() {
-        
+        buttonView.isHidden = true
     }
     
     

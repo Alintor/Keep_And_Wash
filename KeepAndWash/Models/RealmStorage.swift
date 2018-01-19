@@ -21,14 +21,6 @@ class RealmStorage<U:RealmObject> where U:Object {
         try! realm.write {
             let obj = U()
             obj.fillWith(plainObject: item)
-            realm.add(obj)
-        }
-    }
-    
-    func update(item: T) {
-        try! realm.write {
-            let obj = U()
-            obj.fillWith(plainObject: item)
             realm.add(obj, update: true)
         }
     }

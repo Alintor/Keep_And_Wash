@@ -18,12 +18,16 @@ struct Constants {
     }
     
     struct ButtonTitles {
+        static let showIcons = "Icons"
+        static let addClothes = "Add"
+        static let seveClothes = "Save"
         static let addTitle = "Добавить название"
         static let chooseType = "Выбрать тип"
         static let chooseIcons = "Выбрать иконки"
         static let chooseColor = "Выбрать цвет"
         static let addPhoto = "Добавить фото (необ.)"
         static let addNote = "Добавить примечание (необ.)"
+        static let okBtn = "Ok"
     }
     
     struct Labels {
@@ -48,5 +52,16 @@ struct Constants {
     
     struct Colors {
         static let mainColor = UIColor.black
+    }
+    
+    struct ErrorMessages {
+        static let addTitleError = "Необходимо добавить название"
+        static let chooseTypeError = "Необходимо выбрать тип вещи"
+        static let chooseIconsError = "Необходимо выбрать иконки"
+        static let chooseColorError = "Необходимо выбрать цвет вещи"
+    }
+    
+    struct Notifications {
+        static let clothesChanged = Notification.Name(rawValue: "clothesChanged")
     }
 }
