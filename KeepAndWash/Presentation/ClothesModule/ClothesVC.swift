@@ -19,6 +19,8 @@ class ClothesVC: UIViewController {
         navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Icons", style: .plain, target: self, action: #selector(showIconsTapped))
         navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClothesTapped))
         
+        tableView.registerReusableCell(ClothesSwipeableCell.self)
+        
         output?.attachView(self)
     }
 
@@ -48,8 +50,7 @@ extension ClothesVC: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = clothes[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = item.title
+        let cell = tableView.dequeueReusableCell(indexPath: indexPath) as ClothesSwipeableCell
         return cell
     }
 }
