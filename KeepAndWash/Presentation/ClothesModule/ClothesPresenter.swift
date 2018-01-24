@@ -44,11 +44,20 @@ class ClothesPresenter: ClothesViewOutput {
     }
     
     func deleteClothes(_ clothes:Clothes) {
-        
+        router?.showDeleteAlert(title: Constants.Labels.deleteClothesAlertTitle, message: clothes.title, action: {
+            self.clothesService.deleteClothesBy(id: clothes.id)
+        })
     }
     
     func markClothes(_ clothes:Clothes) {
-        
+        clothesService.edit(clothes: Clothes(id: clothes.id,
+                                             title: clothes.title,
+                                             color: clothes.color,
+                                             photoPath: clothes.photoPath,
+                                             note: clothes.note,
+                                             isDirty: !clothes.isDirty,
+                                             type: clothes.type,
+                                             laundryIcons: clothes.laundryIcons))
     }
     
     @objc private func updateClothes() {

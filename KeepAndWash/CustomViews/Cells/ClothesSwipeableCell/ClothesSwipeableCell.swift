@@ -2,6 +2,12 @@
 
 import UIKit
 
+protocol ClothesSwipeableCellDelegate: class {
+    func manageDirty(sender:UITableViewCell)
+    func editClothes(sender:UITableViewCell)
+    func deleteClothes(sender:UITableViewCell)
+}
+
 class ClothesSwipeableCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
@@ -10,41 +16,64 @@ class ClothesSwipeableCell: UITableViewCell {
     @IBOutlet weak var containerRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerLeftConstraint: NSLayoutConstraint!
     
-    var isDirty = false
-    var previousX:CGFloat = 0
-    let stopPosition:CGFloat = 120
+    private weak var delegate:ClothesSwipeableCellDelegate?
+    private var previousX:CGFloat = 0
+    private let stopPosition:CGFloat = 120
+    private var isDirty = false {
+        didSet {
+            if isDirty {
+                containerView.backgroundColor = UIColor.orange
+            } else {
+                containerView.backgroundColor = UIColor.white
+            }
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        containerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(swipeCell)))
+        containerView.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(handleSwipeCell)))
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        setConstraintsToDeffault()
+        setConstraintsToDefault()
     }
     
-    func manageDirty() {
+    func configure(clothes:Clothes, delegate:ClothesSwipeableCellDelegate?) {
+        self.delegate = delegate
+        isDirty = clothes.isDirty
+    }
+    
+    func manageDirtyClothes() {
         isDirty = !isDirty
-        if isDirty {
-            containerView.backgroundColor = UIColor.orange
-        } else {
-            containerView.backgroundColor = UIColor.white
-        }
+        delegate?.manageDirty(sender: self)
     }
     
-    @objc func setConstraintsToDeffault() {
+    //MARK: Buttons actions
+    @IBAction func deleteBtnTapped(_ sender: Any) {
+        setConstraintsToDefault()
+        delegate?.deleteClothes(sender: self)
+    }
+    
+    @IBAction func editBtnTapped(_ sender: Any) {
+        setConstraintsToDefault { (bool) in
+            self.delegate?.editClothes(sender: self)
+        }
+        
+    }
+    
+    func setConstraintsToDefault(completion:((Bool)->Void)? = nil) {
         previousX = 0
         containerLeftConstraint.constant = 0
         containerRightConstraint.constant = 0
         UIView.animate(withDuration: 0.2, delay: 0, options: .curveEaseOut, animations: {
             self.layoutIfNeeded()
-        }, completion: nil)
+        }, completion: completion)
         
     }
 
-    
-    @objc func swipeCell(_ recognizer: UIPanGestureRecognizer) {
+    //MARK:  Swipe animation method
+    @objc func handleSwipeCell(_ recognizer: UIPanGestureRecognizer) {
         switch recognizer.state {
         case .changed:
             let currentX = recognizer.translation(in: containerView).x
@@ -59,12 +88,16 @@ class ClothesSwipeableCell: UITableViewCell {
             
         case .ended:
             if containerRightConstraint.constant == stopPosition {
-                previousX = -containerRightConstraint.constant
+                previousX = -stopPosition
             } else {
                 if sentDirtyImage.frame.minX > 0 {
-                    manageDirty()
+                    setConstraintsToDefault(completion: { (bool) in
+                        self.manageDirtyClothes()
+                    })
+                } else {
+                    setConstraintsToDefault()
                 }
-                setConstraintsToDeffault()
+                
             }
         default:
             break

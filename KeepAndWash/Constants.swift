@@ -28,6 +28,8 @@ struct Constants {
         static let addPhoto = "Добавить фото (необ.)"
         static let addNote = "Добавить примечание (необ.)"
         static let okBtn = "Ok"
+        static let cancelBtn = "Отменить"
+        static let deleteBtn = "Удилить"
     }
     
     struct Labels {
@@ -40,6 +42,7 @@ struct Constants {
         static let cameraPickerCellTitle = "Сделать фото"
         static let photoLibraryPickerCellTitle = "Галерея"
         static let deletePickerCellTitle = "Удалить фото"
+        static let deleteClothesAlertTitle = "Вы действительно хотите удалить данную вещь?"
     }
     
     struct ImageNames {

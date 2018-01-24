@@ -51,6 +51,7 @@ extension ClothesVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = clothes[indexPath.row]
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as ClothesSwipeableCell
+        cell.configure(clothes: item, delegate: self)
         return cell
     }
 }
@@ -58,6 +59,28 @@ extension ClothesVC: UITableViewDataSource {
 extension ClothesVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = clothes[indexPath.row]
-        output?.editClothes(item)
+        //output?.editClothes(item)
     }
+}
+
+extension ClothesVC: ClothesSwipeableCellDelegate {
+    func manageDirty(sender: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            output?.markClothes(clothes[indexPath.row])
+        }
+    }
+    
+    func editClothes(sender: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            output?.editClothes(clothes[indexPath.row])
+        }
+    }
+    
+    func deleteClothes(sender: UITableViewCell) {
+        if let indexPath = tableView.indexPath(for: sender) {
+            output?.deleteClothes(clothes[indexPath.row])
+        }
+    }
+    
+    
 }
