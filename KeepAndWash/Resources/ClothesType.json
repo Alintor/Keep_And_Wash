@@ -1,17 +1,41 @@
 [
 	{
-		"id":"ct1",
+		"id":"ct_shirt",
 		"title":"Рубашка",
-		"imageName":"icnCt_1"
+		"imageName":"icn_ct_shirt"
 	},
 	{
-		"id":"ct2",
+		"id":"ct_tshirt",
 		"title":"Футболка",
-		"imageName":"icnCt_2"
+		"imageName":"icn_ct_tshirt"
 	},
 	{
-		"id":"ct3",
-		"title":"Брюки",
-		"imageName":"icnCt_3"
+		"id":"ct_pants",
+		"title":"Штаны",
+		"imageName":"icn_ct_pants"
+	}, {
+		"id":"ct_underwear",
+		"title":"Нижнее белье",
+		"imageName":"icn_ct_underwear"
+	},
+	{
+		"id":"ct_shorts",
+		"title":"Шорты",
+		"imageName":"icn_ct_shorts"
+	},
+	{
+		"id":"ct_bedclothes",
+		"title":"Постельное белье",
+		"imageName":"icn_ct_bedclothes"
+	},
+	{
+		"id":"ct_socks",
+		"title":"Носки",
+		"imageName":"icn_ct_socks"
+	},
+	{
+		"id":"ct_hoodie",
+		"title":"Кофта",
+		"imageName":"icn_ct_hoodie"
 	}
 ]

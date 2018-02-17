@@ -1,51 +1,268 @@
 [
 	{
-		"id":"ic1",
-		"imageName":"icnIc_1",
-		"desc":"sefhf dfhfgjsfgk adgjkhs zdjz",
+		"id":"li_washing",
+		"imageName":"icn_li_washing",
+		"desc":"Можно стирать.",
 		"priority":1,
-		"categoryId":"lic1"
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic2",
-		"imageName":"icnIc_2",
-		"desc":"sdyhsdzhS dfuhsdaSFH zdfjhzdF",
+		"id":"li_washing_not",
+		"imageName":"icn_li_washing_not",
+		"desc":"Не стирать. Изделия несущие на себе этот знак не подлежат стирке. Их следует подвергать химической чистке.",
 		"priority":1,
-		"categoryId":"lic1"
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic3",
-		"imageName":"icnIc_3",
-		"desc":"adsh zdfhsdzfh zdfjh",
-		"priority":2,
-		"categoryId":"lic1"
+		"id":"li_washing_hand",
+		"imageName":"icn_li_washing_hand",
+		"desc":"Допускается только ручная стирка. Не тереть, не отжимать. Текстильные изделия, не подлежащие стирке в стиральной машине. Температура стирки 30°C—40°C в зависимости от изделия.",
+		"priority":1,
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic4",
-		"imageName":"icnIc_4",
-		"desc":"SfhdfSHG zdfhsgSG sdgjhD",
-		"priority":3,
-		"categoryId":"lic2"
+		"id":"li_washing_95",
+		"imageName":"icn_li_washing_95",
+		"desc":"Cтирка изделий с кипячением.",
+		"priority":1,
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic5",
-		"imageName":"icnIc_5",
-		"desc":"sdfjhgfkddj hfjkgjhdgfj ghfkghj",
-		"priority":3,
-		"categoryId":"lic2"
+		"id":"li_washing_60",
+		"imageName":"icn_li_washing_60",
+		"desc":"Cтирка изделий в горячей воде при 60°С.",
+		"priority":1,
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic6",
-		"imageName":"icnIc_6",
-		"desc":"sdhfgszd fgjhszd dgfjzhd",
-		"priority":4,
-		"categoryId":"lic3"
+		"id":"li_washing_40",
+		"imageName":"icn_li_washing_40",
+		"desc":"Cтирка изделий с нейтральными моющими средствами в теплой воде при максимальной температуре 40°С.",
+		"priority":1,
+		"categoryId":"lic_washing"
 	},
 	{
-		"id":"ic7",
-		"imageName":"icnIc_7",
-		"desc":"zdfjfhszg dfhkgjzhd dhsfjzd",
-		"priority":5,
-		"categoryId":"lic3"
+		"id":"li_washing_30",
+		"imageName":"icn_li_washing_30",
+		"desc":"Cтирка изделий с нейтральными моющими средствами в холодной воде при максимальной температуре 30°С.",
+		"priority":1,
+		"categoryId":"lic_washing"
+	},
+	{
+		"id":"li_washing_gentle",
+		"imageName":"icn_li_washing_gentle",
+		"desc":"Щадящая стирка. Точно выдерживать температуру воды, не подвергать сильной механической обработке, при отжиме — медленный режим центрифуги.",
+		"priority":1,
+		"categoryId":"lic_washing"
+	},
+	{
+		"id":"li_washing_delicate",
+		"imageName":"icn_li_washing_delicate",
+		"desc":"Деликатная стирка. Большое количество воды, минимальная механическая обработка, быстрое полоскание.",
+		"priority":1,
+		"categoryId":"lic_washing"
+	},
+	{
+		"id":"li_drying",
+		"imageName":"icn_li_drying",
+		"desc":"Можно сушить.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_not",
+		"imageName":"icn_li_drying_not",
+		"desc":"Не сушить.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_washer",
+		"imageName":"icn_li_drying_washer",
+		"desc":"Можно выжимать и сушить в стиральной машине или в электрической сушке для белья.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_not_washer",
+		"imageName":"icn_li_drying_not_washer",
+		"desc":"Нельзя выжимать и сушить в стиральной машине или электросушилке.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_not_press",
+		"imageName":"icn_li_drying_not_press",
+		"desc":"Не отжимать.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_low_temp",
+		"imageName":"icn_li_drying_low_temp",
+		"desc":"Сушить при низкой температуре.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_middle_temp",
+		"imageName":"icn_li_drying_middle_temp",
+		"desc":"Сушить при средней температуре.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_high_temp",
+		"imageName":"icn_li_drying_high_temp",
+		"desc":"Сушить при высокой температуре.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_gentle",
+		"imageName":"icn_li_drying_gentle",
+		"desc":"Щадящие отжим и сушка.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_delicate",
+		"imageName":"icn_li_drying_delicate",
+		"desc":"Деликатные отжим и сушка.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_rope",
+		"imageName":"icn_li_drying_rope",
+		"desc":"Сушить на бельевой веревке.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_vertical",
+		"imageName":"icn_li_drying_vertical",
+		"desc":"Сушить без отжима в вертикальном положении",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_horizontal",
+		"imageName":"icn_li_drying_horizontal",
+		"desc":"Сушить на горизонтальной поверхности.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_drying_shadow",
+		"imageName":"icn_li_drying_shadow",
+		"desc":"Сушить в тени.",
+		"priority":1,
+		"categoryId":"lic_drying"
+	},
+	{
+		"id":"li_ironing",
+		"imageName":"icn_li_ironing",
+		"desc":"Можно гладить.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_ironing_not",
+		"imageName":"icn_li_ironing_not",
+		"desc":"Не гладить.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_ironing_high_temp",
+		"imageName":"icn_li_ironing_high_temp",
+		"desc":"Гладить при высокой температуре (до 200°С). Хлопок, лен, текстильные изделия во влажном состоянии. Только в этом режиме можно отпаривать белье.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_ironing_middle_temp",
+		"imageName":"icn_li_ironing_middle_temp",
+		"desc":"Гладить при средней температуре (до 150°С). Хлопок, шелк, шерсть, полиэстр, вискоза. Гладить через слегка увлажненную ткань или утюгом с пароувлажнителем.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_ironing_low_temp",
+		"imageName":"icn_li_ironing_low_temp",
+		"desc":"Гладить при низкой температуре (до 110°С). Синтетические ткани: полиакрил, полиамид, полиэстр, ацетат.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_ironing_not_steam",
+		"imageName":"icn_li_ironing_not_steam",
+		"desc":"Не отпаривать.",
+		"priority":1,
+		"categoryId":"lic_ironing"
+	},
+	{
+		"id":"li_cleaning",
+		"imageName":"icn_li_cleaning",
+		"desc":"Cухая чистка (химчистка).",
+		"priority":1,
+		"categoryId":"lic_cleaning"
+	},
+	{
+		"id":"li_cleaning_not",
+		"imageName":"icn_li_cleaning_not",
+		"desc":"Химчистка запрещена. (Не подвергать химчистке).",
+		"priority":1,
+		"categoryId":"lic_cleaning"
+	},
+	{
+		"id":"li_cleaning_a",
+		"imageName":"icn_li_cleaning_a",
+		"desc":"Химчистка с любым растворителем.",
+		"priority":1,
+		"categoryId":"lic_cleaning"
+	},
+	{
+		"id":"li_cleaning_p",
+		"imageName":"icn_li_cleaning_p",
+		"desc":"Чистка с использованием углеводорода, хлорного этилена, монофлотрихлорметана.",
+		"priority":1,
+		"categoryId":"lic_cleaning"
+	},
+	{
+		"id":"li_cleaning_f",
+		"imageName":"icn_li_cleaning_f",
+		"desc":"Чистка с использованием углеводорода и трифлотрихлорметана.",
+		"priority":1,
+		"categoryId":"lic_cleaning"
+	},
+	{
+		"id":"li_whitening",
+		"imageName":"icn_li_whitening",
+		"desc":"Можно отбеливать.",
+		"priority":1,
+		"categoryId":"lic_whitening"
+	},
+	{
+		"id":"li_whitening_not",
+		"imageName":"icn_li_whitening_not",
+		"desc":"Не отбеливать, нельзя использовать хлоросодержащие моющие средства и стиральные порошки с отбеливателями.",
+		"priority":1,
+		"categoryId":"lic_whitening"
+	},
+	{
+		"id":"li_whitening_cl",
+		"imageName":"icn_li_whitening_cl",
+		"desc":"Можно отбеливать с применением хлора.",
+		"priority":1,
+		"categoryId":"lic_whitening"
+	},
+	{
+		"id":"li_whitening_not_cl",
+		"imageName":"icn_li_whitening_not_cl",
+		"desc":"Отбеливать только без хлора.",
+		"priority":1,
+		"categoryId":"lic_whitening"
 	}
 ]

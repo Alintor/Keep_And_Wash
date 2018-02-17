@@ -1,17 +1,27 @@
 [
 	{
-		"id":"lic1",
+		"id":"lic_washing",
 		"title":"Стирка",
-		"imageName":"icnLic_1"
+		"imageName":"icn_li_washing"
 	},
 	{
-		"id":"lic2",
+		"id":"lic_drying",
 		"title":"Сушка",
-		"imageName":"icnLic_2"
+		"imageName":"icn_li_drying"
 	},
 	{
-		"id":"lic3",
+		"id":"lic_ironing",
 		"title":"Глажка",
-		"imageName":"icnLic_3"
+		"imageName":"icn_li_ironing"
+	}, 
+	{
+		"id":"lic_cleaning",
+		"title":"Чистка",
+		"imageName":"icn_li_cleaning"
+	}, 
+	{
+		"id":"lic_whitening",
+		"title":"Отбеливание",
+		"imageName":"icn_li_whitening"
 	}
 ]
