@@ -19,7 +19,7 @@ class RealmClothesType: Object, RealmObject {
     func fillWith(plainObject clothesType: ClothesType) {
         id = clothesType.id
         title = clothesType.title
-        imageName = clothesType.title
+        imageName = clothesType.imageName
     }
     
     var plainObject: ClothesType {

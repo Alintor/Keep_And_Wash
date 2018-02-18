@@ -29,7 +29,7 @@ struct Constants {
         static let addNote = "Добавить примечание (необ.)"
         static let okBtn = "Ok"
         static let cancelBtn = "Отменить"
-        static let deleteBtn = "Удилить"
+        static let deleteBtn = "Удалить"
         static let doneBtn = "Готово"
     }
     
@@ -50,7 +50,7 @@ struct Constants {
         static let colorIcon = "icn_color"
         static let emptyColorIcon = "icn_empty_color"
         static let cameraIcon = "icn_camera"
-        static let photoLibraryIcon = "icm_photo_library"
+        static let photoLibraryIcon = "icn_photo_library"
         static let deleteIcon = "icn_delete"
     }
     

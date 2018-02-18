@@ -23,6 +23,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cp1-KI-n3v">
                         <rect key="frame" x="16" y="11" width="54" height="54"/>
+                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="54" id="VL7-L4-9MW"/>
                             <constraint firstAttribute="width" secondItem="Cp1-KI-n3v" secondAttribute="height" multiplier="1:1" id="zNx-4E-Mhr"/>

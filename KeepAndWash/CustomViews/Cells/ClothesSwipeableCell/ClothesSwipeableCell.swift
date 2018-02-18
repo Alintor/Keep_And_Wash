@@ -12,6 +12,8 @@ class ClothesSwipeableCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var sentDirtyImage: UIImageView!
+    @IBOutlet weak var iconView: UIImageView!
+    @IBOutlet weak var titleLbl: UILabel!
     
     @IBOutlet weak var containerRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerLeftConstraint: NSLayoutConstraint!
@@ -22,9 +24,10 @@ class ClothesSwipeableCell: UITableViewCell {
     private var isDirty = false {
         didSet {
             if isDirty {
-                containerView.backgroundColor = UIColor.orange
+                containerView.layer.borderWidth = 2
+                containerView.layer.borderColor = UIColor.orange.cgColor
             } else {
-                containerView.backgroundColor = UIColor.white
+                containerView.layer.borderWidth = 0
             }
         }
     }
@@ -40,6 +43,9 @@ class ClothesSwipeableCell: UITableViewCell {
     }
     
     func configure(clothes:Clothes, delegate:ClothesSwipeableCellDelegate?) {
+        titleLbl.text = clothes.title
+        iconView.image = UIImage(named: clothes.type.imageName)
+        iconView.tintColor = UIColor(hex: clothes.color)
         self.delegate = delegate
         isDirty = clothes.isDirty
     }
@@ -85,7 +91,6 @@ class ClothesSwipeableCell: UITableViewCell {
                 containerLeftConstraint.constant = -stopPosition
                 containerRightConstraint.constant = stopPosition
             }
-            
         case .ended:
             if containerRightConstraint.constant == stopPosition {
                 previousX = -stopPosition

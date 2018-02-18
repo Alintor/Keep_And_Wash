@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,28 +21,28 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="101.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShX-up-iqL">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShX-up-iqL">
                         <rect key="frame" x="256" y="30" width="40" height="40"/>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="LGj-Xf-Fxb"/>
                             <constraint firstAttribute="width" constant="40" id="zQb-BK-c6x"/>
                         </constraints>
-                        <state key="normal" title="A">
+                        <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <state key="normal" image="icn_delete">
                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                         <connections>
                             <action selector="deleteBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Jer-06-Edm"/>
                         </connections>
                     </button>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-On-J1s">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-On-J1s">
                         <rect key="frame" x="208" y="30" width="40" height="40"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="bYJ-P5-Rco"/>
                             <constraint firstAttribute="width" constant="40" id="gHd-9Y-iRf"/>
                         </constraints>
-                        <state key="normal" title="B">
+                        <color key="tintColor" red="0.94117647059999998" green="0.56078431370000004" blue="0.34509803919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <state key="normal" image="icn_edit">
                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                         </state>
                         <connections>
@@ -50,18 +51,55 @@
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Fq-0j-U0D">
                         <rect key="frame" x="16" y="11" width="288" height="80"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bLh-yX-tXx">
+                                <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bLh-yX-tXx" secondAttribute="height" multiplier="1:1" id="LjP-cR-RAB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlv-PX-fBb">
+                                <rect key="frame" x="80" y="31" width="200" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zlv-PX-fBb" firstAttribute="centerY" secondItem="bLh-yX-tXx" secondAttribute="centerY" id="J4s-za-UZ4"/>
+                            <constraint firstAttribute="trailing" secondItem="zlv-PX-fBb" secondAttribute="trailing" constant="8" id="JCK-1S-1Za"/>
+                            <constraint firstAttribute="bottom" secondItem="bLh-yX-tXx" secondAttribute="bottom" constant="8" id="b2U-GP-YFK"/>
+                            <constraint firstItem="bLh-yX-tXx" firstAttribute="top" secondItem="1Fq-0j-U0D" secondAttribute="top" constant="8" id="eu6-eQ-alv"/>
+                            <constraint firstItem="bLh-yX-tXx" firstAttribute="leading" secondItem="1Fq-0j-U0D" secondAttribute="leading" constant="8" id="ulQ-ZM-Iwx"/>
+                            <constraint firstItem="zlv-PX-fBb" firstAttribute="leading" secondItem="bLh-yX-tXx" secondAttribute="trailing" constant="8" id="vo3-jv-DGU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowRadius">
+                                <integer key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
+                                <real key="value" value="0.10000000000000001"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="size" keyPath="layer.shadowOffset">
+                                <size key="value" width="1" height="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </view>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_check" translatesAutoresizingMaskIntoConstraints="NO" id="KvR-o4-cxa">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_sentDirty" translatesAutoresizingMaskIntoConstraints="NO" id="KvR-o4-cxa">
                         <rect key="frame" x="-48" y="31" width="40" height="40"/>
+                        <color key="tintColor" red="0.0" green="0.67843137249999996" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="cpB-MH-XKv"/>
                             <constraint firstAttribute="height" constant="40" id="rUa-M6-aRQ"/>
                         </constraints>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" red="0.0" green="0.67843137249999996" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 <constraints>
                     <constraint firstItem="ShX-up-iqL" firstAttribute="leading" secondItem="Nfm-On-J1s" secondAttribute="trailing" constant="8" id="7as-Kx-puK"/>
                     <constraint firstItem="1Fq-0j-U0D" firstAttribute="leading" secondItem="KvR-o4-cxa" secondAttribute="trailing" priority="750" constant="24" id="9XW-EW-xh4"/>
@@ -76,17 +114,22 @@
                     <constraint firstItem="Nfm-On-J1s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yGb-Of-qEB"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerLeftConstraint" destination="c0Y-K3-oc1" id="duN-8o-9LZ"/>
                 <outlet property="containerRightConstraint" destination="h1j-Ro-4qG" id="dd8-Zb-9qD"/>
                 <outlet property="containerView" destination="1Fq-0j-U0D" id="Blu-Sj-vlp"/>
+                <outlet property="iconView" destination="bLh-yX-tXx" id="fmv-vj-HDM"/>
                 <outlet property="sentDirtyImage" destination="KvR-o4-cxa" id="dg3-UT-kQg"/>
+                <outlet property="titleLbl" destination="zlv-PX-fBb" id="LUt-lG-B8M"/>
             </connections>
             <point key="canvasLocation" x="34" y="83"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="icn_check" width="21" height="21"/>
+        <image name="icn_delete" width="21" height="21"/>
+        <image name="icn_edit" width="21" height="21"/>
+        <image name="icn_sentDirty" width="21" height="21"/>
     </resources>
 </document>
