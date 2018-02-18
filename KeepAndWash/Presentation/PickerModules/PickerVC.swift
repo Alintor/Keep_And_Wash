@@ -8,7 +8,7 @@ class PickerVC: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var buttonView: UIView!
-    
+    @IBOutlet weak var doneBtn: UIButton!
     
     var output:PickerViewOutput?
     var viewModels = [PickerViewModel]() {
@@ -20,6 +20,7 @@ class PickerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        doneBtn.setTitle(Constants.ButtonTitles.doneBtn, for: .normal)
         collectionView.registerReusableCell(PickerCell.self)
         output?.attach(view: self)
     }

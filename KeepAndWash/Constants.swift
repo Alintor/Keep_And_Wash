@@ -30,6 +30,7 @@ struct Constants {
         static let okBtn = "Ok"
         static let cancelBtn = "Отменить"
         static let deleteBtn = "Удилить"
+        static let doneBtn = "Готово"
     }
     
     struct Labels {

@@ -16,8 +16,8 @@ class ClothesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Icons", style: .plain, target: self, action: #selector(showIconsTapped))
-        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClothesTapped))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Icons", style: .plain, target: self, action: #selector(showIconsTapped))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addClothesTapped))
         
         tableView.registerReusableCell(ClothesSwipeableCell.self)
         

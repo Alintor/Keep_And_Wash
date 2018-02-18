@@ -100,6 +100,7 @@
                         <outlet property="backgroundView" destination="eMG-CE-XFg" id="Ov4-ec-lKv"/>
                         <outlet property="buttonView" destination="L50-Ai-s0o" id="mna-X1-sai"/>
                         <outlet property="collectionView" destination="9BU-Ga-vaw" id="D2b-3M-lNb"/>
+                        <outlet property="doneBtn" destination="ads-HW-e6T" id="cjF-Tp-JZ7"/>
                         <outlet property="titleLbl" destination="Ywe-X1-I7V" id="Zz1-X4-cPn"/>
                     </connections>
                 </viewController>

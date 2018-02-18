@@ -48,6 +48,7 @@ extension LaundryIconsVC: UITableViewDataSource {
         let icon = groupedIcons[indexPath.section].icons[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         cell.textLabel?.text = icon.desc
+        cell.imageView?.image = UIImage(named: icon.imageName)
         return cell
     }
 }
