@@ -1,17 +1,57 @@
 PODS:
+  - DTModelStorage (7.0.3):
+    - DTModelStorage/Core (= 7.0.3)
+  - DTModelStorage/Core (7.0.3)
+  - DTTableViewManager (6.2.0):
+    - DTModelStorage (~> 7.0.0)
+  - LightRoute (2.1.18)
+  - R.swift (4.0.0):
+    - R.swift.Library (~> 4.0.0)
+  - R.swift.Library (4.0.0)
   - Realm (3.0.2):
     - Realm/Headers (= 3.0.2)
   - Realm/Headers (3.0.2)
   - RealmSwift (3.0.2):
     - Realm (= 3.0.2)
+  - SwiftLint (0.25.1)
+  - Swinject (2.1.1)
+  - SwinjectStoryboard (1.1.2):
+    - Swinject (~> 2.1)
 
 DEPENDENCIES:
+  - DTTableViewManager (~> 6.0)
+  - LightRoute (~> 2.1)
+  - R.swift (~> 4.0.0)
   - RealmSwift
+  - SwiftLint (= 0.25.1)
+  - Swinject (~> 2.1.1)
+  - SwinjectStoryboard (~> 1.1.2)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - DTModelStorage
+    - DTTableViewManager
+    - LightRoute
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+    - SwiftLint
+    - Swinject
+    - SwinjectStoryboard
 
 SPEC CHECKSUMS:
+  DTModelStorage: 24bb695151013519ae1d54aa88fc7f382fda7313
+  DTTableViewManager: d65b233e41a5c6e98c0497ba1dda0022dd8f081c
+  LightRoute: 85b8e17345a7b22d7067608b8ea07b37f7a80249
+  R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
+  R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
   Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
   RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
+  Swinject: afea49fd95f392b41171669f165842879c48fad6
+  SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: 2c10fbeb2fc2642ad7213137050db418359e4ceb
+PODFILE CHECKSUM: a53ac46d3cae891abdf6214e78df33c74793ee17
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
