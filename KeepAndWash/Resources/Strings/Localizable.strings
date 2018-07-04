@@ -1,0 +1,70 @@
+/* 
+  Localizable.strings
+  KeepAndWash
+
+  Created by Alexandr on 04/07/2018.
+  Copyright © 2018 Alexandr Ovchinnikov. All rights reserved.
+*/
+
+"tableName" = "Localizable";
+
+// MARK - Models
+// Clothes Type
+"model.clothesType.shirt" = "Рубашка";
+"model.clothesType.tshirt" = "Футболка";
+"model.clothesType.pants" = "Штаны";
+"model.clothesType.underwear" = "Нижнее белье";
+"model.clothesType.shorts" = "Шорты";
+"model.clothesType.bedclothes" = "Постельное белье";
+"model.clothesType.socks" = "Носки";
+"model.clothesType.hoodie" = "Кофта";
+
+// Laundry icons
+"model.LaundryIcons.washing" = "Стирка";
+"model.LaundryIcons.washing.allowed" = "Можно стирать.";
+"model.LaundryIcons.washing.not" = "Не стирать. Изделия несущие на себе этот знак не подлежат стирке. Их следует подвергать химической чистке.";
+"model.LaundryIcons.washing.hand" = "Допускается только ручная стирка. Не тереть, не отжимать. Текстильные изделия, не подлежащие стирке в стиральной машине. Температура стирки 30°C—40°C в зависимости от изделия.";
+"model.LaundryIcons.washing.temp95" = "Cтирка изделий с кипячением.";
+"model.LaundryIcons.washing.temp60" = "Cтирка изделий в горячей воде при 60°С.";
+"model.LaundryIcons.washing.temp40" = "Cтирка изделий с нейтральными моющими средствами в теплой воде при максимальной температуре 40°С.";
+"model.LaundryIcons.washing.temp30" = "Cтирка изделий с нейтральными моющими средствами в холодной воде при максимальной температуре 30°С.";
+"model.LaundryIcons.washing.gentle" = "Щадящая стирка. Точно выдерживать температуру воды, не подвергать сильной механической обработке, при отжиме — медленный режим центрифуги.";
+"model.LaundryIcons.washing.delicate" = "Деликатная стирка. Большое количество воды, минимальная механическая обработка, быстрое полоскание.";
+
+"model.LaundryIcons.drying" = "Сушка";
+"model.LaundryIcons.drying.allowed" = "Можно сушить.";
+"model.LaundryIcons.drying.not" = "Не сушить.";
+"model.LaundryIcons.drying.washer" = "Можно выжимать и сушить в стиральной машине или в электрической сушке для белья.";
+"model.LaundryIcons.drying.notWasher" = "Нельзя выжимать и сушить в стиральной машине или электросушилке.";
+"model.LaundryIcons.drying.notPress" = "Не отжимать.";
+"model.LaundryIcons.drying.lowTemp" = "Сушить при низкой температуре.";
+"model.LaundryIcons.drying.middleTemp" = "Сушить при средней температуре.";
+"model.LaundryIcons.drying.highTemp" = "Сушить при высокой температуре.";
+"model.LaundryIcons.drying.gentle" = "Щадящие отжим и сушка.";
+"model.LaundryIcons.drying.delicate" = "Деликатные отжим и сушка.";
+"model.LaundryIcons.drying.rope" = "Сушить на бельевой веревке.";
+"model.LaundryIcons.drying.vertical" = "Сушить без отжима в вертикальном положении";
+"model.LaundryIcons.drying.horizontal" = "Сушить на горизонтальной поверхности.";
+"model.LaundryIcons.drying.shadow" = "Сушить в тени.";
+
+"model.LaundryIcons.ironing" = "Глажка";
+"model.LaundryIcons.ironing.allowed" = "Можно гладить.";
+"model.LaundryIcons.ironing.not" = "Не гладить.";
+"model.LaundryIcons.ironing.highTemp" = "Гладить при высокой температуре (до 200°С). Хлопок, лен, текстильные изделия во влажном состоянии. Только в этом режиме можно отпаривать белье.";
+"model.LaundryIcons.ironing.middleTemp" = "Гладить при средней температуре (до 150°С). Хлопок, шелк, шерсть, полиэстр, вискоза. Гладить через слегка увлажненную ткань или утюгом с пароувлажнителем.";
+"model.LaundryIcons.ironing.lowTemp" = "Гладить при низкой температуре (до 110°С). Синтетические ткани: полиакрил, полиамид, полиэстр, ацетат.";
+"model.LaundryIcons.ironing.notSteam" = "Не отпаривать.";
+
+"model.LaundryIcons.cleaning" = "Чистка";
+"model.LaundryIcons.cleaning.allowed" = "Cухая чистка (химчистка).";
+"model.LaundryIcons.cleaning.not" = "Химчистка запрещена. (Не подвергать химчистке).";
+"model.LaundryIcons.cleaning.typeA" = "Химчистка с любым растворителем.";
+"model.LaundryIcons.cleaning.typeP" = "Чистка с использованием углеводорода, хлорного этилена, монофлотрихлорметана.";
+"model.LaundryIcons.cleaning.typeF" = "Чистка с использованием углеводорода и трифлотрихлорметана.";
+
+"model.LaundryIcons.whitening" = "Отбеливание";
+"model.LaundryIcons.whitening.allowed" = "Можно отбеливать.";
+"model.LaundryIcons.whitening.not" = "Не отбеливать, нельзя использовать хлоросодержащие моющие средства и стиральные порошки с отбеливателями.";
+"model.LaundryIcons.whitening.chlorine" = "Можно отбеливать с применением хлора.";
+"model.LaundryIcons.whitening.notChlorine" = "Отбеливать только без хлора.";
+

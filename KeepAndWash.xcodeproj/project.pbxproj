@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
+		A8000AB420EC7DA900B15C31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8000AB320EC7DA900B15C31 /* Localizable.strings */; };
+		A8000AB620EC7E6300B15C31 /* ClothesTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AB520EC7E6300B15C31 /* ClothesTypeEnum.swift */; };
+		A8000AB820EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AB720EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift */; };
+		A8000ABA20EC82CD00B15C31 /* WashingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AB920EC82CD00B15C31 /* WashingIcon.swift */; };
+		A8000ABC20EC874000B15C31 /* LaundryIconsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000ABB20EC873F00B15C31 /* LaundryIconsProtocol.swift */; };
+		A8000AC120ECA56C00B15C31 /* DryingIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC020ECA56C00B15C31 /* DryingIcon.swift */; };
+		A8000AC320ECAB5500B15C31 /* IroningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC220ECAB5500B15C31 /* IroningIcon.swift */; };
+		A8000AC520ECADA600B15C31 /* CleaningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC420ECADA600B15C31 /* CleaningIcon.swift */; };
+		A8000AC720ECBC9C00B15C31 /* WhiteningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */; };
+		A8000ACA20ECD4D400B15C31 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC920ECD4D400B15C31 /* R.generated.swift */; };
 		A8411E7F20076816000D3C5D /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8411E7E20076816000D3C5D /* PickerRouter.swift */; };
 		A841D651200F52E000CD79D5 /* TextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D650200F52E000CD79D5 /* TextInputVC.swift */; };
 		A841D654200F58E900CD79D5 /* TextInputVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A841D653200F58E900CD79D5 /* TextInputVC.storyboard */; };
@@ -99,6 +109,16 @@
 /* Begin PBXFileReference section */
 		78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.release.xcconfig"; sourceTree = "<group>"; };
 		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
+		A8000AB320EC7DA900B15C31 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		A8000AB520EC7E6300B15C31 /* ClothesTypeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesTypeEnum.swift; sourceTree = "<group>"; };
+		A8000AB720EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsCategoryEnum.swift; sourceTree = "<group>"; };
+		A8000AB920EC82CD00B15C31 /* WashingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WashingIcon.swift; sourceTree = "<group>"; };
+		A8000ABB20EC873F00B15C31 /* LaundryIconsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconsProtocol.swift; sourceTree = "<group>"; };
+		A8000AC020ECA56C00B15C31 /* DryingIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DryingIcon.swift; sourceTree = "<group>"; };
+		A8000AC220ECAB5500B15C31 /* IroningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IroningIcon.swift; sourceTree = "<group>"; };
+		A8000AC420ECADA600B15C31 /* CleaningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningIcon.swift; sourceTree = "<group>"; };
+		A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteningIcon.swift; sourceTree = "<group>"; };
+		A8000AC920ECD4D400B15C31 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		A8411E7E20076816000D3C5D /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
 		A841D650200F52E000CD79D5 /* TextInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputVC.swift; sourceTree = "<group>"; };
 		A841D653200F58E900CD79D5 /* TextInputVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInputVC.storyboard; sourceTree = "<group>"; };
@@ -219,6 +239,61 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A8000AB020EC7A0300B15C31 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AB120EC7A1600B15C31 /* Model */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A8000AB120EC7A1600B15C31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8000ABD20ECA4DC00B15C31 /* ClothesType */,
+				A8000ABE20ECA4E800B15C31 /* LaundryIconsCategory */,
+				A8000ABF20ECA4FB00B15C31 /* LaundryIcons */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A8000AB220EC7D8C00B15C31 /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AB320EC7DA900B15C31 /* Localizable.strings */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		A8000ABD20ECA4DC00B15C31 /* ClothesType */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AB520EC7E6300B15C31 /* ClothesTypeEnum.swift */,
+			);
+			path = ClothesType;
+			sourceTree = "<group>";
+		};
+		A8000ABE20ECA4E800B15C31 /* LaundryIconsCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AB720EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift */,
+			);
+			path = LaundryIconsCategory;
+			sourceTree = "<group>";
+		};
+		A8000ABF20ECA4FB00B15C31 /* LaundryIcons */ = {
+			isa = PBXGroup;
+			children = (
+				A8000ABB20EC873F00B15C31 /* LaundryIconsProtocol.swift */,
+				A8000AB920EC82CD00B15C31 /* WashingIcon.swift */,
+				A8000AC020ECA56C00B15C31 /* DryingIcon.swift */,
+				A8000AC220ECAB5500B15C31 /* IroningIcon.swift */,
+				A8000AC420ECADA600B15C31 /* CleaningIcon.swift */,
+				A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */,
+			);
+			path = LaundryIcons;
+			sourceTree = "<group>";
+		};
 		A841D652200F52E400CD79D5 /* TextInputModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +401,8 @@
 		A89A02B81FF6A56300093266 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A8000AC920ECD4D400B15C31 /* R.generated.swift */,
+				A8000AB220EC7D8C00B15C31 /* Strings */,
 				A89A02B61FF6A54D00093266 /* ClothesType.json */,
 				A89A02B21FF6A53800093266 /* LaundryIcons.json */,
 				A89A02B41FF6A54600093266 /* LaundryIconsCategory.json */,
@@ -489,6 +566,7 @@
 		A8DD404D1FF0D15C002AB6DB /* KeepAndWash */ = {
 			isa = PBXGroup;
 			children = (
+				A8000AB020EC7A0300B15C31 /* Classes */,
 				A89A02B81FF6A56300093266 /* Resources */,
 				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
 				A89A02BB1FF6A6AB00093266 /* Constants.swift */,
@@ -547,6 +625,7 @@
 			buildConfigurationList = A8DD405D1FF0D15D002AB6DB /* Build configuration list for PBXNativeTarget "KeepAndWash" */;
 			buildPhases = (
 				6743CDDAF64DBB4904852AE0 /* [CP] Check Pods Manifest.lock */,
+				A8000AC820ECD46200B15C31 /* R.swift */,
 				A8DD40471FF0D15C002AB6DB /* Sources */,
 				A8DD40481FF0D15C002AB6DB /* Frameworks */,
 				A8DD40491FF0D15C002AB6DB /* Resources */,
@@ -605,6 +684,7 @@
 				A8882CAF1FFD0E9A00F540C0 /* PickerVC.storyboard in Resources */,
 				A89A02D01FF8024100093266 /* EditTypeCell.xib in Resources */,
 				A89A02C71FF7ECFB00093266 /* EditTitleCell.xib in Resources */,
+				A8000AB420EC7DA900B15C31 /* Localizable.strings in Resources */,
 				A89A02B31FF6A53800093266 /* LaundryIcons.json in Resources */,
 				A841D654200F58E900CD79D5 /* TextInputVC.storyboard in Resources */,
 				A8882CBA1FFD124C00F540C0 /* PickerCell.xib in Resources */,
@@ -675,6 +755,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		A8000AC820ECD46200B15C31 /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = R.swift;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT\"/KeepAndWash/Resources";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -690,7 +784,10 @@
 				A841D6672010B84500CD79D5 /* PhotoPickerModuleAssembly.swift in Sources */,
 				A8D9E5CB20091130001F1BE6 /* EditCLothesState.swift in Sources */,
 				A841D65C2010B4BC00CD79D5 /* HexColorServiceImpl.swift in Sources */,
+				A8000AB820EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift in Sources */,
+				A8000AC120ECA56C00B15C31 /* DryingIcon.swift in Sources */,
 				A841D6632010B80E00CD79D5 /* IconsPickerModuleAssembly.swift in Sources */,
+				A8000AC720ECBC9C00B15C31 /* WhiteningIcon.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
 				A841D6652010B82900CD79D5 /* ClothesTypePickerAssembly.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
@@ -711,6 +808,7 @@
 				A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */,
 				A8882CAA1FFD06D400F540C0 /* PickerVC.swift in Sources */,
 				A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */,
+				A8000AC320ECAB5500B15C31 /* IroningIcon.swift in Sources */,
 				A89A02D41FF804A900093266 /* EditColorCell.swift in Sources */,
 				A841D65E2010B71300CD79D5 /* TextInputModuleAssembly.swift in Sources */,
 				A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */,
@@ -727,7 +825,9 @@
 				A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */,
 				A841D6602010B7D200CD79D5 /* ColorPickerModuleAssembly.swift in Sources */,
 				A8882CC01FFD222400F540C0 /* UIViewController+StoryboardInstance.swift in Sources */,
+				A8000AB620EC7E6300B15C31 /* ClothesTypeEnum.swift in Sources */,
 				A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */,
+				A8000ABC20EC874000B15C31 /* LaundryIconsProtocol.swift in Sources */,
 				A8DD40701FF390E8002AB6DB /* LaundryIconCategory.swift in Sources */,
 				A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */,
 				A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */,
@@ -739,14 +839,17 @@
 				A841D651200F52E000CD79D5 /* TextInputVC.swift in Sources */,
 				A8411E7F20076816000D3C5D /* PickerRouter.swift in Sources */,
 				A89A02D91FF80B4300093266 /* EditIconsCell.swift in Sources */,
+				A8000ACA20ECD4D400B15C31 /* R.generated.swift in Sources */,
 				A841D658200F679300CD79D5 /* TextInputRouter.swift in Sources */,
 				A89A02C31FF7D14200093266 /* EditClothesViewModel.swift in Sources */,
+				A8000ABA20EC82CD00B15C31 /* WashingIcon.swift in Sources */,
 				A89A02C01FF7B09800093266 /* EditClothesPresenter.swift in Sources */,
 				A89D6F912008A62F00844713 /* IconsPickerPresenter.swift in Sources */,
 				A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */,
 				A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */,
 				A89A02DE1FF80DD100093266 /* EditNoteCell.swift in Sources */,
 				A841D65A2010B41A00CD79D5 /* HexColorService.swift in Sources */,
+				A8000AC520ECADA600B15C31 /* CleaningIcon.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
 				A89A02BA1FF6A5BB00093266 /* RealmStorageUpdater.swift in Sources */,
 			);
@@ -879,7 +982,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K4XW8K2LS2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeepAndWash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -896,7 +999,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K4XW8K2LS2;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = KeepAndWash/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
