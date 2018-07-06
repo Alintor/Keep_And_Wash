@@ -8,7 +8,15 @@
 
 "tableName" = "Localizable";
 
-// MARK - Models
+// MARK: - Common
+
+"common.done" = "Готово";
+"common.ok" = "Ок";
+"common.cancel" = "Отмена";
+"common.yes" = "Да";
+"common.no" = "Нет";
+
+// MARK: - Models
 // Clothes Type
 "model.clothesType.shirt" = "Рубашка";
 "model.clothesType.tshirt" = "Футболка";

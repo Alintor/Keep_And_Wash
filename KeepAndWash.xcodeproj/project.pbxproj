@@ -18,6 +18,29 @@
 		A8000AC520ECADA600B15C31 /* CleaningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC420ECADA600B15C31 /* CleaningIcon.swift */; };
 		A8000AC720ECBC9C00B15C31 /* WhiteningIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */; };
 		A8000ACA20ECD4D400B15C31 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AC920ECD4D400B15C31 /* R.generated.swift */; };
+		A8000ADE20EF2E1900B15C31 /* ClothesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000ADD20EF2E1900B15C31 /* ClothesItem.swift */; };
+		A8000AE020EF2E7300B15C31 /* RealmClothesItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000ADF20EF2E7300B15C31 /* RealmClothesItem.swift */; };
+		A8000AE320EF2F1300B15C31 /* RealmMappable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AE220EF2F1300B15C31 /* RealmMappable.swift */; };
+		A8000AE520EF2F7500B15C31 /* ClothesItem+Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AE420EF2F7400B15C31 /* ClothesItem+Realm.swift */; };
+		A8000AE720EF363C00B15C31 /* LaundryIconMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AE620EF363C00B15C31 /* LaundryIconMapper.swift */; };
+		A8000AEC20EF396E00B15C31 /* RealmStorageNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AEB20EF396E00B15C31 /* RealmStorageNew.swift */; };
+		A8000AEE20EF3CCF00B15C31 /* RealmStorageAssemblyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AED20EF3CCF00B15C31 /* RealmStorageAssemblyContainer.swift */; };
+		A8000AF120EF3ED700B15C31 /* ApplicationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AF020EF3ED700B15C31 /* ApplicationAssembly.swift */; };
+		A8000AF620EF4E8300B15C31 /* ClothesServiceNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AF520EF4E8300B15C31 /* ClothesServiceNew.swift */; };
+		A8000AF820EF4F3C00B15C31 /* ClothesServiceAssemblyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AF720EF4F3C00B15C31 /* ClothesServiceAssemblyContainer.swift */; };
+		A8000B0020EF5DD700B15C31 /* UINavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AFF20EF5DD700B15C31 /* UINavigationItem.swift */; };
+		A8000B0220EF5DEF00B15C31 /* UISearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0120EF5DEF00B15C31 /* UISearchBar.swift */; };
+		A8000B0420EF5E0900B15C31 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0320EF5E0900B15C31 /* UITextField.swift */; };
+		A8000B0620EF5E0900B15C31 /* UITabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0520EF5E0900B15C31 /* UITabBarItem.swift */; };
+		A8000B0820EF5E0900B15C31 /* UIBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0720EF5E0900B15C31 /* UIBarButtonItem.swift */; };
+		A8000B0B20EF5E2600B15C31 /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0A20EF5E2600B15C31 /* UIButton.swift */; };
+		A8000B0D20EF5E7100B15C31 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0C20EF5E7100B15C31 /* UILabel.swift */; };
+		A8000B1020EF5E8F00B15C31 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B0F20EF5E8F00B15C31 /* UIView.swift */; };
+		A8000B1220EF5EAD00B15C31 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1120EF5EAD00B15C31 /* UIApplication.swift */; };
+		A8000B1620EF611A00B15C31 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1520EF611A00B15C31 /* TransitionHandler.swift */; };
+		A8000B1820EF613700B15C31 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1720EF613700B15C31 /* Router.swift */; };
+		A8000B1A20EF614D00B15C31 /* CloseableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1920EF614D00B15C31 /* CloseableRouter.swift */; };
+		A8000B1C20EF618600B15C31 /* AlertRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1B20EF618600B15C31 /* AlertRoutable.swift */; };
 		A8411E7F20076816000D3C5D /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8411E7E20076816000D3C5D /* PickerRouter.swift */; };
 		A841D651200F52E000CD79D5 /* TextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D650200F52E000CD79D5 /* TextInputVC.swift */; };
 		A841D654200F58E900CD79D5 /* TextInputVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A841D653200F58E900CD79D5 /* TextInputVC.storyboard */; };
@@ -36,7 +59,7 @@
 		A841D66F2010C7F500CD79D5 /* ClothesModuleAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D66E2010C7F500CD79D5 /* ClothesModuleAssembly.swift */; };
 		A841D6722013637600CD79D5 /* ClothesSwipeableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6702013637600CD79D5 /* ClothesSwipeableCell.swift */; };
 		A841D6732013637600CD79D5 /* ClothesSwipeableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A841D6712013637600CD79D5 /* ClothesSwipeableCell.xib */; };
-		A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */; };
+		A8882CA21FFCE55800F540C0 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8882CA11FFCE55800F540C0 /* UIColor.swift */; };
 		A8882CA41FFCF81300F540C0 /* LaundryIconsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */; };
 		A8882CA61FFD00CD00F540C0 /* EditClothesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */; };
 		A8882CA81FFD010400F540C0 /* ClothesVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */; };
@@ -119,6 +142,29 @@
 		A8000AC420ECADA600B15C31 /* CleaningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CleaningIcon.swift; sourceTree = "<group>"; };
 		A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteningIcon.swift; sourceTree = "<group>"; };
 		A8000AC920ECD4D400B15C31 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		A8000ADD20EF2E1900B15C31 /* ClothesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesItem.swift; sourceTree = "<group>"; };
+		A8000ADF20EF2E7300B15C31 /* RealmClothesItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmClothesItem.swift; sourceTree = "<group>"; };
+		A8000AE220EF2F1300B15C31 /* RealmMappable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmMappable.swift; sourceTree = "<group>"; };
+		A8000AE420EF2F7400B15C31 /* ClothesItem+Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ClothesItem+Realm.swift"; sourceTree = "<group>"; };
+		A8000AE620EF363C00B15C31 /* LaundryIconMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconMapper.swift; sourceTree = "<group>"; };
+		A8000AEB20EF396E00B15C31 /* RealmStorageNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageNew.swift; sourceTree = "<group>"; };
+		A8000AED20EF3CCF00B15C31 /* RealmStorageAssemblyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmStorageAssemblyContainer.swift; sourceTree = "<group>"; };
+		A8000AF020EF3ED700B15C31 /* ApplicationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationAssembly.swift; sourceTree = "<group>"; };
+		A8000AF520EF4E8300B15C31 /* ClothesServiceNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesServiceNew.swift; sourceTree = "<group>"; };
+		A8000AF720EF4F3C00B15C31 /* ClothesServiceAssemblyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesServiceAssemblyContainer.swift; sourceTree = "<group>"; };
+		A8000AFF20EF5DD700B15C31 /* UINavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationItem.swift; sourceTree = "<group>"; };
+		A8000B0120EF5DEF00B15C31 /* UISearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISearchBar.swift; sourceTree = "<group>"; };
+		A8000B0320EF5E0900B15C31 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		A8000B0520EF5E0900B15C31 /* UITabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarItem.swift; sourceTree = "<group>"; };
+		A8000B0720EF5E0900B15C31 /* UIBarButtonItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonItem.swift; sourceTree = "<group>"; };
+		A8000B0A20EF5E2600B15C31 /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		A8000B0C20EF5E7100B15C31 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		A8000B0F20EF5E8F00B15C31 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		A8000B1120EF5EAD00B15C31 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		A8000B1520EF611A00B15C31 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
+		A8000B1720EF613700B15C31 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		A8000B1920EF614D00B15C31 /* CloseableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseableRouter.swift; sourceTree = "<group>"; };
+		A8000B1B20EF618600B15C31 /* AlertRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoutable.swift; sourceTree = "<group>"; };
 		A8411E7E20076816000D3C5D /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
 		A841D650200F52E000CD79D5 /* TextInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputVC.swift; sourceTree = "<group>"; };
 		A841D653200F58E900CD79D5 /* TextInputVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInputVC.storyboard; sourceTree = "<group>"; };
@@ -137,7 +183,7 @@
 		A841D66E2010C7F500CD79D5 /* ClothesModuleAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesModuleAssembly.swift; sourceTree = "<group>"; };
 		A841D6702013637600CD79D5 /* ClothesSwipeableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesSwipeableCell.swift; sourceTree = "<group>"; };
 		A841D6712013637600CD79D5 /* ClothesSwipeableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClothesSwipeableCell.xib; sourceTree = "<group>"; };
-		A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		A8882CA11FFCE55800F540C0 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		A8882CA31FFCF81300F540C0 /* LaundryIconsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaundryIconsVC.storyboard; sourceTree = "<group>"; };
 		A8882CA51FFD00CC00F540C0 /* EditClothesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditClothesVC.storyboard; sourceTree = "<group>"; };
 		A8882CA71FFD010400F540C0 /* ClothesVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ClothesVC.storyboard; sourceTree = "<group>"; };
@@ -242,7 +288,10 @@
 		A8000AB020EC7A0300B15C31 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A8000AEF20EF3EB700B15C31 /* Application */,
 				A8000AB120EC7A1600B15C31 /* Model */,
+				A8000AE820EF390900B15C31 /* BusinessLogic */,
+				A8000AF920EF5D2400B15C31 /* Presentation */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -250,6 +299,8 @@
 		A8000AB120EC7A1600B15C31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A8000ADB20EF28D300B15C31 /* Mappers */,
+				A8000ADA20EF27E600B15C31 /* Clothes */,
 				A8000ABD20ECA4DC00B15C31 /* ClothesType */,
 				A8000ABE20ECA4E800B15C31 /* LaundryIconsCategory */,
 				A8000ABF20ECA4FB00B15C31 /* LaundryIcons */,
@@ -292,6 +343,178 @@
 				A8000AC620ECBC9C00B15C31 /* WhiteningIcon.swift */,
 			);
 			path = LaundryIcons;
+			sourceTree = "<group>";
+		};
+		A8000ADA20EF27E600B15C31 /* Clothes */ = {
+			isa = PBXGroup;
+			children = (
+				A8000ADC20EF2DFC00B15C31 /* Plain */,
+				A8000AF220EF3F5100B15C31 /* Realm */,
+			);
+			path = Clothes;
+			sourceTree = "<group>";
+		};
+		A8000ADB20EF28D300B15C31 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AE120EF2EF600B15C31 /* Realm */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		A8000ADC20EF2DFC00B15C31 /* Plain */ = {
+			isa = PBXGroup;
+			children = (
+				A8000ADD20EF2E1900B15C31 /* ClothesItem.swift */,
+			);
+			path = Plain;
+			sourceTree = "<group>";
+		};
+		A8000AE120EF2EF600B15C31 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AE220EF2F1300B15C31 /* RealmMappable.swift */,
+				A8000AE420EF2F7400B15C31 /* ClothesItem+Realm.swift */,
+				A8000AE620EF363C00B15C31 /* LaundryIconMapper.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A8000AE820EF390900B15C31 /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AE920EF394800B15C31 /* Storages */,
+				A8000AF320EF494B00B15C31 /* Services */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		A8000AE920EF394800B15C31 /* Storages */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AEA20EF395200B15C31 /* RealmStorage */,
+			);
+			path = Storages;
+			sourceTree = "<group>";
+		};
+		A8000AEA20EF395200B15C31 /* RealmStorage */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AED20EF3CCF00B15C31 /* RealmStorageAssemblyContainer.swift */,
+				A8000AEB20EF396E00B15C31 /* RealmStorageNew.swift */,
+			);
+			path = RealmStorage;
+			sourceTree = "<group>";
+		};
+		A8000AEF20EF3EB700B15C31 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
+				A8000AF020EF3ED700B15C31 /* ApplicationAssembly.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A8000AF220EF3F5100B15C31 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				A8000ADF20EF2E7300B15C31 /* RealmClothesItem.swift */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		A8000AF320EF494B00B15C31 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AF420EF495700B15C31 /* ClothesService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A8000AF420EF495700B15C31 /* ClothesService */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AF520EF4E8300B15C31 /* ClothesServiceNew.swift */,
+				A8000AF720EF4F3C00B15C31 /* ClothesServiceAssemblyContainer.swift */,
+			);
+			path = ClothesService;
+			sourceTree = "<group>";
+		};
+		A8000AF920EF5D2400B15C31 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				A8000B1320EF60F800B15C31 /* Common */,
+				A8000AFA20EF5D5600B15C31 /* Extensions */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A8000AFA20EF5D5600B15C31 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A8000AFE20EF5DC700B15C31 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A8000AFB20EF5D7400B15C31 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD40551FF0D15D002AB6DB /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		A8000AFC20EF5D7B00B15C31 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		A8000AFD20EF5DAC00B15C31 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				A8DD405A1FF0D15D002AB6DB /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		A8000AFE20EF5DC700B15C31 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A8882CA11FFCE55800F540C0 /* UIColor.swift */,
+				A8000AFF20EF5DD700B15C31 /* UINavigationItem.swift */,
+				A8000B0120EF5DEF00B15C31 /* UISearchBar.swift */,
+				A8000B0320EF5E0900B15C31 /* UITextField.swift */,
+				A8000B0520EF5E0900B15C31 /* UITabBarItem.swift */,
+				A8000B0720EF5E0900B15C31 /* UIBarButtonItem.swift */,
+				A8000B0A20EF5E2600B15C31 /* UIButton.swift */,
+				A8000B0C20EF5E7100B15C31 /* UILabel.swift */,
+				A8000B0F20EF5E8F00B15C31 /* UIView.swift */,
+				A8000B1120EF5EAD00B15C31 /* UIApplication.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A8000B1320EF60F800B15C31 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A8000B1420EF610600B15C31 /* Router */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A8000B1420EF610600B15C31 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A8000B1520EF611A00B15C31 /* TransitionHandler.swift */,
+				A8000B1720EF613700B15C31 /* Router.swift */,
+				A8000B1920EF614D00B15C31 /* CloseableRouter.swift */,
+				A8000B1B20EF618600B15C31 /* AlertRoutable.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		A841D652200F52E400CD79D5 /* TextInputModule */ = {
@@ -401,8 +624,10 @@
 		A89A02B81FF6A56300093266 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				A8000AC920ECD4D400B15C31 /* R.generated.swift */,
+				A8000AFC20EF5D7B00B15C31 /* Launch */,
+				A8000AFB20EF5D7400B15C31 /* Images */,
 				A8000AB220EC7D8C00B15C31 /* Strings */,
+				A8000AC920ECD4D400B15C31 /* R.generated.swift */,
 				A89A02B61FF6A54D00093266 /* ClothesType.json */,
 				A89A02B21FF6A53800093266 /* LaundryIcons.json */,
 				A89A02B41FF6A54600093266 /* LaundryIconsCategory.json */,
@@ -513,7 +738,6 @@
 				A8882CBB1FFD1DEA00F540C0 /* UICollectionViewCell+reusable.swift */,
 				A89A02ED1FF8FC6A00093266 /* UITableView+reusable.swift */,
 				A8882CBD1FFD1E1D00F540C0 /* UICollectionView+reusable.swift */,
-				A8882CA11FFCE55800F540C0 /* UIColor+Hex.swift */,
 				A8882CBF1FFD222400F540C0 /* UIViewController+StoryboardInstance.swift */,
 			);
 			path = Extensions;
@@ -568,16 +792,13 @@
 			children = (
 				A8000AB020EC7A0300B15C31 /* Classes */,
 				A89A02B81FF6A56300093266 /* Resources */,
-				A8DD404E1FF0D15C002AB6DB /* AppDelegate.swift */,
 				A89A02BB1FF6A6AB00093266 /* Constants.swift */,
 				A89A02EF1FF8FC7400093266 /* Extensions */,
 				A89A02C81FF7ED0400093266 /* CustomViews */,
 				A89A02A91FF6270800093266 /* Presentation */,
 				A89A02A61FF4FB6C00093266 /* Services */,
 				A8DD40601FF377DC002AB6DB /* Models */,
-				A8DD40551FF0D15D002AB6DB /* Assets.xcassets */,
-				A8DD40571FF0D15D002AB6DB /* LaunchScreen.storyboard */,
-				A8DD405A1FF0D15D002AB6DB /* Info.plist */,
+				A8000AFD20EF5DAC00B15C31 /* SupportingFiles */,
 			);
 			path = KeepAndWash;
 			sourceTree = "<group>";
@@ -780,17 +1001,25 @@
 				A841D66B2010C35A00CD79D5 /* ClothesRouter.swift in Sources */,
 				A8DD407A1FF3CF8F002AB6DB /* LaundryIconService.swift in Sources */,
 				A8882CC21FFD228A00F540C0 /* ColorPickerPresenter.swift in Sources */,
+				A8000AF120EF3ED700B15C31 /* ApplicationAssembly.swift in Sources */,
 				A89A02EC1FF8FC4900093266 /* UITableViewCell+reusable.swift in Sources */,
 				A841D6672010B84500CD79D5 /* PhotoPickerModuleAssembly.swift in Sources */,
 				A8D9E5CB20091130001F1BE6 /* EditCLothesState.swift in Sources */,
+				A8000B1220EF5EAD00B15C31 /* UIApplication.swift in Sources */,
 				A841D65C2010B4BC00CD79D5 /* HexColorServiceImpl.swift in Sources */,
 				A8000AB820EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift in Sources */,
 				A8000AC120ECA56C00B15C31 /* DryingIcon.swift in Sources */,
 				A841D6632010B80E00CD79D5 /* IconsPickerModuleAssembly.swift in Sources */,
 				A8000AC720ECBC9C00B15C31 /* WhiteningIcon.swift in Sources */,
+				A8000AEC20EF396E00B15C31 /* RealmStorageNew.swift in Sources */,
 				A89A02BC1FF6A6AB00093266 /* Constants.swift in Sources */,
+				A8000B1820EF613700B15C31 /* Router.swift in Sources */,
+				A8000B0B20EF5E2600B15C31 /* UIButton.swift in Sources */,
 				A841D6652010B82900CD79D5 /* ClothesTypePickerAssembly.swift in Sources */,
 				A8DD40681FF38F3E002AB6DB /* RealmClothesType.swift in Sources */,
+				A8000AE520EF2F7500B15C31 /* ClothesItem+Realm.swift in Sources */,
+				A8000B0020EF5DD700B15C31 /* UINavigationItem.swift in Sources */,
+				A8000AF820EF4F3C00B15C31 /* ClothesServiceAssemblyContainer.swift in Sources */,
 				A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */,
 				A89A02A81FF626FB00093266 /* ClothesVC.swift in Sources */,
 				A89A02E31FF8106700093266 /* EditPhotoCell.swift in Sources */,
@@ -803,15 +1032,19 @@
 				A8DD40801FF3D157002AB6DB /* ClothesServiceImpl.swift in Sources */,
 				A841D6692010BF2B00CD79D5 /* EditClothesModuleAssembly.swift in Sources */,
 				A8D9E5CD200911A2001F1BE6 /* EditClothesVMBuilder.swift in Sources */,
+				A8000B0820EF5E0900B15C31 /* UIBarButtonItem.swift in Sources */,
 				A8DD40621FF37F41002AB6DB /* RealmСlothes.swift in Sources */,
+				A8000B0420EF5E0900B15C31 /* UITextField.swift in Sources */,
+				A8000AE320EF2F1300B15C31 /* RealmMappable.swift in Sources */,
 				A89A02CF1FF8024100093266 /* EditTypeCell.swift in Sources */,
 				A89D6F972008EBD900844713 /* PhotoPickerPresenter.swift in Sources */,
 				A8882CAA1FFD06D400F540C0 /* PickerVC.swift in Sources */,
 				A89A02AD1FF67A9E00093266 /* LaundryIconsVC.swift in Sources */,
+				A8000AEE20EF3CCF00B15C31 /* RealmStorageAssemblyContainer.swift in Sources */,
 				A8000AC320ECAB5500B15C31 /* IroningIcon.swift in Sources */,
 				A89A02D41FF804A900093266 /* EditColorCell.swift in Sources */,
 				A841D65E2010B71300CD79D5 /* TextInputModuleAssembly.swift in Sources */,
-				A8882CA21FFCE55800F540C0 /* UIColor+Hex.swift in Sources */,
+				A8882CA21FFCE55800F540C0 /* UIColor.swift in Sources */,
 				A8882CB91FFD124C00F540C0 /* PickerCell.swift in Sources */,
 				A8DD406C1FF3909F002AB6DB /* LaundryIcon.swift in Sources */,
 				A8DD40641FF38A4D002AB6DB /* RealmLaundryIcon.swift in Sources */,
@@ -824,22 +1057,32 @@
 				A841D656200F678500CD79D5 /* TextInputPresenter.swift in Sources */,
 				A8DD404F1FF0D15C002AB6DB /* AppDelegate.swift in Sources */,
 				A841D6602010B7D200CD79D5 /* ColorPickerModuleAssembly.swift in Sources */,
+				A8000B1620EF611A00B15C31 /* TransitionHandler.swift in Sources */,
 				A8882CC01FFD222400F540C0 /* UIViewController+StoryboardInstance.swift in Sources */,
 				A8000AB620EC7E6300B15C31 /* ClothesTypeEnum.swift in Sources */,
 				A89A02A31FF4D18500093266 /* RealmObject.swift in Sources */,
 				A8000ABC20EC874000B15C31 /* LaundryIconsProtocol.swift in Sources */,
 				A8DD40701FF390E8002AB6DB /* LaundryIconCategory.swift in Sources */,
 				A89A02EE1FF8FC6A00093266 /* UITableView+reusable.swift in Sources */,
+				A8000B0220EF5DEF00B15C31 /* UISearchBar.swift in Sources */,
+				A8000B1C20EF618600B15C31 /* AlertRoutable.swift in Sources */,
 				A89A02A51FF4D19900093266 /* PlainObject.swift in Sources */,
+				A8000B1A20EF614D00B15C31 /* CloseableRouter.swift in Sources */,
+				A8000AE020EF2E7300B15C31 /* RealmClothesItem.swift in Sources */,
+				A8000B0D20EF5E7100B15C31 /* UILabel.swift in Sources */,
 				A89A02C61FF7ECFB00093266 /* EditTitleCell.swift in Sources */,
 				A8DD407C1FF3CFA2002AB6DB /* ClothesService.swift in Sources */,
 				A841D66D2010C3F800CD79D5 /* LaundryIconsModuleAssembly.swift in Sources */,
+				A8000B0620EF5E0900B15C31 /* UITabBarItem.swift in Sources */,
 				A8DD40661FF38AD7002AB6DB /* RealmLaundryIconCategory.swift in Sources */,
 				A89A02AF1FF67AC000093266 /* LaundryIconsPresenter.swift in Sources */,
+				A8000B1020EF5E8F00B15C31 /* UIView.swift in Sources */,
 				A841D651200F52E000CD79D5 /* TextInputVC.swift in Sources */,
 				A8411E7F20076816000D3C5D /* PickerRouter.swift in Sources */,
 				A89A02D91FF80B4300093266 /* EditIconsCell.swift in Sources */,
 				A8000ACA20ECD4D400B15C31 /* R.generated.swift in Sources */,
+				A8000ADE20EF2E1900B15C31 /* ClothesItem.swift in Sources */,
+				A8000AE720EF363C00B15C31 /* LaundryIconMapper.swift in Sources */,
 				A841D658200F679300CD79D5 /* TextInputRouter.swift in Sources */,
 				A89A02C31FF7D14200093266 /* EditClothesViewModel.swift in Sources */,
 				A8000ABA20EC82CD00B15C31 /* WashingIcon.swift in Sources */,
@@ -848,6 +1091,7 @@
 				A89D6F952008E8F000844713 /* PhotoPickerRouter.swift in Sources */,
 				A8882CBE1FFD1E1D00F540C0 /* UICollectionView+reusable.swift in Sources */,
 				A89A02DE1FF80DD100093266 /* EditNoteCell.swift in Sources */,
+				A8000AF620EF4E8300B15C31 /* ClothesServiceNew.swift in Sources */,
 				A841D65A2010B41A00CD79D5 /* HexColorService.swift in Sources */,
 				A8000AC520ECADA600B15C31 /* CleaningIcon.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
@@ -983,7 +1227,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = KeepAndWash/Info.plist;
+				INFOPLIST_FILE = KeepAndWash/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ovchinnikov.KeepAndWash;
@@ -1000,7 +1244,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = KeepAndWash/Info.plist;
+				INFOPLIST_FILE = KeepAndWash/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ovchinnikov.KeepAndWash;

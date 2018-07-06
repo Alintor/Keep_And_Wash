@@ -16,7 +16,8 @@ enum ClothesTypeEnum: String {
     shorts,
     bedclothes,
     socks,
-    hoodie
+    hoodie,
+    other
     
     static var allValues: [ClothesTypeEnum] {
         return [.shirt, .tshirt, .pants, .underwear, .shorts, .bedclothes, .socks, .hoodie]

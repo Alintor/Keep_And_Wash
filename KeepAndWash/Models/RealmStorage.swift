@@ -35,3 +35,12 @@ class RealmStorage<U:RealmObject> where U:Object {
     
 }
 
+protocol ClothesStorageType {
+    func getAll() -> [Clothes]
+    func getBy(id: String) -> Clothes?
+    func getWith(key:String, value:Any) -> [Clothes]
+    func insert(item: Clothes)
+    func deleteBy(id: String)
+}
+
+extension RealmStorage: ClothesStorageType where U: RealmClothes  {}

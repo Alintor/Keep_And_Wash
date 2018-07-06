@@ -4,6 +4,7 @@ import Foundation
 class ClothesServiceImpl: ClothesService {
     let clothesStorage = RealmStorage<RealmClothes>()
     let clothesTypeStorage = RealmStorage<RealmClothesType>()
+    var clothesStor: ClothesStorageType!
     
     func getClothesTypes() -> [ClothesType] {
         return clothesTypeStorage.getAll()

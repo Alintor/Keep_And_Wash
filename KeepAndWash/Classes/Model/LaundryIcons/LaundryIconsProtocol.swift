@@ -13,18 +13,9 @@ protocol LaundryIconsProtocol {
     var priority: Int { get }
     
     static var allValues: [LaundryIconsProtocol] { get }
-    static func getLaundryIconFrom(_ stringValue: String) -> LaundryIconsProtocol?
 }
 
 extension LaundryIconsProtocol {
-    
-    static func getLaundryIconFrom(_ stringValue: String) -> LaundryIconsProtocol? {
-        return WashingIcon(rawValue: stringValue)
-            ?? DryingIcon(rawValue: stringValue)
-            ?? IroningIcon(rawValue: stringValue)
-            ?? CleaningIcon(rawValue: stringValue)
-            ?? WhiteningIcon(rawValue: stringValue)
-    }
     
     static var allValues: [LaundryIconsProtocol] {
         var values = [LaundryIconsProtocol]()
