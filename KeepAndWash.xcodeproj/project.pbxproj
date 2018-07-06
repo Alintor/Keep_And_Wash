@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		074D729C54F5B178BF155A9C /* ClothesListAssemblyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5970CAE0A61B46F08CBF8F8 /* ClothesListAssemblyContainer.swift */; };
+		0DAF85F115B20D82714ED754 /* ClothesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7C9EEE057527FE9E25738 /* ClothesListPresenter.swift */; };
+		1DB0FB3A73344615F4A48E38 /* ClothesListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0288F9AD0BCDD11DA559C60 /* ClothesListInteractorInput.swift */; };
 		30545332345885CE4B4F810B /* Pods_KeepAndWash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */; };
+		58A712FD249666D2C45868CD /* ClothesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B004CCF52F4FF1BBEC796789 /* ClothesListRouter.swift */; };
+		60EBEB4378E006CD47AF3113 /* ClothesList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3616A9A9B11CC25E15BC7036 /* ClothesList.storyboard */; };
 		A8000AB420EC7DA900B15C31 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8000AB320EC7DA900B15C31 /* Localizable.strings */; };
 		A8000AB620EC7E6300B15C31 /* ClothesTypeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AB520EC7E6300B15C31 /* ClothesTypeEnum.swift */; };
 		A8000AB820EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000AB720EC7F1300B15C31 /* LaundryIconsCategoryEnum.swift */; };
@@ -41,6 +46,7 @@
 		A8000B1820EF613700B15C31 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1720EF613700B15C31 /* Router.swift */; };
 		A8000B1A20EF614D00B15C31 /* CloseableRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1920EF614D00B15C31 /* CloseableRouter.swift */; };
 		A8000B1C20EF618600B15C31 /* AlertRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1B20EF618600B15C31 /* AlertRoutable.swift */; };
+		A8000B1F20EF7DAF00B15C31 /* ClothesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8000B1E20EF7DAF00B15C31 /* ClothesListViewModel.swift */; };
 		A8411E7F20076816000D3C5D /* PickerRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8411E7E20076816000D3C5D /* PickerRouter.swift */; };
 		A841D651200F52E000CD79D5 /* TextInputVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D650200F52E000CD79D5 /* TextInputVC.swift */; };
 		A841D654200F58E900CD79D5 /* TextInputVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A841D653200F58E900CD79D5 /* TextInputVC.storyboard */; };
@@ -127,9 +133,20 @@
 		A8DD407C1FF3CFA2002AB6DB /* ClothesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD407B1FF3CFA2002AB6DB /* ClothesService.swift */; };
 		A8DD407E1FF3D147002AB6DB /* LaundryIconServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD407D1FF3D147002AB6DB /* LaundryIconServiceImpl.swift */; };
 		A8DD40801FF3D157002AB6DB /* ClothesServiceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8DD407F1FF3D157002AB6DB /* ClothesServiceImpl.swift */; };
+		B3F3D5FB9370E1DC58810BD6 /* ClothesListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2607383848B16A68181EC8 /* ClothesListModuleInput.swift */; };
+		B92C94DD1E0DB97968CCA9AF /* ClothesListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24004D173B44AD7AA6883118 /* ClothesListViewInput.swift */; };
+		E2BB71629C1B4BE979161520 /* ClothesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64476C167F8C19CB86BA9298 /* ClothesListInteractor.swift */; };
+		E8E6A996E81E460A6844D98B /* ClothesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B6B583C58AEBD2486E0588 /* ClothesListViewController.swift */; };
+		EBC858FBF37B7E8E9ACCB6B1 /* ClothesListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525B3239F19BB34BDC4B0F37 /* ClothesListRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24004D173B44AD7AA6883118 /* ClothesListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListViewInput.swift; sourceTree = "<group>"; };
+		25A7C9EEE057527FE9E25738 /* ClothesListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListPresenter.swift; sourceTree = "<group>"; };
+		3616A9A9B11CC25E15BC7036 /* ClothesList.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = ClothesList.storyboard; sourceTree = "<group>"; };
+		525B3239F19BB34BDC4B0F37 /* ClothesListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListRouterInput.swift; sourceTree = "<group>"; };
+		5F2607383848B16A68181EC8 /* ClothesListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListModuleInput.swift; sourceTree = "<group>"; };
+		64476C167F8C19CB86BA9298 /* ClothesListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListInteractor.swift; sourceTree = "<group>"; };
 		78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.release.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.release.xcconfig"; sourceTree = "<group>"; };
 		A364B6E530AC262062620C31 /* Pods-KeepAndWash.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KeepAndWash.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KeepAndWash/Pods-KeepAndWash.debug.xcconfig"; sourceTree = "<group>"; };
 		A8000AB320EC7DA900B15C31 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
@@ -165,6 +182,7 @@
 		A8000B1720EF613700B15C31 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		A8000B1920EF614D00B15C31 /* CloseableRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseableRouter.swift; sourceTree = "<group>"; };
 		A8000B1B20EF618600B15C31 /* AlertRoutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertRoutable.swift; sourceTree = "<group>"; };
+		A8000B1E20EF7DAF00B15C31 /* ClothesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesListViewModel.swift; sourceTree = "<group>"; };
 		A8411E7E20076816000D3C5D /* PickerRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PickerRouter.swift; sourceTree = "<group>"; };
 		A841D650200F52E000CD79D5 /* TextInputVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInputVC.swift; sourceTree = "<group>"; };
 		A841D653200F58E900CD79D5 /* TextInputVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TextInputVC.storyboard; sourceTree = "<group>"; };
@@ -253,7 +271,11 @@
 		A8DD407B1FF3CFA2002AB6DB /* ClothesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesService.swift; sourceTree = "<group>"; };
 		A8DD407D1FF3D147002AB6DB /* LaundryIconServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaundryIconServiceImpl.swift; sourceTree = "<group>"; };
 		A8DD407F1FF3D157002AB6DB /* ClothesServiceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesServiceImpl.swift; sourceTree = "<group>"; };
+		B004CCF52F4FF1BBEC796789 /* ClothesListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListRouter.swift; sourceTree = "<group>"; };
 		B38532A87ED3809A8FE06276 /* Pods_KeepAndWash.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KeepAndWash.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B6B583C58AEBD2486E0588 /* ClothesListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListViewController.swift; sourceTree = "<group>"; };
+		D0288F9AD0BCDD11DA559C60 /* ClothesListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListInteractorInput.swift; sourceTree = "<group>"; };
+		E5970CAE0A61B46F08CBF8F8 /* ClothesListAssemblyContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ClothesListAssemblyContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +290,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09939ACCD0B021C1DF7D2206 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				24004D173B44AD7AA6883118 /* ClothesListViewInput.swift */,
+				C3B6B583C58AEBD2486E0588 /* ClothesListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1BE1E21C149B023B2470AE46 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				525B3239F19BB34BDC4B0F37 /* ClothesListRouterInput.swift */,
+				B004CCF52F4FF1BBEC796789 /* ClothesListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2A231C8FD11ABB45B8FF2CF6 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				5F2607383848B16A68181EC8 /* ClothesListModuleInput.swift */,
+				25A7C9EEE057527FE9E25738 /* ClothesListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		33E054F20ECE875618482E49 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				A8000B1D20EF7D7500B15C31 /* ViewModel */,
+				8D1CF9CC460229FC841AE1E1 /* Assembly */,
+				E8D5EBC7B12EBA8265E9CB32 /* Storyboard */,
+				09939ACCD0B021C1DF7D2206 /* View */,
+				2A231C8FD11ABB45B8FF2CF6 /* Presenter */,
+				3A9E662E874951C921B672D3 /* Interactor */,
+				1BE1E21C149B023B2470AE46 /* Router */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		3A9E662E874951C921B672D3 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				D0288F9AD0BCDD11DA559C60 /* ClothesListInteractorInput.swift */,
+				64476C167F8C19CB86BA9298 /* ClothesListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		449D55C4F47680E173058D61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -283,6 +355,14 @@
 				78130CB7B7378254A2D29627 /* Pods-KeepAndWash.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D1CF9CC460229FC841AE1E1 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				E5970CAE0A61B46F08CBF8F8 /* ClothesListAssemblyContainer.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		A8000AB020EC7A0300B15C31 /* Classes */ = {
@@ -445,6 +525,7 @@
 			children = (
 				A8000B1320EF60F800B15C31 /* Common */,
 				A8000AFA20EF5D5600B15C31 /* Extensions */,
+				E07E54B807BC13F0073F05E4 /* ClothesList */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -515,6 +596,14 @@
 				A8000B1B20EF618600B15C31 /* AlertRoutable.swift */,
 			);
 			path = Router;
+			sourceTree = "<group>";
+		};
+		A8000B1D20EF7D7500B15C31 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A8000B1E20EF7DAF00B15C31 /* ClothesListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A841D652200F52E400CD79D5 /* TextInputModule */ = {
@@ -838,6 +927,22 @@
 			path = PlainObjects;
 			sourceTree = "<group>";
 		};
+		E07E54B807BC13F0073F05E4 /* ClothesList */ = {
+			isa = PBXGroup;
+			children = (
+				33E054F20ECE875618482E49 /* Module */,
+			);
+			path = ClothesList;
+			sourceTree = "<group>";
+		};
+		E8D5EBC7B12EBA8265E9CB32 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				3616A9A9B11CC25E15BC7036 /* ClothesList.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -920,6 +1025,7 @@
 				A8DD40561FF0D15D002AB6DB /* Assets.xcassets in Resources */,
 				A89A02B51FF6A54600093266 /* LaundryIconsCategory.json in Resources */,
 				A89A02E41FF8106700093266 /* EditPhotoCell.xib in Resources */,
+				60EBEB4378E006CD47AF3113 /* ClothesList.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1096,6 +1202,16 @@
 				A8000AC520ECADA600B15C31 /* CleaningIcon.swift in Sources */,
 				A8DD40761FF3B7DA002AB6DB /* RealmStorage.swift in Sources */,
 				A89A02BA1FF6A5BB00093266 /* RealmStorageUpdater.swift in Sources */,
+				074D729C54F5B178BF155A9C /* ClothesListAssemblyContainer.swift in Sources */,
+				B92C94DD1E0DB97968CCA9AF /* ClothesListViewInput.swift in Sources */,
+				E8E6A996E81E460A6844D98B /* ClothesListViewController.swift in Sources */,
+				B3F3D5FB9370E1DC58810BD6 /* ClothesListModuleInput.swift in Sources */,
+				0DAF85F115B20D82714ED754 /* ClothesListPresenter.swift in Sources */,
+				1DB0FB3A73344615F4A48E38 /* ClothesListInteractorInput.swift in Sources */,
+				E2BB71629C1B4BE979161520 /* ClothesListInteractor.swift in Sources */,
+				A8000B1F20EF7DAF00B15C31 /* ClothesListViewModel.swift in Sources */,
+				EBC858FBF37B7E8E9ACCB6B1 /* ClothesListRouterInput.swift in Sources */,
+				58A712FD249666D2C45868CD /* ClothesListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,6 +1,6 @@
 
 
-import UIKit
+import DTModelStorage
 
 protocol ClothesSwipeableCellDelegate: class {
     func manageDirty(sender:UITableViewCell)
@@ -8,7 +8,7 @@ protocol ClothesSwipeableCellDelegate: class {
     func deleteClothes(sender:UITableViewCell)
 }
 
-class ClothesSwipeableCell: UITableViewCell {
+final class ClothesSwipeableCell: UITableViewCell {
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var sentDirtyImage: UIImageView!
@@ -17,6 +17,9 @@ class ClothesSwipeableCell: UITableViewCell {
     
     @IBOutlet weak var containerRightConstraint: NSLayoutConstraint!
     @IBOutlet weak var containerLeftConstraint: NSLayoutConstraint!
+    
+    private var actionClosure: ClothesListViewModel.ActionClosure?
+    private var model: ClothesListViewModel!
     
     private weak var delegate:ClothesSwipeableCellDelegate?
     private var previousX:CGFloat = 0
@@ -53,17 +56,21 @@ class ClothesSwipeableCell: UITableViewCell {
     func manageDirtyClothes() {
         isDirty = !isDirty
         delegate?.manageDirty(sender: self)
+        actionClosure?(.mark, model)
     }
     
     //MARK: Buttons actions
     @IBAction func deleteBtnTapped(_ sender: Any) {
         setConstraintsToDefault()
         delegate?.deleteClothes(sender: self)
+        actionClosure?(.delete, model)
     }
     
     @IBAction func editBtnTapped(_ sender: Any) {
-        setConstraintsToDefault { (bool) in
+        setConstraintsToDefault { [weak self] _ in
+            guard let `self` = self else { return }
             self.delegate?.editClothes(sender: self)
+            self.actionClosure?(.edit, self.model)
         }
         
     }
@@ -96,17 +103,27 @@ class ClothesSwipeableCell: UITableViewCell {
                 previousX = -stopPosition
             } else {
                 if sentDirtyImage.frame.minX > 0 {
-                    setConstraintsToDefault(completion: { (bool) in
-                        self.manageDirtyClothes()
+                    setConstraintsToDefault(completion: { [weak self] _ in
+                        self?.manageDirtyClothes()
                     })
                 } else {
                     setConstraintsToDefault()
                 }
-                
             }
-        default:
-            break
+        default: break
         }
     }
     
+}
+
+extension ClothesSwipeableCell: ModelTransfer {
+    
+    func update(with model: ClothesListViewModel) {
+        self.model = model
+        titleLbl.text = model.title
+        iconView.image = model.image
+        iconView.tintColor = model.color
+        isDirty = model.isDirty
+        actionClosure = model.actionClosure
+    }
 }

@@ -9,6 +9,9 @@
 
 protocol ClothesServiceType {
     
+    var allClothes: [ClothesItem] { get }
+    func delete(_ item: ClothesItem)
+    func update(_ item: ClothesItem)
 }
 
 
@@ -25,4 +28,15 @@ final class ClothesServiceNew {
 
 extension ClothesServiceNew: ClothesServiceType {
     
+    var allClothes: [ClothesItem] {
+        return storage.fethAll()
+    }
+    
+    func delete(_ item: ClothesItem) {
+        storage.delete(item)
+    }
+    
+    func update(_ item: ClothesItem) {
+        storage.insert(item)
+    }
 }

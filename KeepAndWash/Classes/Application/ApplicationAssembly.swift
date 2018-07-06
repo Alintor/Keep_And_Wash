@@ -18,9 +18,10 @@ final class ApplicationAssembly {
             RealmStorageAssemblyContainer(),
             
             // Services
-            ClothesServiceAssemblyContainer()
+            ClothesServiceAssemblyContainer(),
             
             // Modules
+            ClothesListAssemblyContainer()
             ])
     }
 }
