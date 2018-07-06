@@ -1,28 +1,28 @@
 PODS:
-  - DTModelStorage (7.0.3):
-    - DTModelStorage/Core (= 7.0.3)
-  - DTModelStorage/Core (7.0.3)
-  - DTTableViewManager (6.2.0):
-    - DTModelStorage (~> 7.0.0)
+  - DTModelStorage (7.1.0):
+    - DTModelStorage/Core (= 7.1.0)
+  - DTModelStorage/Core (7.1.0)
+  - DTTableViewManager (6.3.0):
+    - DTModelStorage (~> 7.1.0)
   - LightRoute (2.1.18)
   - R.swift (4.0.0):
     - R.swift.Library (~> 4.0.0)
   - R.swift.Library (4.0.0)
-  - Realm (3.0.2):
-    - Realm/Headers (= 3.0.2)
-  - Realm/Headers (3.0.2)
-  - RealmSwift (3.0.2):
-    - Realm (= 3.0.2)
+  - Realm (3.7.4):
+    - Realm/Headers (= 3.7.4)
+  - Realm/Headers (3.7.4)
+  - RealmSwift (3.7.4):
+    - Realm (= 3.7.4)
   - SwiftLint (0.25.1)
   - Swinject (2.1.1)
   - SwinjectStoryboard (1.1.2):
     - Swinject (~> 2.1)
 
 DEPENDENCIES:
-  - DTTableViewManager (~> 6.0)
+  - DTTableViewManager (~> 6.3.0)
   - LightRoute (~> 2.1)
   - R.swift (~> 4.0.0)
-  - RealmSwift
+  - RealmSwift (~> 3.7.4)
   - SwiftLint (= 0.25.1)
   - Swinject (~> 2.1.1)
   - SwinjectStoryboard (~> 1.1.2)
@@ -41,17 +41,17 @@ SPEC REPOS:
     - SwinjectStoryboard
 
 SPEC CHECKSUMS:
-  DTModelStorage: 24bb695151013519ae1d54aa88fc7f382fda7313
-  DTTableViewManager: d65b233e41a5c6e98c0497ba1dda0022dd8f081c
+  DTModelStorage: aaaf3eac97693c25fef63ea741aa9c75274a778b
+  DTTableViewManager: ee2e2cfefb08e9723172b623b0bb85e2ea9bdab1
   LightRoute: 85b8e17345a7b22d7067608b8ea07b37f7a80249
   R.swift: d6a5ec2f55a8441dc0ed9f1f8b37d7d11ae85c66
   R.swift.Library: c3af34921024333546e23b70e70d0b4e0cffca75
-  Realm: 6f23fd1f178a09342eac21bfa7c2bf4312a7a180
-  RealmSwift: 695393add1b8f9d5fa75dd16e6355cf3935f71e2
+  Realm: a469bb59e33f9926102ccaea4349822c53b9117e
+  RealmSwift: a45861b21c180f5cf0f122144b9759fa8dde3e9e
   SwiftLint: ce933681be10c3266e82576dad676fa815a602e9
   Swinject: afea49fd95f392b41171669f165842879c48fad6
   SwinjectStoryboard: 92e75763c3299cdf627bef98a5180dc894864336
 
-PODFILE CHECKSUM: a53ac46d3cae891abdf6214e78df33c74793ee17
+PODFILE CHECKSUM: 0bec01b7413611644e457e2bd25f2396334f2c23
 
 COCOAPODS: 1.5.0

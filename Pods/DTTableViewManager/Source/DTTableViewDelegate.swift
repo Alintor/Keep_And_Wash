@@ -58,25 +58,22 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
     /// Implementation for `UITableViewDelegate` protocol
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if configuration?.sectionHeaderStyle == .title { return nil }
-        
-        if let model = self.headerModel(forSection:section) {
-            let view : UIView?
-            do {
-                view = try viewFactory?.headerViewForModel(model, atIndexPath: IndexPath(index: section))
-            } catch let error as DTTableViewFactoryError {
-                handleTableViewFactoryError(error)
-                view = nil
-            } catch {
-                view = nil
-            }
-            
-            if let createdView = view
+        let viewKind = ViewType.supplementaryView(kind: DTTableViewElementSectionHeader)
+        if let model = headerModel(forSection:section) {
+            if let createdView = viewFactory?.headerFooterView(of: viewKind, model: model, atIndexPath: IndexPath(index: section))
             {
-                _ = tableViewEventReactions.performReaction(of: .supplementaryView(kind: DTTableViewElementSectionHeader),
+                _ = tableViewEventReactions.performReaction(of: viewKind,
                                                             signature: EventMethodSignature.configureHeader.rawValue,
-                                                            view: createdView, model: model, location: IndexPath(item: 0, section: section))
+                                                            view: createdView, model: model,
+                                                            location: IndexPath(item: 0, section: section))
+                return createdView
             }
-            return view
+        } else {
+#if swift(>=4.1)
+            if shouldDisplayHeaderView(forSection: section) {
+                manager?.anomalyHandler.reportAnomaly(.nilHeaderModel(section))
+            }
+#endif
         }
         return nil
     }
@@ -84,25 +81,21 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
     /// Implementation for `UITableViewDelegate` protocol
     open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if configuration?.sectionFooterStyle == .title { return nil }
-        
+        let viewKind = ViewType.supplementaryView(kind: DTTableViewElementSectionFooter)
         if let model = self.footerModel(forSection: section) {
-            let view : UIView?
-            do {
-                view = try viewFactory?.footerViewForModel(model, atIndexPath: IndexPath(index: section))
-            } catch let error as DTTableViewFactoryError {
-                handleTableViewFactoryError(error)
-                view = nil
-            } catch {
-                view = nil
-            }
-            
-            if let createdView = view
+            if let createdView = viewFactory?.headerFooterView(of: viewKind, model: model, atIndexPath: IndexPath(index: section))
             {
-                _ = tableViewEventReactions.performReaction(of: .supplementaryView(kind: DTTableViewElementSectionFooter),
+                _ = tableViewEventReactions.performReaction(of: viewKind,
                                                             signature: EventMethodSignature.configureFooter.rawValue,
                                                             view: createdView, model: model, location: IndexPath(item: 0, section: section))
+                return createdView
             }
-            return view
+        } else {
+#if swift(>=4.1)
+            if shouldDisplayFooterView(forSection: section) {
+                manager?.anomalyHandler.reportAnomaly(.nilFooterModel(section))
+            }
+#endif
         }
         return nil
     }
@@ -118,7 +111,11 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
         if configuration?.sectionHeaderStyle == .title {
             if let _ = self.headerModel(forSection:section)
             {
-                return UITableViewAutomaticDimension
+                #if swift(>=4.2)
+                    return UITableView.automaticDimension
+                #else
+                    return UITableViewAutomaticDimension
+                #endif
             }
             return CGFloat.leastNormalMagnitude
         }
@@ -148,7 +145,11 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
         }
         if configuration?.sectionFooterStyle == .title {
             if let _ = self.footerModel(forSection:section) {
+                #if swift(>=4.2)
+                return UITableView.automaticDimension
+                #else
                 return UITableViewAutomaticDimension
+                #endif
             }
             return CGFloat.leastNormalMagnitude
         }
@@ -252,6 +253,15 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
     }
     #endif
     
+#if swift(>=4.2)
+    /// Implementation for `UITableViewDelegate` protocol
+    open func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        if let editingStyle = performCellReaction(.editingStyleForRowAtIndexPath, location: indexPath, provideCell: false) as? UITableViewCell.EditingStyle {
+            return editingStyle
+        }
+        return (delegate as? UITableViewDelegate)?.tableView?(tableView, editingStyleForRowAt: indexPath) ?? .none
+    }
+#else
     /// Implementation for `UITableViewDelegate` protocol
     open func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
         if let editingStyle = performCellReaction(.editingStyleForRowAtIndexPath, location: indexPath, provideCell: false) as? UITableViewCellEditingStyle {
@@ -259,6 +269,7 @@ open class DTTableViewDelegate : DTTableViewDelegateWrapper, UITableViewDelegate
         }
         return (delegate as? UITableViewDelegate)?.tableView?(tableView, editingStyleForRowAt: indexPath) ?? .none
     }
+#endif
     
     #if os(iOS)
     /// Implementation for `UITableViewDelegate` protocol

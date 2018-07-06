@@ -25,6 +25,81 @@
 
 import Foundation
 
+#if swift(>=4.1)
+/// `MemoryStorageAnomaly` represents various errors and unwanted behaviors that can happen when using `MemoryStorage` class.
+/// - SeeAlso: `DTTableViewManagerAnomaly`, `DTCollectionViewManagerAnomaly`
+public enum MemoryStorageAnomaly: Equatable, CustomStringConvertible, CustomDebugStringConvertible {
+    
+    /// When inserting item to `indexPath`, there were only `countOfElementsInSection` items in section
+    case insertionIndexPathTooBig(indexPath: IndexPath, countOfElementsInSection: Int)
+    
+    /// When inserting batch of items, number of items and number of indexPaths was different
+    case batchInsertionItemCountMismatch(itemsCount: Int, indexPathsCount: Int)
+    
+    /// Attempt to replace item, that is not found in storage
+    case replaceItemFailedItemNotFound(itemDescription: String)
+    
+    /// Attempt to remove item, that is not found in storage
+    case removeItemFailedItemNotFound(itemDescription: String)
+    
+    /// Attempt to move item, that is not found in storage
+    case moveItemFailedItemNotFound(indexPath: IndexPath)
+    
+    /// Attempt to move item to too big `indexPath`.
+    case moveItemFailedIndexPathTooBig(indexPath: IndexPath, countOfElementsInSection: Int)
+    
+    /// Inconsistent indexPaths when moving item from `sourceIndexPath` to `destinationIndexPath`.
+    case moveItemFailedInvalidIndexPaths(sourceIndexPath: IndexPath, destinationIndexPath: IndexPath, sourceElementsInSection: Int, destinationElementsInSection: Int)
+    
+    /// Debug information for `MemoryStorageAnomaly`.
+    public var debugDescription: String {
+        switch self {
+        case .insertionIndexPathTooBig(indexPath: let indexPath, countOfElementsInSection: let count):
+            return "⚠️ [MemoryStorage] Failed to insert item into IndexPath: \(indexPath), count of elements in the section: \(count)"
+        case .batchInsertionItemCountMismatch(itemsCount: let itemsCount, indexPathsCount: let indexPathsCount):
+            return "⚠️ [MemoryStorage] Failed to insert batch of items, items count: \(itemsCount), indexPaths count: \(indexPathsCount)"
+        case .replaceItemFailedItemNotFound(itemDescription:let description):
+            return "⚠️ [MemoryStorage] Failed to find item for replacement: \(description)"
+        case .removeItemFailedItemNotFound(itemDescription: let description):
+            return "⚠️ [MemoryStorage] Failed to find item for removal: \(description)"
+        case .moveItemFailedItemNotFound(indexPath: let indexPath):
+            return "⚠️ [MemoryStorage] Failed to find item for moving at indexPath: \(indexPath)"
+        case .moveItemFailedIndexPathTooBig(indexPath: let indexPath, countOfElementsInSection: let count):
+            return "⚠️ [MemoryStorage] Failed to move item, destination indexPath is too big: \(indexPath), number of items in section after removing source item: \(count)"
+        case .moveItemFailedInvalidIndexPaths(sourceIndexPath: let source, destinationIndexPath: let destination, sourceElementsInSection: let sourceCount, destinationElementsInSection: let destinationCount):
+            return "⚠️ [MemoryStorage] Failed to move item, sourceIndexPath: \(source), destination indexPath: \(destination), number of items in source section: \(sourceCount), number of items in destination section after removing source item: \(destinationCount)"
+        }
+    }
+    
+    /// Short description for `MemoryStorageAnomaly`. Useful for sending to analytics, which might have character limit.
+    public var description: String {
+        switch self {
+        case .insertionIndexPathTooBig(indexPath: let indexPath, countOfElementsInSection: let count): return "MemoryStorageAnomaly.insertionIndexPathTooBig(\(indexPath), \(count))"
+        case .batchInsertionItemCountMismatch(itemsCount: let itemsCount, indexPathsCount: let indexPathsCount): return "MemoryStorageAnomaly.batchInsertionItemCountMismatch(\(itemsCount), \(indexPathsCount))"
+        case .replaceItemFailedItemNotFound(itemDescription: let itemDescription): return "MemoryStorageAnomaly.replaceItemFailedItemNotFound(\(itemDescription))"
+        case .removeItemFailedItemNotFound(itemDescription: let itemDescription): return "MemoryStorageAnomaly.removeItemFailedItemNotFound(\(itemDescription))"
+        case .moveItemFailedItemNotFound(indexPath: let indexPath): return "MemoryStorageAnomaly.moveItemFailedItemNotFound(\(indexPath))"
+        case .moveItemFailedIndexPathTooBig(indexPath: let indexPath, countOfElementsInSection: let count): return "MemoryStorageAnomaly.moveItemFailedIndexPathTooBig(\(indexPath), \(count))"
+        case .moveItemFailedInvalidIndexPaths(sourceIndexPath: let source, destinationIndexPath: let destination, sourceElementsInSection: let sourceCount, destinationElementsInSection: let destinationCount):
+            return "MemoryStorageAnomaly.moveItemFailedInvalidIndexPaths(\(source), \(destination), \(sourceCount), \(destinationCount))"
+        }
+    }
+}
+
+/// `MemoryStorageAnomalyHandler` handles anomalies from `MemoryStorage`.
+open class MemoryStorageAnomalyHandler : AnomalyHandler {
+    
+    /// Default action to perform when anomaly is detected. Prints debugDescription of anomaly by default.
+    public static var defaultAction : (MemoryStorageAnomaly) -> Void = { print($0.debugDescription) }
+    
+    /// Action to perform when anomaly is detected. Defaults to `defaultAction`.
+    open var anomalyAction: (MemoryStorageAnomaly) -> Void = MemoryStorageAnomalyHandler.defaultAction
+    
+    /// Creates `MemoryStorageAnomalyHandler`.
+    public init() {}
+}
+#endif
+
 /// This struct contains error types that can be thrown for various MemoryStorage errors
 public enum MemoryStorageError: LocalizedError
 {
@@ -34,6 +109,7 @@ public enum MemoryStorageError: LocalizedError
         case indexPathTooBig(IndexPath)
     }
     
+    @available(*, deprecated, message: "BatchInsertionReason is being replaced by `AnomalyHandler` implementation on MemoryStorage and will be removed in future versions.")
     /// Errors that can be thrown, when calling `insertItems(_:to:)` method
     public enum BatchInsertionReason
     {
@@ -83,7 +159,11 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
     /// Defaults to `true`.
     /// - SeeAlso: https://github.com/DenHeadless/DTCollectionViewManager/issues/27
     open var defersDatasourceUpdates: Bool = true
-    
+
+#if swift(>=4.1)
+    /// Anomaly handler, that handles reported by `MemoryStorage` anomalies.
+    open var anomalyHandler : MemoryStorageAnomalyHandler = .init()
+#endif
     /// sections of MemoryStorage
     open var sections: [Section] = [SectionModel]() {
         didSet {
@@ -287,6 +367,9 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
             let section = self?.getValidSection(indexPath.section, collectChangesIn: update)
             
             guard (section?.items.count ?? 0) >= indexPath.item else {
+#if swift(>=4.1)
+                self?.anomalyHandler.reportAnomaly(MemoryStorageAnomaly.insertionIndexPathTooBig(indexPath: indexPath, countOfElementsInSection: section?.items.count ?? 0))
+#endif
                 throw MemoryStorageError.insertionFailed(reason: .indexPathTooBig(indexPath))
             }
             
@@ -303,6 +386,9 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
     open func insertItems<T>(_ items: [T], to indexPaths: [IndexPath]) throws
     {
         if items.count != indexPaths.count {
+#if swift(>=4.1)
+            anomalyHandler.reportAnomaly(.batchInsertionItemCountMismatch(itemsCount: items.count, indexPathsCount: indexPaths.count))
+#endif
             throw MemoryStorageError.batchInsertionFailed(reason: .itemsCountMismatch)
         }
         if defersDatasourceUpdates {
@@ -355,6 +441,9 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
         
         performDatasourceUpdate { [weak self] update in
             guard let originalIndexPath = self?.indexPath(forItem: itemToReplace) else {
+#if swift(>=4.1)
+                self?.anomalyHandler.reportAnomaly(MemoryStorageAnomaly.replaceItemFailedItemNotFound(itemDescription: String(describing: itemToReplace)))
+#endif
                 throw MemoryStorageError.searchFailed(reason: .itemNotFound(item: itemToReplace))
             }
             
@@ -376,6 +465,9 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
         
         performDatasourceUpdate { [weak self] update in
             guard let indexPath = self?.indexPath(forItem: item) else {
+#if swift(>=4.1)
+                self?.anomalyHandler.reportAnomaly(MemoryStorageAnomaly.removeItemFailedItemNotFound(itemDescription: String(describing: item)))
+#endif
                 throw MemoryStorageError.searchFailed(reason: .itemNotFound(item: item))
             }
             self?.getValidSection(indexPath.section, collectChangesIn: update).items.remove(at: indexPath.item)
@@ -470,14 +562,21 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
         
         performDatasourceUpdate { [weak self] update in
             guard let sourceItem = self?.item(at: source) else {
-                print("MemoryStorage: source indexPath should not be nil when moving item")
+#if swift(>=4.1)
+                self?.anomalyHandler.reportAnomaly(MemoryStorageAnomaly.moveItemFailedItemNotFound(indexPath: source))
+#endif
                 return
             }
             let sourceSection = self?.getValidSection(source.section, collectChangesIn: update)
             let destinationSection = self?.getValidSection(destination.section, collectChangesIn: update)
             
-            if (destinationSection?.items.count ?? 0) < destination.row {
-                print("MemoryStorage: failed moving item to indexPath: \(destination), only \(destinationSection?.items.count ?? 0) items in section")
+            let destinationSectionItemsCount = destinationSection?.items.count ?? 0
+            
+            let numberOfItemsInSectionAfterRemovingSource = source.section == destination.section ? destinationSectionItemsCount - 1 : destinationSectionItemsCount
+            if numberOfItemsInSectionAfterRemovingSource < destination.row {
+#if swift(>=4.1)
+                self?.anomalyHandler.reportAnomaly(MemoryStorageAnomaly.moveItemFailedIndexPathTooBig(indexPath: destination, countOfElementsInSection: numberOfItemsInSectionAfterRemovingSource))
+#endif
                 return
             }
             sourceSection?.items.remove(at: source.row)
@@ -498,12 +597,18 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
         if let from = section(atIndex: sourceIndexPath.section),
             let to = section(atIndex: destinationIndexPath.section)
         {
-            if from.items.count > sourceIndexPath.row, to.items.count >= destinationIndexPath.row {
+            let destinationSectionItemCountAfterRemoval = sourceIndexPath.section == destinationIndexPath.section ? to.items.count - 1: to.items.count
+            if from.items.count > sourceIndexPath.row, destinationSectionItemCountAfterRemoval >= destinationIndexPath.row {
                 let item = from.items[sourceIndexPath.row]
                 from.items.remove(at: sourceIndexPath.row)
                 to.items.insert(item, at: destinationIndexPath.row)
             } else {
-                print("MemoryStorage: failed to move item from \(sourceIndexPath) to \(destinationIndexPath), \(from.items.count) items in source section and \(to.items.count) items in destination section")
+#if swift(>=4.1)
+                anomalyHandler.reportAnomaly(MemoryStorageAnomaly.moveItemFailedInvalidIndexPaths(sourceIndexPath: sourceIndexPath,
+                                                                                                  destinationIndexPath: destinationIndexPath,
+                                                                                                  sourceElementsInSection: from.items.count,
+                                                                                                  destinationElementsInSection: destinationSectionItemCountAfterRemoval))
+#endif
             }
         }
     }
@@ -555,10 +660,8 @@ open class MemoryStorage: BaseStorage, Storage, SupplementaryStorage, SectionLoc
             let rows = self.sections[sectionIndex].items
             
             for rowIndex in 0..<rows.count {
-                if let item = rows[rowIndex] as? T {
-                    if item == searchableItem {
-                        return IndexPath(item: rowIndex, section: sectionIndex)
-                    }
+                if let item = rows[rowIndex] as? T, item == searchableItem {
+                    return IndexPath(item: rowIndex, section: sectionIndex)
                 }
             }
             
