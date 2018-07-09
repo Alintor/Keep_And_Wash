@@ -9,6 +9,11 @@ protocol ClothesSwipeableCellDelegate: class {
 }
 
 final class ClothesSwipeableCell: UITableViewCell {
+    
+    private enum Constant {
+        
+        static let stopPosition:CGFloat = 120
+    }
 
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var sentDirtyImage: UIImageView!
@@ -23,7 +28,6 @@ final class ClothesSwipeableCell: UITableViewCell {
     
     private weak var delegate:ClothesSwipeableCellDelegate?
     private var previousX:CGFloat = 0
-    private let stopPosition:CGFloat = 120
     private var isDirty = false {
         didSet {
             if isDirty {
@@ -91,16 +95,16 @@ final class ClothesSwipeableCell: UITableViewCell {
         case .changed:
             let currentX = recognizer.translation(in: containerView).x
             let deltaX = currentX + previousX
-            if -deltaX < stopPosition && deltaX < self.contentView.frame.size.width - stopPosition {
+            if -deltaX < Constant.stopPosition && deltaX < self.contentView.frame.size.width - Constant.stopPosition {
                 containerLeftConstraint.constant = deltaX
                 containerRightConstraint.constant = -deltaX
-            } else if -deltaX > stopPosition {
-                containerLeftConstraint.constant = -stopPosition
-                containerRightConstraint.constant = stopPosition
+            } else if -deltaX > Constant.stopPosition {
+                containerLeftConstraint.constant = -Constant.stopPosition
+                containerRightConstraint.constant = Constant.stopPosition
             }
         case .ended:
-            if containerRightConstraint.constant == stopPosition {
-                previousX = -stopPosition
+            if containerRightConstraint.constant == Constant.stopPosition {
+                previousX = -Constant.stopPosition
             } else {
                 if sentDirtyImage.frame.minX > 0 {
                     setConstraintsToDefault(completion: { [weak self] _ in

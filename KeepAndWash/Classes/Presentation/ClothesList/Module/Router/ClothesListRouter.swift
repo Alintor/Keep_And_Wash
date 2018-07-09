@@ -16,4 +16,12 @@ final class ClothesListRouter {
 
 extension ClothesListRouter: ClothesListRouterInput {
 
+    func openLaundryIcons() {
+        try? transitionHandler.forStoryboard(
+            factory: StoryboardFactory(storyboard: R.storyboard.laundryIconsList()),
+            to: LaundryIconsListModuleInput.self
+        )
+        .to(preferred: .navigation(style: .push))
+        .perform()
+    }
 }

@@ -23,6 +23,9 @@ final class ClothesListPresenter {
             view.dataSourceIsReady = { [weak self] dataSource in
                 self?.dataSource = dataSource
             }
+            view.showLaundryIcons = { [weak self] in
+                self?.router.openLaundryIcons()
+            }
         }
     }
     var interactor: ClothesListInteractorInput!

@@ -1,5 +1,5 @@
 //
-//  ClothesListRouterInput.swift
+//  LaundryIconsListRouterInput.swift
 //  Keep_And_Wash
 //
 //  Created by Alexandr Ovchinnikov on 06/07/2018.
@@ -7,7 +7,6 @@
 
 import Foundation
 
-protocol ClothesListRouterInput {
+protocol LaundryIconsListRouterInput {
 
-    func openLaundryIcons()
 }
